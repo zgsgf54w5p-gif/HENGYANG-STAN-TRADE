@@ -16,7 +16,7 @@ export default function Home() {
       <ProductGrid />
       <WhyChooseUs />
       <GlobalNetwork />
-      <Footer />
+      <Footer /> 
       <WhatsAppButton />
     </>
   );

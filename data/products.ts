@@ -1,6 +1,7 @@
 export const products = [
   {
     slug: "air-fryer",
+    category: "kitchen-appliances",
     name: "Digital Air Fryer",
     image: "/images/airfryer.jpg",
     description:
@@ -15,6 +16,7 @@ export const products = [
 
   {
     slug: "electric-kettle",
+    category: "kitchen-appliances",
     name: "Electric Kettle",
     image: "/images/boulloir.jpg",
     description:
@@ -29,6 +31,7 @@ export const products = [
 
   {
     slug: "coffee-machine",
+    category: "kitchen-appliances",
     name: "Coffee Machine",
     image: "/images/cafetiere.jpg",
     description:
@@ -43,6 +46,7 @@ export const products = [
 
   {
     slug: "rice-cooker",
+    category: "kitchen-appliances",
     name: "Rice Cooker",
     image: "/images/ricecooker.jpg",
     description:

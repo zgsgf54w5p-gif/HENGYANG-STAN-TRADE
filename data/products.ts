@@ -1,9 +1,11 @@
-export const products = [
+import {Product} from "../types/product";
+
+export const products : Product[]= [
   {
     slug: "air-fryer",
     category: "kitchen-appliances",
     name: "Digital Air Fryer",
-    image: "/images/airfryer.jpg",
+    images:[ "/images/airfryer.jpg"],
     description:
       "Premium oil-free digital air fryer designed for households and distributors.",
     badge: "Best Seller",
@@ -18,7 +20,7 @@ export const products = [
     slug: "electric-kettle",
     category: "kitchen-appliances",
     name: "Electric Kettle",
-    image: "/images/boulloir.jpg",
+    images:[ "/images/boulloir.jpg"],
     description:
       "Fast boiling electric kettle with modern stainless steel design.",
     badge: "New Arrival",
@@ -33,7 +35,7 @@ export const products = [
     slug: "coffee-machine",
     category: "kitchen-appliances",
     name: "Coffee Machine",
-    image: "/images/cafetiere.jpg",
+    images:[ "/images/cafetiere.jpg"],
     description:
       "Professional coffee machine for homes, hotels and offices.",
     badge: "Premium",
@@ -48,7 +50,7 @@ export const products = [
     slug: "rice-cooker",
     category: "kitchen-appliances",
     name: "Rice Cooker",
-    image: "/images/ricecooker.jpg",
+    images:[ "/images/ricecooker.jpg"],
     description:
       "Automatic rice cooker with keep-warm technology.",
     badge: "Top Rated",
@@ -59,18 +61,20 @@ export const products = [
     certification: "CE",
   },
   {
-  slug: "BBQ Grill",
+  slug: "bbq-grill",
   category: "kitchen-appliances",
-  name: "Portable Detachable Charcoal BBQ Grill.",
-  image:[ "/images/BBq1.jpg",
-           "/images/BBq2.jpg",
-           "/images/BBq3.jpg",
+  name: "Portable Detachable Charcoal BBQ Grill",
+  images: [
+    "/images/BBq1.jpg",
+    "/images/BBq2.jpg",
+    "/images/BBq3.jpg",
   ],
   video: "/videos/BBqv.mp4",
-  description: "High-quality portable BBQ grill designed for outdoor cooking, camping, picnics, and commercial use.",
+  description:
+    "High-quality portable BBQ grill designed for outdoor cooking, camping, picnics, and commercial use.",
   badge: "New Arrival",
   moq: "100 Units",
-   material: "Stainless Steel",
+  material: "Stainless Steel",
   fuelType: "Charcoal",
   cookingArea: "45 × 30 cm",
   dimensions: "60 × 35 × 70 cm",

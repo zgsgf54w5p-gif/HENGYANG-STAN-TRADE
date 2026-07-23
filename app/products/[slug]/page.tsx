@@ -26,6 +26,8 @@ export default async function ProductDetails({ params }: PageProps) {
         minHeight: "100vh",
       }}
     >
+
+      {/* Breadcrumb */}
       <p
         style={{
           marginBottom: "30px",
@@ -44,14 +46,19 @@ export default async function ProductDetails({ params }: PageProps) {
         / Products / {product.name}
       </p >
 
+
       <div
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
           gap: "60px",
-          alignItems: "center",
+          alignItems: "start",
         }}
       >
+
+
+        {/* LEFT - PRODUCT IMAGES */}
+
         <div
           style={{
             background: "white",
@@ -60,19 +67,55 @@ export default async function ProductDetails({ params }: PageProps) {
             boxShadow: "0 15px 35px rgba(0,0,0,.1)",
           }}
         >
+
           <Image
-            src={product.image}
+            src={product.images[0]}
             alt={product.name}
             width={700}
             height={700}
             style={{
               width: "100%",
               height: "auto",
+              borderRadius: "15px",
+              objectFit: "cover",
             }}
           />
+
+
+          <div
+            style={{
+              display: "flex",
+              gap: "12px",
+              marginTop: "20px",
+              flexWrap: "wrap",
+            }}
+          >
+
+            {product.images.map((img: string, index: number) => (
+              <Image
+                key={index}
+                src={img}
+                alt={`${product.name} ${index + 1}`}
+                width={100}
+                height={100}
+                style={{
+                  borderRadius: "10px",
+                  objectFit: "cover",
+                  border: "1px solid #ddd",
+                }}
+              />
+            ))}
+
+          </div>
+
         </div>
 
+
+
+        {/* RIGHT - PRODUCT INFORMATION */}
+
         <div>
+
           <span
             style={{
               background: "#FFD700",
@@ -84,6 +127,7 @@ export default async function ProductDetails({ params }: PageProps) {
             {product.badge}
           </span>
 
+
           <h1
             style={{
               fontSize: "50px",
@@ -94,6 +138,7 @@ export default async function ProductDetails({ params }: PageProps) {
             {product.name}
           </h1>
 
+
           <p
             style={{
               color: "#FFC107",
@@ -103,28 +148,125 @@ export default async function ProductDetails({ params }: PageProps) {
             ★★★★★ 4.9 (128 Reviews)
           </p >
 
+
           <p
             style={{
               marginTop: "20px",
-              lineHeight: "1.8",
               color: "#666",
+              lineHeight: "1.8",
             }}
           >
             {product.description}
           </p >
 
-          <div
+
+
+          {/* SPECIFICATIONS */}
+
+          <h2
             style={{
               marginTop: "35px",
-              lineHeight: "2.2",
+              color: "#0B4EA2",
             }}
           >
-            <p>📦 MOQ: {product.moq}</p >
-            <p>⚡ Voltage: {product.voltage}</p >
-            <p>🥘 Capacity: {product.capacity}</p >
-            <p>🔥 Power: {product.power}</p >
-            <p>✅ {product.certification}</p >
-          </div>
+            Specifications
+          </h2>
+
+
+          <div
+            style={{
+              marginTop: "15px",
+              lineHeight: "2",
+            }}
+          >
+
+            {product.moq && <p>📦 MOQ: {product.moq}</p >}
+
+            {product.voltage && (
+              <p>⚡ Voltage: {product.voltage}</p >
+            )}
+
+            {product.capacity && (
+              <p>🥘 Capacity: {product.capacity}</p >
+            )}
+
+            {product.power && (
+              <p>🔥 Power: {product.power}</p >
+            )}
+
+            {product.material && (
+              <p>🛠 Material: {product.material}</p >
+            )}
+
+            {product.fuelType && (
+              <p>🔥 Fuel Type: {product.fuelType}</p >
+            )}
+
+            {product.cookingArea && (
+              <p>🍖 Cooking Area: {product.cookingArea}</p >
+            )}
+
+            {product.dimensions && (
+              <p>📏 Dimensions: {product.dimensions}</p >
+            )}
+
+            {product.weight && (
+              <p>⚖ Weight: {product.weight}</p >
+            )}
+
+            {product.color && (
+              <p>🎨 Color: {product.color}</p >
+            )}
+
+            {product.certification && (
+              <p>✅ Certification: {product.certification}</p >
+            )}
+
+            {product.warranty && (
+              <p>🛡 Warranty: {product.warranty}</p >
+            )}
+
+            {product.oem && (
+              <p>🏭 OEM/ODM: {product.oem}</p >
+            )}
+
+          </div>          {/* PRODUCT VIDEO */}
+
+          {product.video && (
+            <div
+              style={{
+                marginTop: "40px",
+              }}
+            >
+              <h2
+                style={{
+                  color: "#0B4EA2",
+                  marginBottom: "15px",
+                }}
+              >
+                Product Video
+              </h2>
+
+              <video
+                controls
+                style={{
+                  width: "100%",
+                  borderRadius: "15px",
+                }}
+              >
+                <source
+                  src={product.video}
+                  type="video/mp4"
+                />
+
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          )}
+
+
+
+          {/* CONTACT BUTTONS */}
 
           <div
             style={{
@@ -134,6 +276,9 @@ export default async function ProductDetails({ params }: PageProps) {
               flexWrap: "wrap",
             }}
           >
+
+            {/* Request Quote */}
+
             <Link
               href={`/quote?product=${encodeURIComponent(product.name)}`}
               style={{
@@ -148,50 +293,44 @@ export default async function ProductDetails({ params }: PageProps) {
               Request Quote
             </Link>
 
+
+
+            {/* WhatsApp */}
+
             <a
-             href={`https://wa.me/8616617435017?text=${encodeURIComponent(
-
-    `Hello Hengyang Stan Trade, I am interested in your ${product.name}. Could you please send me more information and a quotation?`
-
-  )}`}
-
-  target="_blank"
-
-  rel="noopener noreferrer"
-
-  style={{
-
-    background: "#25D366",
-
-    color: "white",
-
-    padding: "18px 35px",
-
-    borderRadius: "12px",
-
-    textDecoration: "none",
-
-    fontWeight: "bold",
-
-    display: "flex",
-
-    alignItems: "center",
-
-    gap: "10px",
-
-  }}
+              href= "_blank"
+              rel="noopener noreferrer"
+              style={{
+                background: "#25D366",
+                color: "white",
+                padding: "18px 35px",
+                borderRadius: "12px",
+                textDecoration: "none",
+                fontWeight: "bold",
+                display: "flex",
+                alignItems: "center",
+                gap: "10px",
+              }}
             >
+
               <Image
                 src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
                 alt="WhatsApp"
                 width={24}
                 height={24}
               />
+
               WhatsApp
+
             </a >
+
           </div>
+
+
         </div>
+
       </div>
+
     </main>
   );
 }

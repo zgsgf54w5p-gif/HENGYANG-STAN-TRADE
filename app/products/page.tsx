@@ -189,7 +189,7 @@ export default function ProductsPage() {
                     }}
                   >
                     <Image
-                      src={product.image}
+                      src={Array.isArray(product.images) ? product.images[0] : product.images}
                       alt={product.name}
                       width={500}
                       height={500}

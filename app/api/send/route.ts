@@ -1,6 +1,7 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
+export const dynamic = 'force-dynamic'; // ADD THIS LINE
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 if (!process.env.RESEND_API_KEY) {

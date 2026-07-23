@@ -108,7 +108,7 @@ export default function ProductGrid() {
 
               <motion.div whileHover={{ scale: 1.08 }}>
                 <Image
-                  src={product.image}
+                  src={product.images[0]}
                   alt={product.name}
                   width={500}
                   height={350}

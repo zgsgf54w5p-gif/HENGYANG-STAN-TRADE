@@ -50,7 +50,7 @@ export default function Footer() {
           </h3>
 
           <p>📍 Hengyang, Hunan, China</p >
-          <p>📧 3941783104@qq.com</p >
+          <p>📧 kitchenware@foxmail.com</p >
           <p>📱 Phone: +86 191 6460 1883</p >
         </div>
       </div>

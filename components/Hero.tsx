@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#071F3D] via-[#0B4EA2] to-[#1E88E5] text-white">
+    <section className="relative overflow-hidden bg-linear-to-br from-[#071F3D] via-[#0B4EA2] to-[#1E88E5] text-white">
 
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-black/20" />
 
       {/* Decorative Blur */}
       <div className="absolute -left-32 top-20 h-96 w-96 rounded-full bg-yellow-400/10 blur-3xl"></div>
-      <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-blue-400/10 blur-3xl"></div>
+      <div className="absolute right-0 bottom-0 h-125 w-125 rounded-full bg-blue-400/10 blur-3xl"></div>
 
       <div className="relative mx-auto flex min-h-screen max-w-7xl items-center px-8 py-24 lg:px-16 xl:px-24">
 

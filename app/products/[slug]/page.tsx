@@ -18,7 +18,7 @@ export default function ProductPage({
       <div className="grid gap-10 lg:grid-cols-[1.4fr_0.9fr]">
         <section className="space-y-8">
           <div className="overflow-hidden rounded-3xl bg-gray-100">
-            <div className="relative aspect-[4/3] w-full">
+            <div className="relative aspect-4/3 w-full">
               <Image
                 src={product.images[0]}
                 alt={product.name}

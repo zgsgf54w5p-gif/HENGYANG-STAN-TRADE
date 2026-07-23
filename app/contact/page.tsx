@@ -90,8 +90,8 @@ export default function ContactPage() {
         <div>
           <h2>Our Information</h2>
           <p>📍 Hengyang, Hunan, China</p >
-          <p>📧 info@hengyangstantrade.com</p >
-          <p>📱 WhatsApp: +86 XXX XXX XXXX</p >
+          <p>📧 kitchenware@foxmail.com</p >
+          <p>📱 WhatsApp: +86 191 6460 1883</p >
           <p>🌐 Worldwide Export</p >
         </div>
 

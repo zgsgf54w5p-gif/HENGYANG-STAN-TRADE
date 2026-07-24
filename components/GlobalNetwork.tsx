@@ -11,7 +11,7 @@ export default function GlobalNetwork() {
       style={{
         background: "#0B4EA2",
         color: "white",
-        padding: "90px 30px",
+        padding: "80px 24px",
       }}
     >
       <div
@@ -34,7 +34,7 @@ export default function GlobalNetwork() {
           style={{
             fontSize: "20px",
             maxWidth: "800px",
-            margin: "0 auto 60px",
+            margin: "0 auto 48px",
             lineHeight: "1.8",
           }}
         >
@@ -46,7 +46,7 @@ export default function GlobalNetwork() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: "30px",
+            gap: "24px",
           }}
         >
           {stats.map((item) => (
@@ -55,7 +55,7 @@ export default function GlobalNetwork() {
               style={{
                 background: "rgba(255,255,255,0.1)",
                 borderRadius: "15px",
-                padding: "30px",
+                padding: "28px",
               }}
             >
               <h3

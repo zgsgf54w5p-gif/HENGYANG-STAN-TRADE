@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function AboutPreview() {
   return (
-    <section className="bg-white py-28">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-20 px-8 lg:flex-row">
+    <section className="bg-white py-20 sm:py-24 lg:py-28">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-6 sm:px-8 lg:flex-row lg:gap-20 lg:px-12">
         {/* Left Image */}
         <div className="flex-1">
           <Image
@@ -22,23 +22,23 @@ export default function AboutPreview() {
             About Our Company
           </p >
 
-          <h2 className="mb-8 text-5xl font-extrabold leading-tight text-[#071F3D]">
+          <h2 className="mb-6 text-4xl font-extrabold leading-tight text-[#071F3D] sm:text-5xl">
             Trusted Export Solutions <br /> from China
           </h2>
 
-          <p className="mb-6 text-lg leading-9 text-gray-600">
+          <p className="mb-5 text-lg leading-8 text-gray-600">
             Hengyang Stan Trade Development Co., Ltd. is a trusted supplier
             of home appliances, kitchen equipment, consumer electronics and
             commercial products.
           </p >
 
-          <p className="mb-10 text-lg leading-9 text-gray-600">
+          <p className="mb-8 text-lg leading-8 text-gray-600">
             We help importers, wholesalers and distributors worldwide source
             premium-quality products directly from China with competitive
             prices, reliable logistics and professional customer service.
           </p >
 
-          <div className="grid grid-cols-2 gap-6 mb-10">
+          <div className="mb-8 grid grid-cols-2 gap-4 sm:gap-6">
             <div className="rounded-2xl bg-blue-50 p-6 shadow-md">
               <h3 className="text-3xl font-bold text-[#0B4EA2]">500+</h3>
               <p className="mt-2 text-gray-600">Products Available</p >

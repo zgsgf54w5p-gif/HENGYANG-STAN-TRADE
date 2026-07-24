@@ -7,21 +7,21 @@ import { categories } from "@/data/categories";
 
 export default function ProductCategories() {
   return (
-    <section className="py-24 bg-[#F5F8FC]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-[#F5F8FC] py-20 sm:py-24 lg:py-28">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-12 text-center sm:mb-16"
         >
           <p className="text-[#0B4EA2] font-semibold uppercase tracking-widest">
             Our Categories
           </p >
 
-          <h2 className="text-5xl font-bold text-[#071F3D] mt-3">
+          <h2 className="mt-3 text-3xl font-bold text-[#071F3D] sm:text-4xl">
             Explore Our Product Range
           </h2>
 
@@ -31,7 +31,7 @@ export default function ProductCategories() {
           </p >
         </motion.div>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {categories.map((category, index) => (
             <motion.div
               key={category.slug}

@@ -7,61 +7,24 @@ import { products } from "../data/products";
 
 export default function ProductGrid() {
   return (
-    <section
-      style={{
-        padding: "100px 8%",
-        background: "#F5F8FC",
-      }}
-    >
-      <div
-        style={{
-          textAlign: "center",
-          marginBottom: "60px",
-        }}
-      >
-        <p
-          style={{
-            color: "#0B4EA2",
-            fontWeight: "bold",
-            letterSpacing: "2px",
-            fontSize: "15px",
-          }}
-        >
+    <section className="bg-[#F5F8FC] py-20 sm:py-24 lg:py-28">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+        <div className="mb-12 text-center sm:mb-16">
+          <p className="text-[15px] font-bold tracking-[2px] text-[#0B4EA2]">
           OUR PRODUCTS
-        </p >
+          </p>
 
-        <h2
-          style={{
-            fontSize: "42px",
-            color: "#071F3D",
-            marginTop: "10px",
-            marginBottom: "15px",
-          }}
-        >
+          <h2 className="mt-3 text-3xl font-bold text-[#071F3D] sm:text-4xl">
           Featured Products
-        </h2>
+          </h2>
 
-        <p
-          style={{
-            maxWidth: "700px",
-            margin: "0 auto",
-            color: "#666",
-            lineHeight: "1.8",
-            fontSize: "18px",
-          }}
-        >
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
           High-quality appliances carefully selected for importers,
           wholesalers and distributors worldwide.
-        </p >
-      </div>
+          </p>
+        </div>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))",
-          gap: "35px",
-        }}
-      >
+        <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
         {products.map((product) => (
           <Link
             key={product.slug}
@@ -90,18 +53,7 @@ export default function ProductGrid() {
               }}
             >
               <div
-                style={{
-                  position: "absolute",
-                  top: "15px",
-                  left: "15px",
-                  background: "#FFD700",
-                  color: "#071F3D",
-                  padding: "8px 14px",
-                  borderRadius: "30px",
-                  fontWeight: "bold",
-                  fontSize: "13px",
-                  zIndex: 2,
-                }}
+                className="absolute left-4 top-4 z-2 rounded-full bg-yellow-400 px-3.5 py-2 text-[13px] font-bold text-[#071F3D]"
               >
                 {product.badge}
               </div>
@@ -120,51 +72,21 @@ export default function ProductGrid() {
                 />
               </motion.div>
 
-              <div style={{ padding: "25px" }}>
-                <h3
-                  style={{
-                    fontSize: "24px",
-                    color: "#071F3D",
-                    marginBottom: "10px",
-                  }}
-                >
+              <div className="p-6">
+                <h3 className="mb-3 text-2xl text-[#071F3D]">
                   {product.name}
                 </h3>
 
-                <p
-                  style={{
-                    color: "#666",
-                    lineHeight: "1.7",
-                    minHeight: "55px",
-                  }}
-                >
+                <p className="min-h-14 leading-7 text-slate-600">
                   {product.description}
                 </p >
 
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    marginTop: "18px",
-                  }}
-                >
-                  <span
-                    style={{
-                      color: "#FFC107",
-                      fontSize: "20px",
-                    }}
-                  >
+                <div className="mt-5 flex items-center justify-between gap-4">
+                  <span className="text-xl text-[#FFC107]">
                     ★★★★★
                   </span>
 
-                  <span
-                    style={{
-                      color: "#0B4EA2",
-                      fontWeight: "bold",
-                      fontSize: "14px",
-                    }}
-                  >
+                  <span className="text-sm font-bold text-[#0B4EA2]">
                     MOQ: {product.moq}
                   </span>
                 </div>
@@ -172,19 +94,7 @@ export default function ProductGrid() {
                 <motion.button
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
-                  style={{
-                    marginTop: "22px",
-                    width: "100%",
-                    padding: "15px",
-                    background:
-                      "linear-gradient(135deg,#0B4EA2,#1565C0)",
-                    color: "white",
-                    border: "none",
-                    borderRadius: "12px",
-                    fontWeight: "bold",
-                    fontSize: "16px",
-                    cursor: "pointer",
-                  }}
+                  className="mt-6 w-full cursor-pointer rounded-xl border-0 bg-linear-to-br from-[#0B4EA2] to-[#1565C0] px-4 py-3.5 text-base font-bold text-white"
                 >
                   View Details →
                 </motion.button>
@@ -192,6 +102,7 @@ export default function ProductGrid() {
             </motion.div>
           </Link>
         ))}
+        </div>
       </div>
     </section>
   );

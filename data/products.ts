@@ -64,11 +64,7 @@ export const products : Product[]= [
   slug: "bbq-grill",
   category: "kitchen-appliances",
   name: "Portable Detachable Charcoal BBQ Grill",
-  images: [
-    "/images/BBq1.jpg",
-    "/images/BBq2.jpg",
-    "/images/BBq3.jpg",
-  ],
+  images: ["/images/BBq1.jpg"],
   video: "/videos/BBqv.mp4",
   description:
     "High-quality portable BBQ grill designed for outdoor cooking, camping, picnics, and commercial use.",

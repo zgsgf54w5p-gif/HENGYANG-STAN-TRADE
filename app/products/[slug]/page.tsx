@@ -1,6 +1,6 @@
-﻿import Image from "next/image";
-import { notFound } from "next/navigation";
+﻿import { notFound } from "next/navigation";
 import { products as allProducts } from "@/data/products";
+import ProductGallery from "@/components/ProductGallery";
 
 export default async function ProductPage({
   params,
@@ -18,35 +18,7 @@ export default async function ProductPage({
     <main className="container mx-auto px-4 py-10">
       <div className="grid gap-10 lg:grid-cols-[1.4fr_0.9fr]">
         <section className="space-y-8">
-          <div className="overflow-hidden rounded-3xl bg-gray-100">
-            <div className="relative aspect-4/3 w-full">
-              <Image
-                src={product.images[0]}
-                alt={product.name}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 900px"
-              />
-            </div>
-          </div>
-
-          {product.images.length > 1 ? (
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-              {product.images.map((src, index) => (
-                <div key={index} className="overflow-hidden rounded-3xl bg-gray-100">
-                  <div className="relative aspect-square w-full">
-                    <Image
-                      src={src}
-                      alt={`${product.name} ${index + 1}`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 50vw, 33vw"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : null}
+          <ProductGallery images={product.images} productName={product.name} />
 
           {product.video ? (
             <div className="space-y-4">
@@ -55,6 +27,7 @@ export default async function ProductPage({
                 controls
                 preload="metadata"
                 playsInline
+                poster={product.images[0]}
                 className="w-full overflow-hidden rounded-3xl bg-black"
               >
                 <source src={product.video} type="video/mp4" />
@@ -78,6 +51,23 @@ export default async function ProductPage({
           <p className="mt-5 text-lg leading-8 text-slate-600">
             {product.description}
           </p>
+
+          <div className="mt-8 grid gap-3 sm:grid-cols-2">
+            <a
+              href={`/quote?product=${encodeURIComponent(product.name)}`}
+              className="rounded-xl bg-yellow-400 px-5 py-4 text-center font-bold text-slate-950 transition hover:bg-yellow-300"
+            >
+              Request a Quote
+            </a>
+            <a
+              href={`https://wa.me/8613510151112?text=${encodeURIComponent(`Hello Hengyang Stan Trade, I am interested in the ${product.name}.`)}`}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-xl bg-[#25D366] px-5 py-4 text-center font-bold text-white transition hover:bg-[#1fba59]"
+            >
+              WhatsApp Us
+            </a>
+          </div>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
             {product.moq ? (

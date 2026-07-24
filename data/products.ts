@@ -68,7 +68,7 @@ export const products : Product[]= [
     "/BBq2.jpg",
     "/BBq3.jpg",
   ],
-  video: "/videos/BBQV.MP4",
+  video: "/videos/BBQV.mp4",
   description:
     "High-quality portable BBQ grill designed for outdoor cooking, camping, picnics, and commercial use.",
   badge: "New Arrival",

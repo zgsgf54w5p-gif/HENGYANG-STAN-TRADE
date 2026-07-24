@@ -29,10 +29,7 @@ export default function ProductGrid() {
           <Link
             key={product.slug}
             href={`/products/${product.slug}`}
-            style={{
-              textDecoration: "none",
-              color: "inherit",
-            }}
+            className="group block h-full text-inherit no-underline"
           >
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -58,7 +55,7 @@ export default function ProductGrid() {
                 {product.badge}
               </div>
 
-              <motion.div whileHover={{ scale: 1.08 }}>
+              <motion.div className="overflow-hidden" whileHover={{ scale: 1.08 }}>
                 <Image
                   src={product.images[0]}
                   alt={product.name}
@@ -91,13 +88,11 @@ export default function ProductGrid() {
                   </span>
                 </div>
 
-                <motion.button
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.97 }}
-                  className="mt-6 w-full cursor-pointer rounded-xl border-0 bg-linear-to-br from-[#0B4EA2] to-[#1565C0] px-4 py-3.5 text-base font-bold text-white"
+                <div
+                  className="mt-6 w-full cursor-pointer rounded-xl border-0 bg-linear-to-br from-[#0B4EA2] to-[#1565C0] px-4 py-3.5 text-center text-base font-bold text-white transition duration-300 group-hover:from-[#1565C0] group-hover:to-[#1E88E5]"
                 >
                   View Details →
-                </motion.button>
+                </div>
               </div>
             </motion.div>
           </Link>

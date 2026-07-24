@@ -1,14 +1,24 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-linear-to-br from-[#071F3D] via-[#0B4EA2] to-[#1E88E5] text-white">
+    <section className="relative overflow-hidden bg-[#071F3D] text-white">
+
+      <Image
+        src="/hero.jpg"
+        alt="Products prepared for international export"
+        fill
+        priority
+        className="object-cover object-center opacity-25"
+        sizes="100vw"
+      />
 
       {/* Background Overlay */}
-      <div className="absolute inset-0 bg-black/20" />
+      <div className="absolute inset-0 bg-linear-to-r from-[#071F3D] via-[#071F3D]/90 to-[#0B4EA2]/60" />
 
       {/* Decorative Blur */}
       <div className="absolute -left-32 top-20 h-96 w-96 rounded-full bg-yellow-400/10 blur-3xl"></div>
@@ -23,7 +33,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex rounded-full bg-yellow-400 px-8 py-3 text-sm font-bold uppercase tracking-[0.4em] text-black shadow-xl"
+            className="inline-flex rounded-full bg-yellow-400 px-6 py-3 text-xs font-bold uppercase tracking-[0.3em] text-black shadow-xl sm:px-8 sm:text-sm"
           >
             Global Import & Export
           </motion.span>
@@ -65,14 +75,14 @@ export default function Hero() {
           >
             <Link
               href="/products"
-              className="rounded-xl bg-yellow-400 px-12 py-5 text-lg font-bold text-black shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-300 hover:shadow-2xl"
+              className="rounded-xl bg-yellow-400 px-8 py-4 text-base font-bold text-black shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-300 hover:shadow-2xl sm:px-10 sm:py-5 sm:text-lg"
             >
               Explore Products
             </Link>
 
             <Link
               href="/quote"
-              className="rounded-xl border-2 border-white px-12 py-5 text-lg font-bold transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#0B4EA2]"
+              className="rounded-xl border-2 border-white px-8 py-4 text-base font-bold transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#0B4EA2] sm:px-10 sm:py-5 sm:text-lg"
             >
               Request Quote
             </Link>

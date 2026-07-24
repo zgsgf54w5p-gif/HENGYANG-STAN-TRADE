@@ -2,12 +2,13 @@
 import { notFound } from "next/navigation";
 import { products as allProducts } from "@/data/products";
 
-export default function ProductPage({
+export default async function ProductPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const product = allProducts.find((item) => item.slug === params.slug);
+  const { slug } = await params;
+  const product = allProducts.find((item) => item.slug === slug);
 
   if (!product) {
     notFound();
@@ -39,6 +40,7 @@ export default function ProductPage({
                       alt={`${product.name} ${index + 1}`}
                       fill
                       className="object-cover"
+                      sizes="(max-width: 640px) 50vw, 33vw"
                     />
                   </div>
                 </div>

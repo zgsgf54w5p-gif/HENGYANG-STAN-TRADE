@@ -22,7 +22,7 @@ export default function AboutPreview() {
             About Our Company
           </p >
 
-          <h2 className="mb-6 text-4xl font-extrabold leading-tight text-[#071F3D] sm:text-5xl">
+          <h2 className="font-display mb-6 text-5xl font-semibold leading-tight text-[#071F3D] sm:text-6xl">
             Trusted Export Solutions <br /> from China
           </h2>
 

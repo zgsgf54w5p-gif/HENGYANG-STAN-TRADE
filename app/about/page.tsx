@@ -33,7 +33,8 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-20 lg:px-12 lg:py-28">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.3em] text-yellow-400">About Hengyang Stan Trade</p>
-            <h1 className="mt-6 max-w-3xl text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
+            <p className="font-script mt-7 text-4xl text-yellow-300 sm:text-5xl">Trade with intention</p>
+            <h1 className="font-display mt-4 max-w-3xl text-5xl font-semibold leading-tight sm:text-6xl lg:text-7xl">
               A dependable bridge between Chinese supply and global demand.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300">
@@ -58,7 +59,7 @@ export default function AboutPage() {
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#0B4EA2]">Who we are</p>
-            <h2 className="mt-4 text-3xl font-extrabold leading-tight text-[#071F3D] sm:text-4xl">Built around clarity, consistency and long-term trade relationships.</h2>
+            <h2 className="font-display mt-4 text-4xl font-semibold leading-tight text-[#071F3D] sm:text-5xl">Built around clarity, consistency and long-term trade relationships.</h2>
           </div>
           <div className="space-y-6 text-lg leading-8 text-slate-600">
             <p>We are an export partner for businesses that need more than a product list. Our role is to make sourcing from China easier to understand, easier to coordinate and more dependable from the first inquiry to the final shipment.</p>

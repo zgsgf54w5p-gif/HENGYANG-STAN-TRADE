@@ -38,12 +38,21 @@ export default function Hero() {
             Global Import & Export
           </motion.span>
 
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="font-script mt-8 text-4xl text-yellow-300 sm:text-5xl"
+          >
+            Trade with intention
+          </motion.p>
+
           {/* Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 35 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="mt-10 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-7xl xl:text-8xl"
+            className="font-display mt-5 text-5xl font-semibold leading-[0.95] tracking-tight md:text-7xl xl:text-8xl"
           >
             Premium Products
             <br />

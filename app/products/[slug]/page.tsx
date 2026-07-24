@@ -52,10 +52,14 @@ export default async function ProductPage({
             <div className="space-y-4">
               <h2 className="text-2xl font-semibold">Product Video</h2>
               <video
-                src={product.video}
                 controls
+                preload="metadata"
+                playsInline
                 className="w-full overflow-hidden rounded-3xl bg-black"
-              />
+              >
+                <source src={product.video} type="video/mp4" />
+                Your browser does not support HTML video playback.
+              </video>
             </div>
           ) : null}
         </section>

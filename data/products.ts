@@ -65,7 +65,6 @@ export const products : Product[]= [
   category: "kitchen-appliances",
   name: "Portable Detachable Charcoal BBQ Grill",
   images: [
-    "/BBq1.jpg",
     "/BBq2.jpg",
     "/BBq3.jpg",
   ],

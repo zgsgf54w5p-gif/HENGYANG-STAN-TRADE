@@ -29,7 +29,7 @@ export default function Footer() {
           <div className="space-y-3 leading-7 text-slate-300">
             <p>Hengyang, Hunan, China</p>
             <p>kitchenware@foxmail.com</p>
-            <p>+86 191 6460 1883</p>
+            <p>Phone: +86 191 6460 1883</p>
           </div>
         </div>
       </div>

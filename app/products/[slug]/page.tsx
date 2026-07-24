@@ -28,7 +28,7 @@ export default async function ProductPage({
                 preload="metadata"
                 playsInline
                 poster={product.images[0]}
-                className="w-full overflow-hidden rounded-3xl bg-black"
+                className="block aspect-[720/928] h-auto w-full overflow-hidden rounded-3xl bg-slate-100 object-contain"
               >
                 <source src={product.video} type="video/mp4" />
                 Your browser does not support HTML video playback.

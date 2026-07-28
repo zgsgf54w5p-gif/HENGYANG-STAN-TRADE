@@ -27,7 +27,9 @@ export default function Footer() {
         <div>
           <h3 className="mb-4 font-bold">Contact</h3>
           <div className="space-y-3 leading-7 text-slate-300">
-            <p>Hengyang, Hunan, China</p>
+            <p>Building 20, Workshop Area, Shuangchuang Center
+Northeast Corner, Intersection of Chuanshan West Road and Hongshan Road
+Xidu Town, Hengyang County, Hengyang City, Hunan Province, P.R.China</p>
             <p>kitchenware@foxmail.com</p>
             <p>Phone: +86 191 6460 1883</p>
           </div>

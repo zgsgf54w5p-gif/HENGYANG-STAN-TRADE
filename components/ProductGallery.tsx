@@ -1,16 +1,21 @@
 "use client";
 
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function ProductGallery({
   images,
   productName,
+  productSlug,
 }: {
   images: string[];
   productName: string;
+  productSlug?: string;
 }) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const shouldAutoRotate = productSlug === "bbq-grill" && images.length > 1;
 
   useEffect(() => {
     if (!selectedImage) {
@@ -32,24 +37,51 @@ export default function ProductGallery({
     };
   }, [selectedImage]);
 
+  useEffect(() => {
+    if (!shouldAutoRotate) {
+      return;
+    }
+
+    const intervalId = window.setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 2800);
+
+    return () => {
+      window.clearInterval(intervalId);
+    };
+  }, [images.length, shouldAutoRotate]);
+
+  const mainImage = images[currentImageIndex] ?? images[0];
+
   return (
     <>
       <div className="space-y-4">
         <button
           type="button"
-          onClick={() => setSelectedImage(images[0])}
+          onClick={() => setSelectedImage(mainImage)}
           className="group block w-full cursor-zoom-in overflow-hidden rounded-3xl bg-gray-100 text-left"
           aria-label={`View ${productName} image full screen`}
         >
           <div className="relative aspect-4/3 w-full">
-            <Image
-              src={images[0]}
-              alt={productName}
-              fill
-              priority
-              className="object-cover transition duration-300 group-hover:scale-105"
-              sizes="(max-width: 1024px) 100vw, 900px"
-            />
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={mainImage}
+                initial={{ x: -50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 50, opacity: 0 }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                className="absolute inset-0"
+              >
+                <Image
+                  src={mainImage}
+                  alt={productName}
+                  fill
+                  priority
+                  className="object-cover transition duration-300 group-hover:scale-105"
+                  sizes="(max-width: 1024px) 100vw, 900px"
+                />
+              </motion.div>
+            </AnimatePresence>
           </div>
         </button>
 
@@ -59,7 +91,10 @@ export default function ProductGallery({
               <button
                 key={src}
                 type="button"
-                onClick={() => setSelectedImage(src)}
+                onClick={() => {
+                  setCurrentImageIndex(index + 1);
+                  setSelectedImage(src);
+                }}
                 className="group block w-full cursor-zoom-in overflow-hidden rounded-3xl bg-gray-100 text-left"
                 aria-label={`View ${productName} image ${index + 2} full screen`}
               >

@@ -18,7 +18,7 @@ export default async function ProductPage({
     <main className="container mx-auto px-4 py-10">
       <div className="grid gap-10 lg:grid-cols-[1.4fr_0.9fr]">
         <section className="space-y-8">
-          <ProductGallery images={product.images} productName={product.name} />
+          <ProductGallery images={product.images} productName={product.name} productSlug={product.slug} />
 
           {product.video ? (
             <div className="space-y-4">

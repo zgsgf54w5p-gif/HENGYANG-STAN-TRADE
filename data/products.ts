@@ -64,7 +64,7 @@ export const products : Product[]= [
     slug: "bbq-grill",
     category: "kitchen-appliances",
     name: "Portable Charcoal BBQ Grill",
-    images: ["/BBq2.jpg"],
+    images: ["/bbqaw.jpg"],
     description:
       "Portable charcoal BBQ grill with foldable legs and a built-in seasoning plate for easy outdoor cooking.",
     badge: "New Arrival",

@@ -96,6 +96,10 @@ const bbqGalleryImages = [
   "/images/bbq-gallery/bbq-093.jpg",
 ];
 
+const bbqSeriesA1Images = bbqGalleryImages.slice(0, 27);
+const bbqSeriesA2Images = bbqGalleryImages.slice(27, 60);
+const bbqSeriesA3Images = bbqGalleryImages.slice(60);
+
 export const products : Product[]= [
   {
     slug: "air-fryer",
@@ -157,25 +161,69 @@ export const products : Product[]= [
     certification: "CE",
   },
   {
-  slug: "bbq-grill",
-  category: "kitchen-appliances",
-  name: "Portable Detachable Charcoal BBQ Grill",
-  images: bbqGalleryImages,
-  video: "/videos/BBQV.mp4",
-  description:
-    "High-quality portable BBQ grill designed for outdoor cooking, camping, picnics, and commercial use.",
-  badge: "New Arrival",
-  moq: "100 Units",
-  material: "Stainless Steel",
-  fuelType: "Charcoal",
-  cookingArea: "45 × 30 cm",
-  dimensions: "60 × 35 × 70 cm",
-  weight: "5.8 kg",
-  color: "Grey",
-  assembly: "Easy Assembly",
-  cleaning: "Removable Ash Tray",
-  certification: "CE",
-  warranty: "12 Months",
-  oem: "OEM & ODM Available",
-}
+    slug: "bbq-grill-a1",
+    category: "kitchen-appliances",
+    name: "Portable Detachable Charcoal BBQ Grill - Series A1",
+    images: bbqSeriesA1Images,
+    video: "/videos/BBQV.mp4",
+    description:
+      "Compact portable grill with durable construction for outdoor cooking, camping and picnics.",
+    badge: "New Arrival",
+    moq: "100 Units",
+    material: "Stainless Steel",
+    fuelType: "Charcoal",
+    cookingArea: "45 × 30 cm",
+    dimensions: "60 × 35 × 70 cm",
+    weight: "5.8 kg",
+    color: "Grey",
+    assembly: "Easy Assembly",
+    cleaning: "Removable Ash Tray",
+    certification: "CE",
+    warranty: "12 Months",
+    oem: "OEM & ODM Available",
+  },
+  {
+    slug: "bbq-grill-a2",
+    category: "kitchen-appliances",
+    name: "Portable Foldable BBQ Grill - Series A2",
+    images: bbqSeriesA2Images,
+    video: "/videos/BBQV.mp4",
+    description:
+      "Lightweight foldable grill designed for easy transport, camping trips and backyard use.",
+    badge: "New Arrival",
+    moq: "120 Units",
+    material: "Stainless Steel",
+    fuelType: "Charcoal",
+    cookingArea: "50 × 32 cm",
+    dimensions: "65 × 38 × 72 cm",
+    weight: "6.2 kg",
+    color: "Black",
+    assembly: "Quick Setup",
+    cleaning: "Removable Ash Tray",
+    certification: "CE",
+    warranty: "12 Months",
+    oem: "OEM & ODM Available",
+  },
+  {
+    slug: "bbq-grill-a3",
+    category: "kitchen-appliances",
+    name: "Premium Outdoor Grill Set - Series A3",
+    images: bbqSeriesA3Images,
+    video: "/videos/BBQV.mp4",
+    description:
+      "Premium outdoor grill collection for wholesalers, hospitality and commercial BBQ setups.",
+    badge: "New Arrival",
+    moq: "150 Units",
+    material: "Stainless Steel",
+    fuelType: "Charcoal",
+    cookingArea: "55 × 35 cm",
+    dimensions: "70 × 40 × 75 cm",
+    weight: "6.8 kg",
+    color: "Silver",
+    assembly: "Easy Assembly",
+    cleaning: "Removable Ash Tray",
+    certification: "CE",
+    warranty: "12 Months",
+    oem: "OEM & ODM Available",
+  }
 ];

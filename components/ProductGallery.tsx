@@ -15,7 +15,7 @@ export default function ProductGallery({
 }) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const shouldAutoRotate = productSlug === "bbq-grill" && images.length > 1;
+  const shouldAutoRotate = Boolean(productSlug?.startsWith("bbq-")) && images.length > 1;
 
   useEffect(() => {
     if (!selectedImage) {

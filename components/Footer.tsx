@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-[#071F3D] px-6 pb-7 pt-16 text-white sm:px-8 lg:px-12">
       <div className="mx-auto mb-11 grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr] lg:gap-12">
         <div>
-          <h2 className="mb-4 text-xl font-bold">Hengyang Stan Trade</h2>
+          <h2 className="mb-4 text-xl font-bold">Hengyang Stan Trade Development Co.,Ltd</h2>
           <p className="max-w-md leading-7 text-slate-300">
             Your trusted China export partner supplying home appliances,
             electronics, kitchen equipment and commercial products to

@@ -97,7 +97,7 @@ export const products : Product[]= [
     capacity: "N/A",
     certification: "CE / RoHS",
   },
-  
+
    {
     slug: "meat-presser",
     category: "kitchen-appliances",
@@ -110,6 +110,19 @@ export const products : Product[]= [
     voltage: "N/A",
     capacity: "N/A",
     material: "Aluminium",
+    certification: "CE",
+  },
+  {
+    slug: "bone-saw-machine",
+    category: "kitchen-appliances",
+    name: "Bone Saw Machine",
+    images:[ "/images/A7.jpg"],
+    description:
+      "Max cutting Width 180-380mm ; Saw blaze size 1650-3330mm",
+    badge: "New Arrival",
+    moq: "150 Units",
+    voltage: "N/A",
+    capacity: "N/A",
     certification: "CE",
   },
   {

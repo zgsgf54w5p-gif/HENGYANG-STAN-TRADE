@@ -97,6 +97,20 @@ export const products : Product[]= [
     capacity: "N/A",
     certification: "CE / RoHS",
   },
+   {
+    slug: "meat-presser",
+    category: "kitchen-appliances",
+    name: "Meat presser",
+    images:[ "/images/A6.jpg"],
+    description:
+      "Meat presser with matte finish handle, available in two color option: matte black handle & matte red handle.",
+    badge: "New Arrival",
+    moq: "150 Units",
+    voltage: "N/A",
+    capacity: "N/A",
+    material: "Aluminium",
+    certification: "CE",
+  },
   {
     slug: "bbq-grill",
     category: "kitchen-appliances",

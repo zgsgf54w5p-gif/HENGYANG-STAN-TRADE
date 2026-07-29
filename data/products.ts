@@ -30,6 +30,7 @@ export const products : Product[]= [
     power: "1500W",
     certification: "CE / RoHS",
   },
+  
 
   {
     slug: "coffee-machine",
@@ -45,6 +46,8 @@ export const products : Product[]= [
     power: "1200W",
     certification: "CE",
   },
+  
+
 
   {
     slug: "rice-cooker",
@@ -59,6 +62,19 @@ export const products : Product[]= [
     capacity: "5 Liters",
     power: "900W",
     certification: "CE",
+  },
+   {
+    slug: "knife-rest",
+    category: "kitchen-appliances",
+    name: "Kitchen Knife Rest",
+    images:[ "/images/SUS304.jpg"],
+    description:
+      "Modern kitchen knife rest designed to safely store and organize knives while keeping your kitchen clean and stylish.",
+    badge: "New Arrival",
+    moq: "100 Units",
+    material: "Stainless Steel",
+    capacity: "Modern minimalist",
+    certification: "CE / RoHS",
   },
   {
     slug: "bbq-grill",
@@ -81,4 +97,5 @@ export const products : Product[]= [
     warranty: "12 Months",
     oem: "OEM & ODM Available",
   }
+
 ];

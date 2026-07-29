@@ -97,6 +97,7 @@ export const products : Product[]= [
     capacity: "N/A",
     certification: "CE / RoHS",
   },
+  
    {
     slug: "meat-presser",
     category: "kitchen-appliances",

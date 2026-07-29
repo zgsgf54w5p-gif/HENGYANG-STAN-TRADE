@@ -36,7 +36,7 @@ export default function Navbar() {
               HENGYANG STAN
             </h1>
             <p className="text-yellow-400 font-semibold text-lg">
-              TRADE Development Co.,Ltd.S
+              TRADE Development Co.,Ltd.
             </p >
           </div>
         </Link>

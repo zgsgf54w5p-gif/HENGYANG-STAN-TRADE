@@ -125,6 +125,33 @@ export const products : Product[]= [
     capacity: "N/A",
     certification: "CE",
   },
+   {
+    slug: "double-head-wafle-maker",
+    category: "kitchen-appliances",
+    name: "Double Head Waffle Maker",
+    images:[ "/images/A8.jpg"],
+    description:
+      "Model XC-XF-2; Brand Fangbo; Overall Dimension: 500*380*260mm;; Application scenario: Western restaurants, cake shops, tea restaurants, beverage stores, coffee shops, Frequency:50Hz; Adjustable temperature range: 50-300 celcius degrees",
+    badge: "New Arrival",
+    moq: "150 Units",
+    power: "1000W(1KW)",
+    voltage: "220V",
+    capacity: "N/A",
+    certification: "CE",
+  },
+  {
+  slug: "electric-deep-fryer",
+    category: "kitchen-appliances",
+    name: "Electric Deep Fryer",
+    images:[ "/images/A9.jpg"],
+    description:
+    "Product Description (English) 1. Product Attributes Item  Details   Brand  Lingduo  Alias  Model 82 Deep Fryer  Application  Snack & Fast Food Equipment  After-sales Service  3-month warranty for spare parts  Type  Electric Deep Fryer  Power Supply & Power  220V, 2.5KW + 2.5KW  Model No.  82 Deep Fryer  Package Material  Carton Box  2. Specifications Specification Item  Parameter  ----  ----  Model  82 Deep Fryer  Rated Power  2.5KW + 2.5KW  Voltage  220V  Net Weight  5.8 KG  3. Packaging Information Gross Weight: 13000 g (13 KG) Short Version for Listing Electric Deep Fryer This commercial electric fryer is specially designed for snack shops and fast food stores. It adopts dual heating tubes with total 5KW power under 220V voltage, heating evenly and efficiently.Net weight: 5.8kg; Gross packing weight:13kg Packed with carton box for safe transportation Spare parts enjoy 3-month after-sales warranty Ideal equipment for frying chicken, fries, dough sticks and other fried snacks.",
+    badge: "New Arrival",
+    moq: "150 Units",
+    voltage: "220V",
+    capacity: "N/A",
+    certification: "CE",
+  },
   {
     slug: "bbq-grill",
     category: "kitchen-appliances",

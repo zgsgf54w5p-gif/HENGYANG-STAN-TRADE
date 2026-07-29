@@ -16,7 +16,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0B4EA2]/85 backdrop-blur-sm shadow-lg">
+    <header className="sticky top-0 z-50 bg-[#0B4EA2]/75 backdrop-blur-[1px] shadow-lg">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-12">
 
         {/* Logo */}

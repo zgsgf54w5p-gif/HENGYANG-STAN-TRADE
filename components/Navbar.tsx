@@ -24,7 +24,7 @@ export default function Navbar() {
           <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-lg bg-white">
             <Image
               src="/images/logo2.jpg"
-              alt="Hengyang Stan Trade"
+              alt="Hengyang Stan Trade Development Co.,Ltd."
               width={56}
               height={56}
               className="w-full h-full object-cover"

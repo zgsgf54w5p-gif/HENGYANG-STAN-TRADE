@@ -17,6 +17,24 @@ export const products : Product[]= [
   },
 
   {
+    slug: "insulated-food-service-counter",
+    category: "kitchen-appliances",
+    name: "Insulated Food Service Counter",
+    images:[ 
+      "/images/IFS1.jpg",
+      "/images/IFS2.jpg",
+      "/images/IFS3.jpg",
+    ],
+    description:
+      "Professional insulated food service counter designed to keep meals warm and ready for serving in restaurant, hotels, school, and catering businesses",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity: "3-compartment(SUS304 stainless steel), 4-compartment(SUS304 stainless steel), 5-compartment(SUS304 stainless steel), 6-compartment(SUS304 stainless steel)",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+  {
     slug: "electric-kettle",
     category: "kitchen-appliances",
     name: "Electric Kettle",
@@ -67,13 +85,16 @@ export const products : Product[]= [
     slug: "knife-rest",
     category: "kitchen-appliances",
     name: "Kitchen Knife Rest",
-    images:[ "/images/SUS304.jpg"],
+    images:[
+       "/images/SUS304.jpg",
+       "/images/AS.jpg",
+      ],
     description:
       "Modern kitchen knife rest designed to safely store and organize knives while keeping your kitchen clean and stylish.",
     badge: "New Arrival",
     moq: "100 Units",
     material: "Stainless Steel",
-    capacity: "Modern minimalist",
+    capacity: "N/A",
     certification: "CE / RoHS",
   },
   {

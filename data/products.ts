@@ -152,6 +152,33 @@ export const products : Product[]= [
     capacity: "N/A",
     certification: "CE",
   },
+    {
+  slug: "commercial-roller-hot-dog-grill-machine",
+    category: "kitchen-appliances",
+    name: "Commercial Roller Hot Dog Grill Machine",
+    images:[ "/images/A10.jpg"],
+    description:
+    "Commercial Roller Hot Dog Grill Machine Product Features 1. Independent Dual Temperature Control System Supports wide temperature adjustment from 20°C to 300°C with grouped heating control. The front and rear heating zones can be regulated separately. Once reaching the preset temperature, the machine automatically pauses heating to maintain the perfect taste of sausages. Multiple heating modes are available to meet different cooking demands. 2. Dual-layer Design with Extra Storage Shelf Equipped with a sturdy upper food rack, forming a double-layer large-capacity structure. Sausages can be cooked on the bottom rolling rollers, while more food can be stored on the upper shelf. The reinforced shelf bears heavy weight and resists bending, greatly expanding food placement space.", 
+    badge: "New Arrival",
+    moq: "150 Units",
+    capacity: "N/A",
+    certification: "CE",
+  },
+  {
+    slug: "grill-steak-maker",
+    category: "kitchen-appliances",
+    name: "Grill Steak Maker",
+    images:[
+       "/images/A11-1.jpg",
+       "/images/A11-2.jpg",
+       "/images/A11-3.jpg",
+      ],
+    description:
+      "Item No.: R.2685 Gift Box Size: 30.525.510.5 cm Cooking Plate: Non-stick plate Net Weight: 1500g Rated Power: 750W Carton Information: Carton dimension: 543253 cm, Volume: 0.09 m³ 10 pcs per carton N.W.: 15.4 KG, G.W.: 16 KG Brief Product Introduction This electric steak grill is equipped with non-stick grooved cooking plates. It can open flat for expanded cooking area, suitable for steak, sandwiches, bacon, vegetables and other food. 750W constant power heats evenly, easy to clean and convenient for home use.",
+    badge: "New Arrival",
+    moq: "150 Units",
+    certification: "CE",
+  },
   {
     slug: "bbq-grill",
     category: "kitchen-appliances",
@@ -172,6 +199,23 @@ export const products : Product[]= [
     certification: "CE",
     warranty: "12 Months",
     oem: "OEM & ODM Available",
+  },
+   {
+    slug: "commercial-meat-processing-machine",
+    category: "kitchen-appliances",
+    name: "Commercial Meat Processing Machine",
+    images:[
+       "/images/A12.jpg",
+       "/images/A12-2.jpg",
+       "/images/A12-3.jpg",
+       "/images/A12-5.jpg",
+      ],
+    description:
+      " Model | Net Weight(kg) | Voltage(V) | Rated Power(W) | Basin-type All-Steel Commercial Meat Mincer | 43 | 220 | 2200 | Basin-type All-Steel Commercial Meat Slicer | 58 | 220 | 2200 | All-Steel Commercial Meat Mincer & Slicer | 70 | 220 | 2200 | Detachable Lift Head All-Steel Meat Mincer & Slicer | 75 | 220 | 2200 | Detachable Basin-Type Dual-Motor All-Steel Meat Mincer & Slicer | 75 | 220 | 4400 | Detachable Dual-Motor All-Steel Meat Mincer & Slicer | 90 | 220 | 4400 | All models work with 220V power supply. 2.2kW = 2200W; 4.4kW = 4400W. All machines adopt full stainless steel structure, designed for commercial catering use.",
+    badge: "New Arrival",
+    moq: "150 Units",
+    certification: "CE",
   }
+  
 
 ];

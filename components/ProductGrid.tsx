@@ -1,306 +1,196 @@
-import { notFound } from "next/navigation";
-import { products as allProducts } from "@/data/products";
-import ProductGallery from "@/components/ProductGallery";
+"use client";
 
-export default async function ProductPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-  const product = allProducts.find((item) => item.slug === slug);
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowRight, Package, Zap, ShieldCheck } from "lucide-react";
+import { products } from "../data/products";
 
-  if (!product) {
-    notFound();
-  }
+export default function ProductGrid() {
+  return (
+    <section className="bg-[#F8FAFC] py-24">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
-return (
-  <main className="bg-[#F8FAFC] py-14">
-    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Heading */}
 
-      <div className="grid gap-12 lg:grid-cols-[1.45fr_0.95fr]">
+        <div className="mb-20 text-center">
 
-        {/* LEFT SIDE */}
-        <section className="space-y-8">
+          <span className="rounded-full bg-blue-100 px-5 py-2 text-sm font-bold uppercase tracking-[3px] text-[#0B4EA2]">
+            Featured Products
+          </span>
 
-          <ProductGallery
-            images={product.images}
-            productName={product.name}
-            productSlug={product.slug}
-          />
+          <h2 className="mt-6 text-5xl font-extrabold text-[#071F3D]">
+            Discover Our Premium Collection
+          </h2>
 
-          {product.video && (
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg">
-              <h2 className="mb-5 text-2xl font-bold text-[#071F3D]">
-                Product Video
-              </h2>
-
-              <video
-                controls
-                preload="metadata"
-                playsInline
-                poster={product.images[0]}
-                className="aspect-video w-full rounded-2xl bg-slate-100 object-contain"
-              >
-                <source src={product.video} type="video/mp4" />
-                Your browser does not support HTML video.
-              </video>
-            </div>
-          )}
-
-        </section>
-
-        {/* RIGHT SIDE */}
-        <aside className="sticky top-24 min-h-[900px] rounded-3xl border border-slate-200 bg-white p-8 shadow-lx flex flex-col">
-
-          {product.badge && (
-            <span className="inline-flex rounded-full bg-[#0B4EA2] px-4 py-2 text-sm font-semibold text-white">
-              {product.badge}
-            </span>
-          )}
-
-          <h1 className="mt-6 text-4xl font-extrabold leading-tight text-[#071F3D]">
-            {product.name}
-          </h1>
-
-          <div className="mt-5 flex items-center gap-3">
-
-            <span className="text-xl text-yellow-400">
-              ★★★★★
-            </span>
-
-            <span className="text-sm font-medium text-slate-500">
-              Trusted Export Product
-            </span>
-
-          </div>
-
-          <p className="mt-6 text-lg leading-8 text-slate-600">
-            {product.description}
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+            High-quality commercial kitchen equipment and home appliances
+            designed for importers, wholesalers and distributors worldwide.
           </p >
 
-          {/* Quick Info */}
+        </div>
 
-          <div className="mt-8 grid grid-cols-2 gap-4">
+        {/* Grid */}
 
-            {product.moq && (
-              <div className="rounded-2xl bg-slate-50 p-4">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                  MOQ
-                </p >
-                <p className="mt-2 text-lg font-bold text-[#071F3D]">
-                  {product.moq}
-                </p >
-              </div>
-            )}
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 xl:grid-cols-4">
 
-            {product.voltage && (
-              <div className="rounded-2xl bg-slate-50 p-4">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                  Voltage
-                </p >
-                <p className="mt-2 text-lg font-bold text-[#071F3D]">
-                  {product.voltage}
-                </p >
-              </div>
-            )}
+          {products.map((product, index) => (
 
-            {product.power && (
-              <div className="rounded-2xl bg-slate-50 p-4">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                  Power
-                </p >
-                <p className="mt-2 text-lg font-bold text-[#071F3D]">
-                  {product.power}
-                </p >
-              </div>
-            )}
-
-            {product.capacity && (
-              <div className="rounded-2xl bg-slate-50 p-4">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                  Capacity
-                </p >
-                <p className="mt-2 text-lg font-bold text-[#071F3D]">
-                  {product.capacity}
-                </p >
-              </div>
-            )}
-
-          </div>
-
-          {/* Action Buttons */}
-
-          <div className="mt-10 space-y-4">
-
-            <a
-              href=" "
-              className="block w-full rounded-xl bg-[#0B4EA2] py-4 text-center text-lg font-bold text-white transition hover:bg-[#1565C0]"
+            <Link
+              key={product.slug}
+              href={`/products/${product.slug}`}
+              className="group"
             >
-              Request a Quote
-            </a >
 
-            <a
-              href={`https://wa.me/8613510151112?text=${encodeURIComponent(
-                `Hello Hengyang Stan Trade, I am interested in the ${product.name}.`
-              )}`}
-              target="_blank"
-              rel="noreferrer"
-              className="block w-full rounded-xl bg-[#25D366] py-4 text-center text-lg font-bold text-white transition hover:bg-[#1EBE5A]"
-            >
-              Chat on WhatsApp
-            </a >
+              <motion.article
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.45,
+                  delay: index * 0.05,
+                }}
+                whileHover={{
+                  y: -10,
+                }}
+                className="flex h-[720px] flex-col overflow-hidden rounded-[30px] border border-slate-200 bg-white shadow-lg transition-all duration-500 group-hover:shadow-2xl"
+              >
 
-          </div>
+                {/* Badge */}
 
-          {/* Part 2 starts here */}          {/* Specifications */}
+                {product.badge && (
 
-          <div className="mt-10">
+                  <div className="absolute ml-5 mt-5 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 px-4 py-2 text-xs font-bold uppercase tracking-[2px] text-[#071F3D] shadow-lg">
 
-            <h2 className="mb-5 text-2xl font-bold text-[#071F3D]">
-              Product Specifications
-            </h2>
+                    {product.badge}
 
-            <div className="overflow-hidden rounded-2xl border border-slate-200">
-
-              {[
-                ["Minimum Order", product.moq],
-                ["Voltage", product.voltage],
-                ["Power", product.power],
-                ["Capacity", product.capacity],
-                ["Material", product.material],
-                ["Fuel Type", product.fuelType],
-                ["Cooking Area", product.cookingArea],
-                ["Dimensions", product.dimensions],
-                ["Weight", product.weight],
-                ["Color", product.color],
-              ]
-                .filter(([, value]) => value)
-                .map(([label, value], index) => (
-                  <div
-                    key={String(label)}
-                    className={`grid grid-cols-[170px_1fr] ${
-                      index !== 9 ? "border-b border-slate-200" : ""
-                    }`}
-                  >
-                    <div className="bg-slate-50 px-5 py-4 font-semibold text-[#071F3D]">
-                      {label}
-                    </div>
-
-                    <div className="px-5 py-4 text-slate-600">
-                      {value}
-                    </div>
                   </div>
-                ))}
 
-            </div>
+                )}
 
-          </div>
+                {/* Image */}
 
-          {/* Export Advantages */}
+                <div className="overflow-hidden bg-slate-100">
 
-          <div className="mt-10 rounded-2xl bg-[#F5F8FC] p-6">
+                  <Image
+                    src={product.images[0]}
+                    alt={product.name}
+                    width={700}
+                    height={700}
+                    className="h-[300px] w-full object-cover transition duration-700 group-hover:scale-105"
+                  />
 
-            <h2 className="text-2xl font-bold text-[#071F3D]">
-              Why Buy From Us?
-            </h2>
+                </div>
 
-            <div className="mt-6 space-y-4">
+                {/* Content */}
 
-              <div className="flex items-center gap-3">
-                <span className="text-xl">✔</span>
-                <p>Factory Direct Pricing</p >
-              </div>
+                <div className="flex flex-1 flex-col p-7">
 
-              <div className="flex items-center gap-3">
-                <span className="text-xl">✔</span>
-                <p>Professional Export Service</p >
-              </div>
+                  <p className="text-sm font-semibold uppercase tracking-[2px] text-[#0B4EA2]">
+                    Commercial Equipment
+                  </p >
 
-              <div className="flex items-center gap-3">
-                <span className="text-xl">✔</span>
-                <p>Worldwide Shipping Available</p >
-              </div>
+                  <h3 className="mt-3 min-h-[70px] text-2xl font-extrabold leading-tight text-[#071F3D]">
+                    {product.name}
+                  </h3>
 
-              <div className="flex items-center gap-3">
-                <span className="text-xl">✔</span>
-                <p>OEM & ODM Manufacturing</p >
-              </div>
+                  <p className="mt-5 min-h-[120px] text-[15px] leading-7 text-slate-600 line-clamp-4">
+                    {product.description}
+                  </p >
 
-              <div className="flex items-center gap-3">
-                <span className="text-xl">✔</span>
-                <p>Quality Inspection Before Shipment</p >
-              </div>
+                  {/* Specs */}
 
-              <div className="flex items-center gap-3">
-                <span className="text-xl">✔</span>
-                <p>Fast Response Within 24 Hours</p >
-              </div>
+                  <div className="mt-6 grid grid-cols-2 gap-3">
 
-            </div>
+                    {product.moq && (
 
-          </div>
+                      <div className="rounded-2xl bg-slate-50 p-3">
 
-          {/* Shipping */}
+                        <div className="flex items-center gap-2 text-[#0B4EA2]">
 
-          <div className="mt-8 rounded-2xl border border-slate-200 p-6">
+                          <Package size={16} />
 
-            <h2 className="text-xl font-bold text-[#071F3D]">
-              Shipping Information
-            </h2>
+                          <span className="text-xs font-semibold uppercase">
+                            MOQ
+                          </span>
 
-            <div className="mt-5 grid gap-4">
+                        </div>
 
-              <div className="flex justify-between">
-                <span className="text-slate-500">
-                  Export Port
-                </span>
+                        <p className="mt-2 font-bold text-[#071F3D]">
+                          {product.moq}
+                        </p >
 
-                <span className="font-semibold">
-                  Shenzhen / Guangzhou
-                </span>
-              </div>
+                      </div>
 
-              <div className="flex justify-between">
-                <span className="text-slate-500">
-                  Delivery
-                </span>
+                    )}
 
-                <span className="font-semibold">
-                  Worldwide
-                </span>
-              </div>
+                    {product.voltage && (
 
-              <div className="flex justify-between">
-                <span className="text-slate-500">
-                  Packaging
-                </span>
+                      <div className="rounded-2xl bg-slate-50 p-3">
 
-                <span className="font-semibold">
-                  Export Standard
-                </span>
-              </div>
+                        <div className="flex items-center gap-2 text-[#0B4EA2]">
 
-              <div className="flex justify-between">
-                <span className="text-slate-500">
-                  Payment
-                </span>
+                          <Zap size={16} />
 
-                <span className="font-semibold">
-                  T/T • L/C
-                </span>
-              </div>
+                          <span className="text-xs font-semibold uppercase">
+                            Voltage
+                          </span>
 
-            </div>
+                        </div>
 
-          </div>
+                        <p className="mt-2 font-bold text-[#071F3D]">
+                          {product.voltage}
+                        </p >
 
-        </aside>
+                      </div>
+
+                    )}
+
+                  </div>
+
+                  {/* Trust */}
+
+                  <div className="mt-6 flex items-center gap-2 rounded-2xl bg-[#F5F8FC] p-4">
+
+                    <ShieldCheck
+                      size={18}
+                      className="text-green-600"
+                    />
+
+                    <span className="text-sm font-medium text-slate-700">
+                      Factory Direct • Export Quality
+                    </span>
+
+                  </div>
+
+                  {/* Button */}
+
+                  <div className="mt-auto pt-8">
+
+                    <div className="flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-[#0B4EA2] to-[#1E88E5] py-4 font-bold text-white transition duration-300 group-hover:shadow-xl">
+
+                      View Details
+
+                      <ArrowRight
+                        size={18}
+                        className="transition-transform duration-300 group-hover:translate-x-1"
+                      />
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </motion.article>
+
+            </Link>
+
+          ))}
+
+        </div>
 
       </div>
-
-    </div>
-
-  </main>
-);
+    </section>
+  );
 }

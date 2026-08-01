@@ -40,14 +40,7 @@ export default function ProductGrid() {
                 scale: 1.03,
               }}
               transition={{ duration: 0.35 }}
-              style={{
-                position: "relative",
-                background: "#fff",
-                borderRadius: "22px",
-                overflow: "hidden",
-                boxShadow: "0 15px 35px rgba(0,0,0,.10)",
-                height: "100%",
-              }}
+             className="relative flex h-[680px] flex-col overflow-hidden rounded-3xl bg-white border border-gray-200 shadow-lg transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl"
             >
               <div
                 className="absolute left-4 top-4 z-2 rounded-full bg-yellow-400 px-3.5 py-2 text-[13px] font-bold text-[#071F3D]"
@@ -69,16 +62,16 @@ export default function ProductGrid() {
                 />
               </motion.div>
 
-              <div className="p-6">
-                <h3 className="mb-3 text-2xl text-[#071F3D]">
+              <div className="flex flex-1 flex-col p-6">
+                <h3 className="text-x1 font-bold text-[#071F3D] line-clamp-2 min-h-[64px]">
                   {product.name}
                 </h3>
 
-                <p className="text-gray-600 line-clamp-6">
+                <p className="mt-4 text[15px] leading-7 text-gray-600 line-clamp-5 min-h-[175px]">
                   {product.description}
                 </p >
 
-                <div className="mt-5 flex items-center justify-between gap-4">
+                <div className="mt-6 flex items-center justify-between border-t border-gray-100 pt-4">
                   <span className="text-xl text-[#FFC107]">
                     ★★★★★
                   </span>
@@ -89,7 +82,7 @@ export default function ProductGrid() {
                 </div>
 
                 <div
-                  className="mt-6 w-full cursor-pointer rounded-xl border-0 bg-linear-to-br from-[#0B4EA2] to-[#1565C0] px-4 py-3.5 text-center text-base font-bold text-white transition duration-300 group-hover:from-[#1565C0] group-hover:to-[#1E88E5]"
+                  className="mt-auto w-full rounded-x1 bg-gradient-to-r from-[#0B4EA2] to-[#1565C0]  py-3.5 text-center text-base font-semibold text-white transition-all duration-300 group-hover:from-[#1565C0] group-hover:to-[#1E88E5]"
                 >
                   View Details →
                 </div>

@@ -51,7 +51,7 @@ return (
         </section>
 
         {/* RIGHT SIDE */}
-        <aside className="sticky top-24 min-h-[900px] rounded-3xl border border-slate-200 bg-white p-8 shadow-lx flex flex-col">
+        <aside className="sticky top-24 min-h-225 rounded-3xl border border-slate-200 bg-white p-8 shadow-lx flex flex-col">
 
           {product.badge && (
             <span className="inline-flex rounded-full bg-[#0B4EA2] px-4 py-2 text-sm font-semibold text-white">

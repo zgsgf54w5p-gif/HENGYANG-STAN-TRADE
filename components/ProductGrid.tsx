@@ -3,95 +3,169 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import {
+  ArrowRight,
+  ShieldCheck,
+  Zap,
+  Package,
+} from "lucide-react";
+
 import { products } from "../data/products";
 
 export default function ProductGrid() {
   return (
-    <section className="bg-[#F5F8FC] py-20 sm:py-24 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-        <div className="mb-12 text-center sm:mb-16">
-          <p className="text-[15px] font-bold tracking-[2px] text-[#0B4EA2]">
-          OUR PRODUCTS
-          </p>
+    <section className="relative overflow-hidden bg-linear-to-b from-white via-[#F8FAFC] to-[#EEF5FD] py-24">
 
-          <h2 className="mt-3 text-3xl font-bold text-[#071F3D] sm:text-4xl">
-          Featured Products
+      {/* Background Decoration */}
+
+      <div className="absolute inset-0 -z-10">
+
+        <div className="absolute left-[-120px] top-[-120px] h-72 w-72 rounded-full bg-blue-100 blur-3xl opacity-40" />
+
+        <div className="absolute right-[-120px] bottom-[-120px] h-72 w-72 rounded-full bg-yellow-100 blur-3xl opacity-40" />
+
+      </div>
+
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+
+        {/* Heading */}
+
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20 text-center"
+        >
+
+          <span className="inline-flex rounded-full bg-blue-100 px-5 py-2 text-sm font-bold uppercase tracking-[3px] text-[#0B4EA2]">
+            Featured Products
+          </span>
+
+          <h2 className="mt-6 text-4xl font-extrabold tracking-tight text-[#071F3D] sm:text-5xl">
+            Discover Our Premium Collection
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-          High-quality appliances carefully selected for importers,
-          wholesalers and distributors worldwide.
-          </p>
-        </div>
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+            High-quality commercial kitchen equipment and home appliances
+            manufactured for importers, wholesalers and distributors
+            worldwide.
+          </p >
 
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 x1:grid-cols-4">
-        {products.map((product) => (
-          <Link
-            key={product.slug}
-            href={`/products/${product.slug}`}
-            className="group block h-full text-inherit no-underline"
-          >
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              whileHover={{
-                y: -10,
-                scale: 1.03,
-              }}
-              transition={{ duration: 0.35 }}
-             className="relative flex h-[680px] flex-col overflow-hidden rounded-3xl bg-white border border-gray-200 shadow-lg transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl"
+        </motion.div>
+
+        {/* Product Grid */}
+
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 xl:grid-cols-4">
+          {products.map((product, index) => (
+            <Link
+              key={product.slug}
+              href={`/products/${product.slug}`}
+              className="group block h-full"
             >
-              <div
-                className="absolute left-4 top-4 z-2 rounded-full bg-yellow-400 px-3.5 py-2 text-[13px] font-bold text-[#071F3D]"
+              <motion.article
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.45,
+                  delay: index * 0.06,
+                }}
+                whileHover={{
+                  y: -10,
+                }}
+                className="relative flex h-[720px] flex-col overflow-hidden rounded-[30px] border border-slate-200 bg-white shadow-md transition-all duration-500 group-hover:shadow-2xl"
               >
-                {product.badge}
-              </div>
+                {product.badge && (
+                  <div className="absolute left-5 top-5 z-20 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 px-4 py-2 text-xs font-bold uppercase tracking-[2px] text-[#071F3D] shadow-lg">
+                    {product.badge}
+                  </div>
+                )}
 
-              <motion.div className="overflow-hidden" whileHover={{ scale: 1.08 }}>
-                <Image
-                  src={product.images[0]}
-                  alt={product.name}
-                  width={500}
-                  height={350}
-                  style={{
-                    width: "100%",
-                    height: "260px",
-                    objectFit: "cover",
-                  }}
-                />
-              </motion.div>
-
-              <div className="flex flex-1 flex-col p-6">
-                <h3 className="text-x1 font-bold text-[#071F3D] line-clamp-2 min-h-[64px]">
-                  {product.name}
-                </h3>
-
-                <p className="mt-4 text[15px] leading-7 text-gray-600 line-clamp-5 min-h-[175px]">
-                  {product.description}
-                </p >
-
-                <div className="mt-6 flex items-center justify-between border-t border-gray-100 pt-4">
-                  <span className="text-xl text-[#FFC107]">
-                    ★★★★★
-                  </span>
-
-                  <span className="text-sm font-bold text-[#0B4EA2]">
-                    MOQ: {product.moq}
-                  </span>
+                <div className="relative overflow-hidden bg-slate-100">
+                  <Image
+                    src={product.images[0]}
+                    alt={product.name}
+                    width={700}
+                    height={700}
+                    className="h-[300px] w-full object-cover transition duration-700 group-hover:scale-105"
+                  />
                 </div>
 
-                <div
-                  className="mt-auto w-full rounded-x1 bg-gradient-to-r from-[#0B4EA2] to-[#1565C0]  py-3.5 text-center text-base font-semibold text-white transition-all duration-300 group-hover:from-[#1565C0] group-hover:to-[#1E88E5]"
-                >
-                  View Details →
+                <div className="flex flex-1 flex-col p-7">
+                  <p className="text-sm font-semibold uppercase tracking-[2px] text-[#0B4EA2]">
+                    Commercial Equipment
+                  </p>
+
+                  <h3 className="mt-3 min-h-[72px] text-[24px] font-extrabold leading-tight text-[#071F3D] transition-colors duration-300 group-hover:text-[#0B4EA2]">
+                    {product.name}
+                  </h3>
+
+                  <p className="mt-5 min-h-[115px] text-[15px] leading-7 text-slate-600 line-clamp-4">
+                    {product.description}
+                  </p>
+
+                  <div className="mt-6 grid grid-cols-2 gap-3">
+                    {product.moq && (
+                      <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3 transition group-hover:border-blue-200">
+                        <div className="flex items-center gap-2 text-[#0B4EA2]">
+                          <Package size={16} />
+                          <span className="text-xs font-semibold uppercase">
+                            MOQ
+                          </span>
+                        </div>
+
+                        <p className="mt-2 font-bold text-[#071F3D]">
+                          {product.moq}
+                        </p>
+                      </div>
+                    )}
+
+                    {product.voltage && (
+                      <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3 transition group-hover:border-blue-200">
+                        <div className="flex items-center gap-2 text-[#0B4EA2]">
+                          <Zap size={16} />
+                          <span className="text-xs font-semibold uppercase">
+                            Voltage
+                          </span>
+                        </div>
+
+                        <p className="mt-2 font-bold text-[#071F3D]">
+                          {product.voltage}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="mt-6 flex items-center gap-2 rounded-2xl bg-[#F5F8FC] p-4">
+                    <ShieldCheck
+                      size={20}
+                      className="text-green-600"
+                    />
+
+                    <p className="text-sm font-medium text-slate-700">
+                      Factory Direct • Export Quality
+                    </p>
+                  </div>
+
+                  <div className="mt-auto pt-8">
+                    <div className="flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-[#0B4EA2] via-[#1565C0] to-[#1E88E5] py-4 text-base font-bold text-white transition-all duration-300 group-hover:shadow-xl">
+                      View Product
+
+                      <ArrowRight
+                        size={20}
+                        className="transition-transform duration-300 group-hover:translate-x-1"
+                      />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          </Link>
-        ))}
+              </motion.article>
+            </Link>
+          ))}
         </div>
+
       </div>
+
     </section>
   );
 }

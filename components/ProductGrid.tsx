@@ -74,7 +74,7 @@ export default function ProductGrid() {
                   {product.name}
                 </h3>
 
-                <p className="min-h-14 leading-7 text-slate-600">
+                <p className="text-gray-600 line-clamp-6">
                   {product.description}
                 </p >
 

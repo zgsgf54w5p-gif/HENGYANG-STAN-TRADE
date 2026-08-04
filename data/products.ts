@@ -333,6 +333,22 @@ export const products : Product[]= [
     capacity:"N/A",
     power: "N/A",
     certification: "CE / RoHS",
+  },
+   {
+    slug: "Round-ceramic-plates",
+    category: "kitchen-appliances",
+    name: "Round Ceramic Plates",
+    images:[ 
+      "/images/A21.jpg",
+    ],
+    description:
+      "·  Two sizes optional: 7-inch & 8-inch blue and white round plates·  Assorted patterns delivered randomly·  Net weight: 500g per plate",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
   }
 
 

@@ -371,7 +371,7 @@ export const products : Product[]= [
     category: "kitchen-appliances",
     name: "Japanese Style Thickened Aluminum Yukihira Pot",
     images:[ 
-      "/images/A23.jpg",
+      "/images/A24.jpg",
     ],
     description:
       "Japanese Style Thickened Aluminum Yukihira Pot, Multipurpose Pan for Noodles, Congee & Snail Noodles, Available for Gas Stove / Induction Cooker, With or Without Lid, Multiple Sizes 16cm-24cm;This is a thickened aluminum Yukihira pot with matching lid in classic Japanese style. Durable construction, perfect for cooking noodles, soup, congee and luosifen (snail noodles). Compatible with induction cookers and general stovetops for versatile daily cooking.20cm For Gas Stove Only (Without Lid);16cm For Gas Stove Only (Without Lid, Small Size);18cm For Gas Stove Only (Without Lid);22cm For Gas Stove Only (Without Lid);24cm For Gas Stove Only (Without Lid);16cm For Gas Stove Only (With Lid);18cm For Gas Stove Only (With Lid);20cm For Gas Stove Only (With Lid);22cm For Gas Stove Only (With Lid);24cm For Gas Stove Only (With Lid);18cm Universal for Induction Cooker & Gas Stove (Without Lid);20cm Universal for Induction Cooker & Gas Stove (Without Lid);22cm Universal for Induction Cooker & Gas Stove (Without Lid);24cm Universal for Induction Cooker & Gas Stove (Without Lid);18cm Universal for Induction Cooker & Gas Stove (With Lid);20cm Universal for Induction Cooker & Gas Stove (With Lid);22cm Universal for Induction Cooker & Gas Stove (With Lid);24cm Universal for Induction Cooker & Gas Stove (With Lid)",

@@ -251,6 +251,74 @@ export const products : Product[]= [
     capacity:"N/A",
     power: "N/A",
     certification: "CE / RoHS",
+  },
+  {
+    slug: "Cast-Iron-Uncoated-Korean-BBQ-Grill-Plate",
+    category: "kitchen-appliances",
+    name: "Cast Iron Uncoated Korean BBQ Grill Plate",
+    images:[ 
+      "/images/A15-1.jpg",
+      "/images/A15-2.jpg",
+      "/images/A15-3.jpg",
+    ],
+    description:
+      "Cast Iron Uncoated Korean BBQ Grill Plate;Our cast iron barbecue pan works great with cassette stoves, suitable for home cooking and outdoor camping barbecue.;✅ Raw cast iron, no chemical coating, safe and healthy;✅ Even heat distribution, perfect for Korean BBQ, teppanyaki, frying steak and seafood;✅ Multiple size options: 28cm / 30cm / 33cm / 37cm;✅ Multiple package combinations available:",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+  {
+    slug: "Carbon-Steel-Kitchen-Sink-Organizer ",
+    category: "kitchen-appliances",
+    name: "Carbon Steel Kitchen Sink-Organizer ",
+    images:[ 
+      "/images/A16.jpg",
+    ],
+    description:
+      "✅ Easy Installation;Simple assembly design, fits most kitchen faucets with strong adaptability.✅ Easy Access;All cleaning tools within reach for convenient daily use.✅ Thickened Sturdy Material;Solid carbon steel structure, not easy to deform.✅ High Load Bearing Capacity;Stable support to hold all your cleaning supplies safely.✅ Multi-purpose Storage;Organize sponges, rags, detergent bottles, scrubbers and small utensils in one rack.✅ Waterproof & Moisture-proof;Surface treated to resist water, moisture and rust for long service life.",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+   {
+    slug: "Tier-Foldable-304-Stainless-Steel-Kitchen-Dish-Drying-Rack",
+    category: "kitchen-appliances",
+    name: "Tier Foldable 304 Stainless Steel Kitchen Dish Drying Rack",
+    images:[ 
+      "/images/A17.jpg",
+    ],
+    description:
+      "Tier Foldable 304 Stainless Steel Kitchen Dish Drying Rack, Household Countertop Plate Bowl Storage Dish Rack with Drain Tray;This foldable dish drying rack is constructed from premium 304 stainless steel, featuring modern minimalist design ideal for household kitchen use.The 2-tier structure offers ample storage space for bowls, plates, cups and tableware. Equipped with a cutlery holder for chopsticks, spoons and forks, plus an independent cutting board rack. The matched drain tray collects residual water to keep your countertop dry and clean.Product Advantages;✅ Premium 304 stainless steel material, rustproof, durable and easy to clean;✅ Foldable design for convenient storage when not in use, save kitchen space;✅ Complete accessories: cutlery rack, chopping board holder & water drain tray;✅ Stable countertop placement, strong load-bearing capacity;✅ Available in two colors: black & white, match different kitchen decoration styles;Suitable for global markets including Europe, North America, Southeast Asia, Middle East, Africa and South America. Professional export supply, support brand authorization.",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+   {
+    slug: "Stainless-Steel-Kitchen-Countertop-Dish-Rack",
+    category: "kitchen-appliances",
+    name: "Stainless Steel Kitchen Countertop Dish-Rack",
+    images:[ 
+      "/images/A19.jpg",
+    ],
+    description:
+      "Stainless Steel Kitchen Countertop Dish Rack;Made of premium stainless steel, this multi-layer dish rack offers stable storage for plates, bowls, cups and kitchen utensils.Available in double-layer & triple-layer structures, with 33cm / 43cm / 53cm size options to fit different countertops.Two configurations for your choice:✅ Standard Version: Main rack with water drip tray;✅ Full Accessory Version: Comes with cutting board holder, knife rack and chopstick & spoon cylinder;Equipped with removable water tray to catch excess water and keep your counter dry. Multiple side hooks provide extra hanging space for small kitchen gadgets.Smooth wire structure for easy cleaning; anti-slip foot pads enhance stability and protect table surfaces.Perfect to tidy up your kitchen counter, save space and keep tableware ventilated to dry quickly.",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
   }
+
+
 
 ];

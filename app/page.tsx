@@ -13,9 +13,9 @@ export default function Home() {
   return (
     <div
       style={{
-        maxWidth: "1280px",
+        maxWidth: "1440px",
         margin: "0 auto",
-        padding: "0 24px",
+        padding: "0 40px",
         boxSizing: "border-box",
       }}
     >

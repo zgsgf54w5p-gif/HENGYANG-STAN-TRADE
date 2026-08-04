@@ -1,32 +1,35 @@
 "use client";
 
 import { useState } from "react";
-import { Search } from "lucide-react";
+import { Search, ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { products } from "@/data/products";
 
+const DESCRIPTION_LIMIT = 130;
+
 export default function ProductsPage() {
   const [search, setSearch] = useState("");
+  const [expandedSlug, setExpandedSlug] = useState<string | null>(null);
 
   const filteredProducts = products.filter((product) => {
-  const keyword = search.toLowerCase();
+    const keyword = search.toLowerCase();
 
-  return (
-    (product.name ?? "").toLowerCase().includes(keyword) ||
-    (product.category ?? "").toLowerCase().includes(keyword) ||
-    (product.description ?? "").toLowerCase().includes(keyword)
-  );
-});
+    return (
+      (product.name ?? "").toLowerCase().includes(keyword) ||
+      (product.category ?? "").toLowerCase().includes(keyword) ||
+      (product.description ?? "").toLowerCase().includes(keyword)
+    );
+  });
 
   return (
     <main
       style={{
         background: "#F5F8FC",
         minHeight: "100vh",
+        fontFamily: "Inter, Arial, sans-serif",
       }}
     >
-      {/* Hero */}
       <section
         style={{
           background:
@@ -39,8 +42,9 @@ export default function ProductsPage() {
         <h1
           style={{
             fontSize: "56px",
-            fontWeight: "bold",
+            fontWeight: 800,
             marginBottom: "20px",
+            letterSpacing: "-0.04em",
           }}
         >
           Our Products
@@ -57,9 +61,7 @@ export default function ProductsPage() {
         >
           Premium kitchen appliances manufactured for wholesalers,
           distributors and importers worldwide.
-        </p >
-
-        {/* Premium Search Bar */}
+        </p>
 
         <div
           style={{
@@ -75,7 +77,8 @@ export default function ProductsPage() {
               left: "20px",
               top: "50%",
               transform: "translateY(-50%)",
-              color: "#999",
+              color: "#7C8DAA",
+              pointerEvents: "none",
             }}
           />
 
@@ -88,11 +91,12 @@ export default function ProductsPage() {
               width: "100%",
               padding: "18px 20px 18px 58px",
               borderRadius: "16px",
-              border: "none",
+              border: "1px solid rgba(255,255,255,0.2)",
               outline: "none",
               fontSize: "17px",
               boxShadow: "0 12px 35px rgba(0,0,0,.15)",
               color: "#071F3D",
+              background: "#fff",
             }}
           />
         </div>
@@ -105,91 +109,88 @@ export default function ProductsPage() {
           }}
         >
           Showing{" "}
-          <strong style={{ color: "#FFD700" }}>
-            {filteredProducts.length}
-          </strong>{" "}
+          <strong style={{ color: "#FFD700" }}>{filteredProducts.length}</strong>{" "}
           products
-        </p >
-      </section>      {/* Products */}
-      <section
-        style={{
-          padding: "80px 8%",
-        }}
-      >
+        </p>
+      </section>
+
+      <section style={{ padding: "80px 8%" }}>
         {filteredProducts.length === 0 ? (
-          <div
-            style={{
-              textAlign: "center",
-              padding: "80px 20px",
-            }}
-          >
+          <div style={{ textAlign: "center", padding: "80px 20px" }}>
             <h2
               style={{
                 color: "#071F3D",
                 fontSize: "34px",
                 marginBottom: "15px",
+                fontWeight: 800,
               }}
             >
               No products found
             </h2>
 
-            <p
-              style={{
-                color: "#666",
-                fontSize: "18px",
-              }}
-            >
+            <p style={{ color: "#666", fontSize: "18px" }}>
               Try searching with another keyword.
-            </p >
+            </p>
           </div>
         ) : (
           <div
             style={{
               display: "grid",
-              gridTemplateColumns:
-                "repeat(auto-fit, minmax(300px, 1fr))",
-              gap: "35px",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gap: "32px",
+              alignItems: "stretch",
             }}
           >
-            {filteredProducts.map((product) => (
-              <Link
-                key={product.slug}
-                href={`/products/${product.slug}`}
-                style={{
-                  textDecoration: "none",
-                  color: "inherit",
-                }}
-              >
-                <div
+            {filteredProducts.map((product) => {
+              const description = product.description ?? "";
+              const isExpanded = expandedSlug === product.slug;
+              const isLongDescription = description.length > DESCRIPTION_LIMIT;
+              const previewText = isLongDescription
+                ? `${description.slice(0, DESCRIPTION_LIMIT).trim()}...`
+                : description;
+
+              return (
+                <article
+                  key={product.slug}
                   style={{
                     background: "#fff",
-                    borderRadius: "22px",
+                    borderRadius: "24px",
                     overflow: "hidden",
-                    boxShadow: "0 15px 40px rgba(0,0,0,.08)",
-                    transition: "all .3s ease",
-                    cursor: "pointer",
+                    boxShadow: "0 16px 44px rgba(0,0,0,.08)",
+                    border: "1px solid rgba(11, 78, 162, 0.08)",
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    transition: "all .25s ease",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.transform =
-                      "translateY(-8px)";
+                    e.currentTarget.style.transform = "translateY(-8px)";
                     e.currentTarget.style.boxShadow =
-                      "0 25px 60px rgba(0,0,0,.15)";
+                      "0 24px 60px rgba(0,0,0,.14)";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.transform =
-                      "translateY(0)";
+                    e.currentTarget.style.transform = "translateY(0)";
                     e.currentTarget.style.boxShadow =
-                      "0 15px 40px rgba(0,0,0,.08)";
+                      "0 16px 44px rgba(0,0,0,.08)";
                   }}
                 >
                   <div
                     style={{
-                      background: "#EEF6FF",
-                      padding: "25px",
+                      background:
+                        "linear-gradient(135deg, #ECF4FF 0%, #F8FBFF 100%)",
+                      padding: "26px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      minHeight: "260px",
                     }}
                   >
                     <Image
-                      src={Array.isArray(product.images) ? product.images[0] : product.images}
+                      src={
+                        Array.isArray(product.images)
+                          ? product.images[0]
+                          : product.images
+                      }
                       alt={product.name}
                       width={500}
                       height={500}
@@ -199,9 +200,14 @@ export default function ProductsPage() {
                         objectFit: "contain",
                       }}
                     />
-                  </div>                  <div
+                  </div>
+
+                  <div
                     style={{
-                      padding: "25px",
+                      padding: "24px 24px 20px",
+                      display: "flex",
+                      flexDirection: "column",
+                      flex: 1,
                     }}
                   >
                     <div
@@ -212,8 +218,9 @@ export default function ProductsPage() {
                         padding: "6px 14px",
                         borderRadius: "999px",
                         fontSize: "13px",
-                        fontWeight: "bold",
+                        fontWeight: 700,
                         marginBottom: "16px",
+                        alignSelf: "flex-start",
                       }}
                     >
                       {product.badge}
@@ -222,54 +229,106 @@ export default function ProductsPage() {
                     <h2
                       style={{
                         color: "#071F3D",
-                        fontSize: "28px",
+                        fontSize: "26px",
                         marginBottom: "14px",
+                        fontWeight: 800,
+                        lineHeight: 1.25,
                       }}
                     >
                       {product.name}
                     </h2>
 
-                    <p
+                    <div
                       style={{
-                        color: "#666",
-                        lineHeight: 1.7,
-                        marginBottom: "22px",
+                        minHeight: "100px",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "10px",
+                        flex: 1,
                       }}
                     >
-                      {product.description}
-                    </p >
+                      <p
+                        style={{
+                          color: "#666",
+                          lineHeight: 1.7,
+                          margin: 0,
+                          fontSize: "15px",
+                        }}
+                      >
+                        {isExpanded ? description : previewText}
+                      </p>
+
+                      {isLongDescription && (
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setExpandedSlug(isExpanded ? null : product.slug)
+                          }
+                          style={{
+                            border: "none",
+                            background: "transparent",
+                            color: "#0B4EA2",
+                            fontWeight: 700,
+                            textAlign: "left",
+                            padding: 0,
+                            cursor: "pointer",
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: "6px",
+                            width: "fit-content",
+                          }}
+                        >
+                          {isExpanded ? (
+                            <>
+                              Show less <ChevronUp size={16} />
+                            </>
+                          ) : (
+                            <>
+                              Read more <ChevronDown size={16} />
+                            </>
+                          )}
+                        </button>
+                      )}
+                    </div>
 
                     <p
                       style={{
                         color: "#0B4EA2",
-                        fontWeight: "bold",
-                        marginBottom: "25px",
+                        fontWeight: 700,
+                        margin: "22px 0 18px",
                       }}
                     >
                       MOQ: {product.moq}
-                    </p >
+                    </p>
 
-                    <div
+                    <Link
+                      href={`/products/${product.slug}`}
                       style={{
+                        display: "inline-flex",
+                        justifyContent: "center",
+                        alignItems: "center",
                         background:
                           "linear-gradient(135deg,#0B4EA2,#1E88E5)",
                         color: "white",
                         textAlign: "center",
-                        padding: "14px",
+                        padding: "14px 18px",
                         borderRadius: "12px",
-                        fontWeight: "bold",
-                        transition: "0.3s",
+                        fontWeight: 700,
+                        textDecoration: "none",
+                        transition: "0.25s ease",
+                        boxShadow: "0 10px 22px rgba(11,78,162,.22)",
                       }}
                     >
                       View Details →
-                    </div>
+                    </Link>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </article>
+              );
+            })}
           </div>
         )}
-      </section>      {/* Bottom CTA */}
+      </section>
+
       <section
         style={{
           padding: "90px 8%",
@@ -282,7 +341,7 @@ export default function ProductsPage() {
           style={{
             fontSize: "42px",
             marginBottom: "20px",
-            fontWeight: "bold",
+            fontWeight: 800,
           }}
         >
           Looking for Bulk Orders?
@@ -299,7 +358,7 @@ export default function ProductsPage() {
         >
           We supply wholesalers, distributors and importers worldwide with
           high-quality kitchen appliances at competitive factory prices.
-        </p >
+        </p>
 
         <Link
           href="/quote"
@@ -310,13 +369,14 @@ export default function ProductsPage() {
             padding: "18px 38px",
             borderRadius: "14px",
             textDecoration: "none",
-            fontWeight: "bold",
+            fontWeight: 800,
             fontSize: "18px",
             boxShadow: "0 10px 25px rgba(0,0,0,.2)",
           }}
         >
           Request a Quote
         </Link>
-      </section>    </main>
+      </section>
+    </main>
   );
 }

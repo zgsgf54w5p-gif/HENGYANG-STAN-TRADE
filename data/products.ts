@@ -215,7 +215,42 @@ export const products : Product[]= [
     badge: "New Arrival",
     moq: "150 Units",
     certification: "CE",
+  },
+   {
+    slug: "Non-Stick-Shallow-Tray",
+    category: "kitchen-appliances",
+    name: "Non-Stick Shallow Tray,",
+    images:[ 
+      "/images/A13-1.jpg",
+      "/images/A13-2.jpg",
+      "/images/A13-3.jpg",
+    ],
+    description:
+      "Grade A Non-Stick Shallow Tray, 1.6kg;Grade A Non-Stick Deep Tray, 1.75kg;Grade A Non-Stick Shallow Tray, 1.85kg;Grade A Non-Stick Deep Tray, 1.95kg;Grade A Non-Stick Shallow Tray, 1.6kg ;Grade A Non-Stick Deep Tray, 1.75kg;Grade A Non-Stick Shallow Tray, 1.85kg",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+  {
+    slug: "Non-stick-Round-Pizza-Baking-Tray",
+    category: "kitchen-appliances",
+    name: "Non-Stick Round Pizza Baking Tray",
+    images:[ 
+      "/images/A14-1.jpg",
+      "/images/A14-2.jpg",
+      "/images/A14-3.jpg",
+    ],
+    description:
+      "Non-stick Round Pizza Baking Tray, High Temperature Resistant Baking Tool, Wholesale Sizes: 24cm, 26cm, 29cm, 32cm, 36cm",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
   }
-  
 
 ];

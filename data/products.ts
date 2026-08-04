@@ -349,7 +349,56 @@ export const products : Product[]= [
     capacity:"N/A",
     power: "N/A",
     certification: "CE / RoHS",
+  },
+  {
+    slug: "Coating-Free-Aluminum-Stock-Pot-Set",
+    category: "kitchen-appliances",
+    name: "Coating-Free Aluminum Stock Pot Set",
+    images:[ 
+      "/images/A23.jpg",
+    ],
+    description:
+      "Coating-Free Aluminum Stock Pot Set, Modern Minimalist Cookware for General Stovetops,This modern minimalist coating-free cookware set is available in aluminum material. The pot body is made of austenitic stainless steel, while the pot bottom supports aluminum, cast iron, 201 stainless steel and 410 stainless steel options. The lid is made of aluminum. Universal compatibility for various stoves. Custom processing and logo printing are supported. Packed in color box. It can be used as business gifts, promotional presents and event souvenirs.",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+   {
+    slug: "Japanese-Style-Thickened-Aluminum-Yukihira-Pot",
+    category: "kitchen-appliances",
+    name: "Japanese Style Thickened Aluminum Yukihira Pot",
+    images:[ 
+      "/images/A23.jpg",
+    ],
+    description:
+      "Japanese Style Thickened Aluminum Yukihira Pot, Multipurpose Pan for Noodles, Congee & Snail Noodles, Available for Gas Stove / Induction Cooker, With or Without Lid, Multiple Sizes 16cm-24cm;This is a thickened aluminum Yukihira pot with matching lid in classic Japanese style. Durable construction, perfect for cooking noodles, soup, congee and luosifen (snail noodles). Compatible with induction cookers and general stovetops for versatile daily cooking.20cm For Gas Stove Only (Without Lid);16cm For Gas Stove Only (Without Lid, Small Size);18cm For Gas Stove Only (Without Lid);22cm For Gas Stove Only (Without Lid);24cm For Gas Stove Only (Without Lid);16cm For Gas Stove Only (With Lid);18cm For Gas Stove Only (With Lid);20cm For Gas Stove Only (With Lid);22cm For Gas Stove Only (With Lid);24cm For Gas Stove Only (With Lid);18cm Universal for Induction Cooker & Gas Stove (Without Lid);20cm Universal for Induction Cooker & Gas Stove (Without Lid);22cm Universal for Induction Cooker & Gas Stove (Without Lid);24cm Universal for Induction Cooker & Gas Stove (Without Lid);18cm Universal for Induction Cooker & Gas Stove (With Lid);20cm Universal for Induction Cooker & Gas Stove (With Lid);22cm Universal for Induction Cooker & Gas Stove (With Lid);24cm Universal for Induction Cooker & Gas Stove (With Lid)",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+   {
+    slug: "Non-Stick-Aluminum-Frying-Pan ",
+    category: "kitchen-appliances",
+    name: "Non-Stick Aluminum Frying Pan",
+    images:[ 
+      "/images/A25.jpg",
+    ],
+    description:
+      "Non-Stick Frying Pan;Aluminum Alloy;201 Stainless Steel;High-temperature Non-stick Coating;Optional Tempered Glass Lid;7.5 cm;20cm / 24cm / 28cm / 30cm / 32cm;Approx. 1 kg;Western Style;Premium Quality;Wheat Pattern / Black (Selected Models);OEM Logo Accepted;OPP Bag (Custom Packaging Available);FDA, BSCI and other certifications availablee",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
   }
+
 
 
 

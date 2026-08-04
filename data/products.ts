@@ -317,7 +317,24 @@ export const products : Product[]= [
     capacity:"N/A",
     power: "N/A",
     certification: "CE / RoHS",
+  },
+   {
+    slug: "French-Style-Constance-Dinner-Plates",
+    category: "kitchen-appliances",
+    name: "French Style Constance Dinner Plates",
+    images:[ 
+      "/images/A20.jpg",
+    ],
+    description:
+      "Made of bone china with more than 45% bone ash content, decorated with overglaze floral patterns, round flat plate. ⚠️ Not suitable for microwave oven use. Multiple specifications available: coffee cup & saucer set, 6.5-inch small plate, 8-inch flat plate, 9-inch flat plate, 10.5-inch flat plate, 4-piece large and small plate set, diameter ranging from 20 cm to 20.9 cm. Suitable for hotels, food serving, coffee and tea drinking scenarios. Custom processing and logo printing are acceptable. Launched in 2024, minimalist outdoor style, quantity per set: 1-7 pieces. Qualified product, no patent and copyright. Suitable for all users.These luxury round dinner plates are crafted from bone china with over 45% bone ash, adorned with elegant floral overglaze patterns, featuring minimalist outdoor French style. Not microwave safe. Multiple sizes available: coffee cup & saucer set, 6.5''small plate, 8'',9'',10.5'' flat plates, diameter 20-20.9cm. Perfect for household western food, steak serving, hotel catering, coffee and tea use. Custom processing and logo printing are supported. Sets contain 1-7 pieces.",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
   }
+
 
 
 

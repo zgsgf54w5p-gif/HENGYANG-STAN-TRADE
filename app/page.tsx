@@ -11,7 +11,14 @@ import WhatsAppButton from "../components/WhatsAppButton";
 
 export default function Home() {
   return (
-    <>
+    <div
+      style={{
+        maxWidth: "1280px",
+        margin: "0 auto",
+        padding: "0 24px",
+        boxSizing: "border-box",
+      }}
+    >
       <Hero />
       <AboutPreview />
       <ProductCategories />
@@ -20,8 +27,8 @@ export default function Home() {
       <WhyChooseUs />
       <SourcingProcess />
       <GlobalNetwork />
-      <Footer /> 
+      <Footer />
       <WhatsAppButton />
-    </>
+    </div>
   );
 }

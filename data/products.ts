@@ -397,7 +397,74 @@ export const products : Product[]= [
     capacity:"N/A",
     power: "N/A",
     certification: "CE / RoHS",
+  },
+  {
+    slug: "Custom 410 Stainless Steel Soup Bucket",
+    category: "kitchen-appliances",
+    name: "Custom 410 Stainless Steel Soup Bucket",
+    images:[ 
+      "/images/A26.jpg",
+    ],
+    description:
+      "Custom 410 Stainless Steel Soup Bucket, Large Capacity for Home Commercial Kitchen, Water Rice Storage Pot;Product Description;Material: 410 stainless steel;Capacity: 5L and above;Applicable Stoves: Universal;Style: Modern minimalist;Logo Printing: Available;Lid Type: Customizable;Custom Processing: Supported;Packaging: Carton;Nonelectric design;Multipurpose: For soupholding, water storage, rice storage, home & commercial kitchen use;Product Features;Custommade stainless steel soup bucket, largecapacity, suitable for household and commercial kitchen scenarios, can be used for containing soup, storing water and rice.",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+   {
+    slug: "Carbon-Steel-Uncoated-Frying-Pan",
+    category: "kitchen-appliances",
+    name: "Carbon Steel Uncoated Frying Pan",
+    images:[ 
+      "/images/A27.jpg",
+    ],
+    description:
+      "Pot Body Material: Fine Iron;Bottom Material: Carbon Steel, singlelayer bottom;Function: Frying, searing, cooking steak;Style: Chinese style;Feature: Uncoated pan;Applicable Stoves: Gas & induction cooker compatible;Depth: 6.5cm7.6cm;Available Sizes: 24cm(1.5mm thickness), 26cm(1.5mm thickness), 28cm(1.5mm thickness);Lid Type: No lid; optional with glass lid;Weight: 1.1kg;Custom Processing: Supported;Logo Printing: Available;Packaging: OPP bag;Nonelectric design",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+   {
+    slug: "Titanium-Wok-Pan",
+    category: "kitchen-appliances",
+    name: "Titanium Wok Pan",
+    images:[ 
+      "/images/A28.jpg",
+    ],
+    description:
+      "This household flatbottom wok is made of 304 stainless steel with threelayer bottom construction, adopting plasma spraying craft and exquisite fishscale hammer texture. It is noncoating and delivers good nonstick performance. Universal for all stovetops, Chinesestyle design with side ears for easy handling. Comes with glass lid option or lidfree version. Available sizes: 32cm, 34cm, 36cm.;Hammerpattern wok with glass lid & side ear:  32cm: 2200g  34cm: 2300g  36cm: 2600g;Hammerpattern wok without lid & with side ear:  32cm: 1350g  34cm: 1470g  36cm: 1550g",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+   {
+    slug: "Piece-Sanded-Aluminum-Pot-Set",
+    category: "kitchen-appliances",
+    name: "Piece Sanded Aluminum Pot Set",
+    images:[ 
+      "/images/A29.jpg",
+    ],
+    description:
+      "This westernstyle aluminum cookware set features sandfinished pot body and matching aluminum lids. No coating inside the pots, safe for daily home cooking. Singlelayer aluminum base, compatible with all types of stovetops.;Two available combinations:;7 PCS aluminum pot set: size range 1426 cm;5 PCS aluminum pot set: size range 1624 cm",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
   }
+
+
+
 
 
 

@@ -32,19 +32,28 @@ export async function POST(req: Request) {
 
     const toEmail = process.env.CONTACT_TO_EMAIL || "kitchenware@foxmail.com";
     const fromEmail = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
+    const testEmail = process.env.RESEND_TEST_EMAIL;
 
     // Use a verified Resend sender to avoid unverified domain errors.
     const safeFromEmail = fromEmail.includes("@resend.dev")
       ? fromEmail
       : "onboarding@resend.dev";
 
+    const useTestRecipient = !fromEmail.includes("@resend.dev") && Boolean(testEmail);
+    const toRecipients = useTestRecipient ? [testEmail!] : [toEmail];
+    const subject = `${useTestRecipient ? "[TEST] " : ""}New Contact Message from ${name}`;
+    const actualRecipientNote = useTestRecipient
+      ? `<p style="color:#888"><em>Actual recipient would be: ${toEmail}</em></p>`
+      : "";
+
     const { data, error } = await resend.emails.send({
       from: safeFromEmail,
-      to: [toEmail],
-      subject: `New Contact Message from ${name}`,
+      to: toRecipients,
+      subject,
       replyTo: email,
       html: `
         <h2>New Contact Message</h2>
+        ${actualRecipientNote}
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone || "Not provided"}</p>

@@ -38,7 +38,7 @@ export default function ContactPage() {
           message: "",
         });
       } else {
-        setStatus("Failed to send message.");
+        setStatus(data.error || "Failed to send message.");
       }
     } catch (error) {
       console.error(error);

@@ -4,6 +4,7 @@ import { NextResponse } from "next/server";
 export const dynamic = "force-dynamic";
 
 const resendApiKey = process.env.RESEND_API_KEY;
+
 const resend = resendApiKey ? new Resend(resendApiKey) : null;
 
 export async function POST(req: Request) {
@@ -14,67 +15,72 @@ export async function POST(req: Request) {
       return NextResponse.json(
         {
           success: false,
-          error: "Please provide your name, email, and a message.",
+          error: "Please provide your name, email, and message.",
         },
         { status: 400 }
       );
     }
 
-    if (!resendApiKey || !resend) {
+    if (!resend) {
       return NextResponse.json(
         {
           success: false,
-          error: "Email service is not configured yet.",
+          error: "Email service is not configured.",
         },
         { status: 500 }
       );
     }
 
-    const toEmail = process.env.CONTACT_TO_EMAIL || "kitchenware@foxmail.com";
-    const fromEmail = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
-    const testEmail = process.env.RESEND_TEST_EMAIL;
-
-    // Use a verified Resend sender to avoid unverified domain errors.
-    const safeFromEmail = fromEmail.includes("@resend.dev")
-      ? fromEmail
-      : "onboarding@resend.dev";
-
-    const useTestRecipient = !fromEmail.includes("@resend.dev") && Boolean(testEmail);
-    const toRecipients = useTestRecipient ? [testEmail!] : [toEmail];
-    const subject = `${useTestRecipient ? "[TEST] " : ""}New Contact Message from ${name}`;
-    const actualRecipientNote = useTestRecipient
-      ? `<p style="color:#888"><em>Actual recipient would be: ${toEmail}</em></p>`
-      : "";
-
     const { data, error } = await resend.emails.send({
-      from: safeFromEmail,
-      to: toRecipients,
-      subject,
+      from: "Afrometal Website <contact@afrometal.com>",
+      to: ["kitchenware@foxmail.com"],
       replyTo: email,
+      subject: `New Contact Message from ${name}`,
       html: `
-        <h2>New Contact Message</h2>
-        ${actualRecipientNote}
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
-        <p><strong>Message:</strong> ${message}</p>
+        <div style="font-family: Arial, sans-serif;">
+          <h2>New Contact Message</h2>
+
+          <p><strong>Name:</strong> ${name}</p >
+
+          <p><strong>Email:</strong> ${email}</p >
+
+          <p><strong>Phone:</strong> ${
+            phone || "Not provided"
+          }</p >
+
+          <p><strong>Message:</strong></p >
+
+          <p>${message}</p >
+        </div>
       `,
     });
 
     if (error) {
-      console.error("Resend send error:", error);
+      console.error("Resend error:", error);
 
       return NextResponse.json(
-        { success: false, error: "Failed to send message. Please try again later." },
+        {
+          success: false,
+          error: "Failed to send email.",
+        },
         { status: 500 }
       );
     }
 
-    return NextResponse.json({ success: true, message: "Email sent successfully", data });
+    return NextResponse.json({
+      success: true,
+      message: "Email sent successfully.",
+      data,
+    });
+
   } catch (err) {
-    console.error("Email send error:", err);
+    console.error("Server error:", err);
+
     return NextResponse.json(
-      { success: false, error: "Internal Server Error" },
+      {
+        success: false,
+        error: "Internal server error.",
+      },
       { status: 500 }
     );
   }

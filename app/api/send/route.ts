@@ -62,11 +62,10 @@ export async function POST(req: Request) {
     });
 
     if (error) {
-      const errorMessage =
-        typeof error === "string" ? error : error?.message || "Failed to send email";
+      console.error("Resend send error:", error);
 
       return NextResponse.json(
-        { success: false, error: errorMessage },
+        { success: false, error: "Failed to send message. Please try again later." },
         { status: 500 }
       );
     }

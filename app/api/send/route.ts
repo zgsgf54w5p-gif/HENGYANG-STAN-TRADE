@@ -33,8 +33,13 @@ export async function POST(req: Request) {
     const toEmail = process.env.CONTACT_TO_EMAIL || "kitchenware@foxmail.com";
     const fromEmail = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
 
+    // Use a verified Resend sender to avoid unverified domain errors.
+    const safeFromEmail = fromEmail.includes("@resend.dev")
+      ? fromEmail
+      : "onboarding@resend.dev";
+
     const { data, error } = await resend.emails.send({
-      from: fromEmail,
+      from: safeFromEmail,
       to: [toEmail],
       subject: `New Contact Message from ${name}`,
       replyTo: email,

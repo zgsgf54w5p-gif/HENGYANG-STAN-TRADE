@@ -22,7 +22,7 @@ export async function POST(req: Request) {
 
     const { data, error } = await resend.emails.send({
       from: "quotes@afrometal.com", // or your verified domain
-      to: ["teddyfosso18@gmail.com"], // change to your real email for testing
+      to: ["kitchenware@foxmail.com"], // change to your real email for testing
       subject: `New Quote Request from ${name}`,
       replyTo: email,
       html: `

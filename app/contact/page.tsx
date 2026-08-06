@@ -91,7 +91,7 @@ export default function ContactPage() {
           <h2>Our Information</h2>
           <p>📍 Hengyang, Hunan, China</p >
           <p>📧 kitchenware@foxmail.com</p >
-          <p>📱 WhatsApp: +86 191 6460 1883</p >
+          <p>📱 Phone: +86 191 6460 1883</p >
           <p>🌐 Worldwide Export</p >
         </div>
 

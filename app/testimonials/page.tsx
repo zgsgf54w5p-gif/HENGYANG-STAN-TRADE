@@ -42,16 +42,47 @@ export default function TestimonialsPage() {
   const [entries, setEntries] = useState<TestimonialEntry[]>(initialTestimonials);
   const [form, setForm] = useState({
     name: "",
+    email: "",
     location: "",
     message: "",
     type: "Impression" as "Impression" | "Question",
   });
   const [replyForm, setReplyForm] = useState({
     name: "",
+    email: "",
     location: "",
     message: "",
     type: "Impression" as "Impression" | "Question",
   });
+
+  const sendQuestionEmail = async (
+    name: string,
+    email: string,
+    message: string,
+    location?: string,
+    type?: string
+  ) => {
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          phone: location || "Not provided",
+          message: `Question type: ${type || "Question"}` +
+            "\n\n" +
+            message,
+        }),
+      });
+
+      return response.ok;
+    } catch {
+      return false;
+    }
+  };
   const [activeReplyId, setActiveReplyId] = useState<number | null>(null);
   const [status, setStatus] = useState("");
 
@@ -83,7 +114,7 @@ export default function TestimonialsPage() {
                 }`}
                 onClick={() => {
                   setActiveReplyId(entry.id === activeReplyId ? null : entry.id);
-                  setReplyForm({ name: "", location: "", message: "", type: "Impression" });
+                  setReplyForm({ name: "", email: "", location: "", message: "", type: "Impression" });
                   setStatus("");
                 }}
               >
@@ -103,10 +134,27 @@ export default function TestimonialsPage() {
                 />
                 <input
                   className="rounded-xl border border-white/20 bg-slate-950/30 px-3 py-2 text-white outline-none placeholder:text-slate-300"
+                  placeholder="Email address"
+                  type="email"
+                  value={replyForm.email}
+                  onChange={(event) => setReplyForm({ ...replyForm, email: event.target.value })}
+                />
+                <input
+                  className="rounded-xl border border-white/20 bg-slate-950/30 px-3 py-2 text-white outline-none placeholder:text-slate-300"
                   placeholder="Country or city"
                   value={replyForm.location}
                   onChange={(event) => setReplyForm({ ...replyForm, location: event.target.value })}
                 />
+                <select
+                  className="rounded-xl border border-white/20 bg-slate-950/30 px-3 py-2 text-white outline-none"
+                  value={replyForm.type}
+                  onChange={(event) =>
+                    setReplyForm({ ...replyForm, type: event.target.value as "Impression" | "Question" })
+                  }
+                >
+                  <option value="Impression">Impression</option>
+                  <option value="Question">Question</option>
+                </select>
                 <textarea
                   className="md:col-span-2 rounded-2xl border border-white/15 bg-slate-950/30 px-3 py-2 text-white outline-none placeholder:text-slate-300"
                   placeholder="Write your reply"
@@ -163,11 +211,11 @@ export default function TestimonialsPage() {
     window.localStorage.setItem("testimonial-comments", JSON.stringify(customEntries));
   }, [entries]);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (!form.name.trim() || !form.message.trim()) {
-      setStatus("Please add your name and a comment or question.");
+    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+      setStatus("Please add your name, email, and a comment or question.");
       return;
     }
 
@@ -180,15 +228,36 @@ export default function TestimonialsPage() {
     };
 
     setEntries((prev) => [newEntry, ...prev]);
-    setForm({ name: "", location: "", message: "", type: "Impression" });
+    setForm({ name: "", email: "", location: "", message: "", type: "Impression" });
+    if (form.type === "Question") {
+      const emailSent = await sendQuestionEmail(
+        form.name.trim(),
+        form.email.trim(),
+        form.message.trim(),
+        form.location.trim(),
+        form.type
+      );
+
+      setStatus(
+        emailSent
+          ? "Question published and sent by email."
+          : "Question published, but email delivery failed."
+      );
+      return;
+    }
     setStatus("Thanks! Your comment has been added to the testimonials section.");
   };
 
-  const handleReplySubmit = (event: FormEvent<HTMLFormElement>, parentId: number) => {
+  const handleReplySubmit = async (event: FormEvent<HTMLFormElement>, parentId: number) => {
     event.preventDefault();
 
     if (!replyForm.name.trim() || !replyForm.message.trim()) {
       setStatus("Please add your name and a reply message.");
+      return;
+    }
+
+    if (replyForm.type === "Question" && !replyForm.email.trim()) {
+      setStatus("Please add your email address for questions.");
       return;
     }
 
@@ -202,8 +271,26 @@ export default function TestimonialsPage() {
     };
 
     setEntries((prev) => [newReply, ...prev]);
-    setReplyForm({ name: "", location: "", message: "", type: "Impression" });
+    setReplyForm({ name: "", email: "", location: "", message: "", type: "Impression" });
     setActiveReplyId(null);
+
+    if (replyForm.type === "Question") {
+      const emailSent = await sendQuestionEmail(
+        replyForm.name.trim(),
+        replyForm.email.trim(),
+        replyForm.message.trim(),
+        replyForm.location.trim(),
+        replyForm.type
+      );
+
+      setStatus(
+        emailSent
+          ? "Question published and sent by email."
+          : "Question published, but email delivery failed."
+      );
+      return;
+    }
+
     setStatus("Thanks! Your reply has been added.");
   };
 
@@ -231,6 +318,13 @@ export default function TestimonialsPage() {
             />
             <input
               className="rounded-xl border border-white/20 bg-slate-950/30 px-4 py-3 text-white outline-none placeholder:text-slate-300"
+              placeholder="Email address"
+              type="email"
+              value={form.email}
+              onChange={(event) => setForm({ ...form, email: event.target.value })}
+            />
+            <input
+              className="rounded-xl border border-white/20 bg-slate-950/30 px-4 py-3 text-white outline-none placeholder:text-slate-300 md:col-span-2"
               placeholder="Country or city"
               value={form.location}
               onChange={(event) => setForm({ ...form, location: event.target.value })}

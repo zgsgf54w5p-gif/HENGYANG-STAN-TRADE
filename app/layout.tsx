@@ -50,7 +50,17 @@ export default function RootLayout({
         }}
       >
         <Navbar />
-        {children}
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "1440px",
+            margin: "0 auto",
+            padding: "0 40px",
+            boxSizing: "border-box",
+          }}
+        >
+          {children}
+        </div>
       </body>
     </html>
   );

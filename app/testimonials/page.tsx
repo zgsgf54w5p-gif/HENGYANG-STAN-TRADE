@@ -92,7 +92,7 @@ export default function TestimonialsPage() {
 
   return (
     <main className="min-h-screen bg-linear-to-br from-[#0b4ea2] via-[#072f5d] to-[#091a2e] px-6 py-20 text-white">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto flex max-w-6xl flex-col items-center">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-yellow-400">Customer testimonials</p>
           <h1 className="mb-4 mt-4 text-4xl font-bold sm:text-5xl">Trusted feedback from buyers around the world</h1>
@@ -103,7 +103,7 @@ export default function TestimonialsPage() {
 
         <form
           onSubmit={handleSubmit}
-          className="mx-auto mt-10 max-w-4xl rounded-4xl border border-white/20 bg-white/10 p-6 shadow-2xl shadow-slate-950/20 backdrop-blur md:p-8"
+          className="mx-auto mt-10 w-full max-w-4xl rounded-[2rem] border border-white/20 bg-white/10 p-6 shadow-2xl shadow-slate-950/20 backdrop-blur md:p-8"
         >
           <div className="grid gap-4 md:grid-cols-2">
             <input
@@ -137,7 +137,7 @@ export default function TestimonialsPage() {
             />
           </div>
 
-          <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-5 flex flex-col items-center gap-3 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
             <button
               type="submit"
               className="rounded-xl bg-yellow-400 px-5 py-3 font-semibold text-slate-900 transition hover:bg-yellow-300"
@@ -148,9 +148,9 @@ export default function TestimonialsPage() {
           </div>
         </form>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3">
           {entries.map((entry) => (
-            <div key={entry.id} className="rounded-3xl border border-white/15 bg-white/10 p-6 shadow-xl backdrop-blur-sm">
+            <div key={entry.id} className="rounded-[1.5rem] border border-white/15 bg-white/10 p-6 text-center shadow-xl backdrop-blur-sm">
               <div className="mb-3 flex items-center justify-between">
                 <div className="text-2xl text-yellow-400">★★★★★</div>
                 <span className="rounded-full bg-slate-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-slate-100">

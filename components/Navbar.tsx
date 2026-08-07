@@ -42,7 +42,7 @@ export default function Navbar() {
         </Link>
 
         {/* Navigation */}
-        <nav className="hidden items-center gap-7 md:flex lg:gap-8">
+        <nav className="flex flex-wrap items-center gap-4 text-sm md:gap-7 lg:gap-8">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -61,7 +61,7 @@ export default function Navbar() {
         {/* Button */}
         <Link
           href="/quote"
-          className="hidden md:inline-flex bg-yellow-400 text-black font-bold px-6 py-3 rounded-full hover:scale-105 hover:bg-yellow-300 transition-all duration-300 shadow-lg"
+          className="inline-flex bg-yellow-400 text-black font-bold px-5 py-3 rounded-full hover:scale-105 hover:bg-yellow-300 transition-all duration-300 shadow-lg"
         >
           Request Quote
         </Link>

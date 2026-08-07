@@ -461,9 +461,88 @@ export const products : Product[]= [
     capacity:"N/A",
     power: "N/A",
     certification: "CE / RoHS",
+  },
+  {
+    slug: "Dumpling-Plate-10-Inch",
+    category: "kitchen-appliances",
+    name: "Dumpling Plate 10-Inch",
+    images:[ 
+      "/images/A30.jpg",
+    ],
+    description:
+      "This is a nordicstyle round divided ceramic platter, finished with exquisite electroplating craft. Material: Ceramic Diameter: 10inch (1010.9cm) Weight: 1000g NOT microwavesafe.Multiple styles & colors available:  Goldplated 10 inch lotusmouth dumpling plate  Silverplated 10 inch lotusmouth dumpling plate  Darkgreen goldplated 10 inch lotusmouth dumpling plate  Pink goldplated 10 inch lotusmouth dumpling plate  Pink silverplated 10 inch lotusmouth dumpling plate  Green goldplated shellshape dumpling plate  Fruitgreen goldplated square dumpling plate  Orange goldplated 10inch peachblossom dumpling plate  Fruitgreen goldplated square divided serving plate",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+  {
+    slug: "8Inch-New-Chinese-Style-Ceramic-Soup-Bowl",
+    category: "kitchen-appliances",
+    name: "8-Inch New Chinese Style Ceramic Soup Bowl",
+    images:[ 
+      "/images/A31.jpg",
+    ],
+    description:
+      "This is a newChinese / nationaltrend style ceramic soup bowl with elegant landscape pattern, crafted with underglaze color technique.;Material: Ceramic;Size: 8inch, diameter 1919.9 cm;Microwave safe",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+  {
+    slug: "Gold-Rim-Bone-China-Round-Ceramic-Plates",
+    category: "kitchen-appliances",
+    name: "Gold Rim Bone China Round Ceramic Plates",
+    images:[ 
+      "/images/A32.jpg",
+    ],
+    description:
+      "- Material: Bone China Ceramic;- Shape: Round, flat shallow plate;- Sizes: 5/6/7/8/9/10/12/14/16 inch;- Single piece dimension: 20×20×2 cm;- Unit Weight: 200g‑1300g (depends on plate size);- Application: Household, restaurant, hotel, catering service;Features:✅ Premium bone‑china ceramic material, smooth surface;✅ Exquisite gold‑edged decoration, elegant for table display;✅ Multiple size options for dinner, dessert, side dish;✅ Ideal for home use, hotel banquet and commercial catering",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+  {
+    slug: "Gold-Rim-Bone-China-Round-Ceramic-Plates",
+    category: "kitchen-appliances",
+    name: "Gold Rim Bone China Round Ceramic Plates",
+    images:[ 
+      "/images/A33.jpg",
+      "/images/A33-1.jpg",
+    ],
+    description:
+      "Material: Melamine;Product Type: Bowl;Surface Finish: Matte Black;Shape: Round;Quality Grade: Firstgrade product;Microwave: Not applicable / Do not use in microwave oven;Customization: Custom logo & processing available;Size: 4.5inch, Diameter ≥23cm;Target User: Adult;Style: Modern Minimalist;Application Scenarios: Hotel, restaurant, catering, daily dining;Exportready: Yes, for crossborder export;Main selling regions: Africa, Europe, South America, Southeast Asia, North America, Northeast Asia, Middle East",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+  {
+    slug: "Modern-Simple-Ceramic-Bowls",
+    category: "kitchen-appliances",
+    name: "Modern Simple Ceramic Bowls",
+    images:[ 
+      "/images/A34.jpg",
+    ],
+    description:
+      "Material: Ceramic;Product Category: Bowl;Surface Craft: Underglaze color;Quality Grade: Superiorgrade;Shape: Round;Style: Modern Minimalist;Microwave: Available;Customization: Custom logo & processing supported;Diameter range: 1111.9 cm and other multisize options;Target User: Adult;Crossborder export supply: Yes;Gift: Suitable as business gift;Sizes available: 4inch,4.5inch,5inch,6inch,7inch,8inch,9inch",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
   }
-
-
 
 
 

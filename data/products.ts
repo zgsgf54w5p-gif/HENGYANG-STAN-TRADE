@@ -542,7 +542,74 @@ export const products : Product[]= [
     capacity:"N/A",
     power: "N/A",
     certification: "CE / RoHS",
+  },
+  {
+    slug: "Multifunction-Blender",
+    category: "kitchen-appliances",
+    name: "Multifunction Blender",
+    images:[ 
+      "/images/F1F2.jpg",
+    ],
+    description:
+      "800W Multifunction Blender, 40000RPM Semiautomatic Blender;Type: Blender Capacity: 1L3L Operation: Semiautomatic Functions: Juice, mince meat, crush ice, dry grind, stir, mix Voltage: 111240V Frequency: 5060Hz Rated Power: 1800W Motor Speed: 40000RPM+ Speed Gears: ≥7 gears Blades: 68 pcs mixing blades Housing: PC material, sprayed surface Size: 32×38×43 Suitable for 45 people Marking: Jar scale marking Power: Plugin Cleaning: Autocleaning Aftersales: Free spare parts Support custom processing For crossborder export, markets: Africa, Europe, South America, Southeast Asia, North America, Northeast Asia, Middle East",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "111-240V",
+    capacity:"1L-3L",
+    power: "1800W",
+    certification: "CE / RoHS",
+  },
+   {
+    slug: "Multifunction-Kitchen-Appliance-HSL768",
+    category: "kitchen-appliances",
+    name: "Multifunction Kitchen Appliance HSL768",
+    images:[ 
+      "/images/F4.jpg",
+    ],
+    description:
+      "Kitchen Appliance Color: Silver Capacity: Above 1.2L Operation: Mechanical control Functions: Baby food making, highspeed grinding Suitable for 36 people Product Size: 220×200×520 mm Weight: 3.25 KG Material: 9525 stainlesssteel version, EU standard, 2in1 /3in1 option",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "220V",
+    capacity:"Above 1.2L",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+   {
+    slug: "Multifunctional-High‑Speed-Blender",
+    category: "kitchen-appliances",
+    name: "Multifunctional High‑Speed Blender",
+    images:[ 
+      "/images/F6.jpg",
+    ],
+    description:
+      " Capacity: Above 1.2L;- Brand: Other;- Applicable number of people: 5 persons;- Cross‑border export dedicated supply: Yes;- Weight: 4;- Model: 220V National Standard;- Condition: 1;- Smart connection: None;- Smart interaction: None;- Functions: Preset timing, preset time, wall‑breaking grinding, preset temperature;- Control mode: 1;- Special features: Filter‑free after wall‑breaking, hot‑air sterilization, no‑hand‑wash, 3D uniform heating;- Voltage & Plug Type: 220V EU plug, 110V US plug, 220V UK plug, 220V CN 3‑pin plug; US, CN, UK, EU, Brazil, Italy, Denmark specifications;- Main sales regions: Europe, South America, Southeast Asia, North America, Northeast Asia, Middle East;- Main downstream platforms: eBay, Amazon, Wish, AliExpress, Independent Site, Lazada, Others;- Authorizable own brand: Yes;- Smart level: Non‑smart;- AI capability: None",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "220V",
+    capacity:"Above 1.2L",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+  {
+    slug: "Carbon-Steel-Non‑Stick-Wok-Pan",
+    category: "kitchen-appliances",
+    name: "Carbon Steel Non‑Stick Wok Pan",
+    images:[ 
+      "/images/F7.jpg",
+    ],
+    description:
+      "Size: 32cm;- Body Material: Fine carbon steel;- Bottom: Double‑layer composite bottom;- Weight: 1.2kg;- Depth: 10‑12 cm;- Coating: Non‑stick coating with high‑temperature thermal spraying process;- Lid: Glass lid (available for lidded version; lid‑free option also offered);- Colors: Red with lid / Red without lid;- Fit for all stovetops.",
+    badge: "New Arrival",
+    moq: "200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
   }
+
+
+
 
 
 

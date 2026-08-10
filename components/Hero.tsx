@@ -2,227 +2,225 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Globe2, Truck, ShieldCheck } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowRight, Globe, Truck, ShieldCheck } from "lucide-react";
+
 
 export default function Hero() {
 
   return (
 
-    <section className="relative overflow-hidden bg-[#071F3D]">
+<section className="bg-[#071F3D] overflow-hidden">
 
 
-      {/* Background */}
+<div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
 
-      <div className="absolute inset-0">
 
-        <Image
-          src="/images/ban.jpg"
-          alt="Kitchen appliances supplier"
-          fill
-          priority
-          className="object-cover opacity-40"
-        />
+<div className="grid items-center gap-8 lg:grid-cols-2">
 
-      </div>
 
 
+{/* LEFT CONTENT */}
 
-      <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+<motion.div
 
+initial={{opacity:0, x:-40}}
 
-        <div className="grid items-center gap-12 lg:grid-cols-2">
+animate={{opacity:1, x:0}}
 
+transition={{duration:0.6}}
 
-          {/* Left Content */}
+className="text-white"
 
-          <div className="text-white">
+>
 
 
-            <span className="inline-flex rounded-full bg-yellow-400 px-5 py-2 text-sm font-bold text-black">
+<span className="inline-block rounded-full bg-yellow-400 px-4 py-2 text-xs font-bold text-black">
 
-              GLOBAL APPLIANCE SUPPLIER
+GLOBAL SUPPLIER FROM CHINA
 
-            </span>
+</span>
 
 
 
-            <h1 className="mt-6 text-5xl font-extrabold leading-tight lg:text-6xl">
 
-              Quality Kitchen Appliances
+<h1 className="mt-5 text-3xl font-extrabold leading-tight sm:text-5xl">
 
-              <span className="block text-yellow-400">
+Quality Products
 
-                For Global Importers
+<span className="block text-yellow-400">
 
-              </span>
+For Global Importers
 
-            </h1>
+</span>
 
+</h1>
 
 
 
-            <p className="mt-6 max-w-xl text-lg leading-8 text-gray-200">
 
-              Hengyang Stan Trade Development Co.,Ltd provides
-              reliable home appliances and commercial equipment
-              with worldwide shipping solutions.
+<p className="mt-5 max-w-xl text-base leading-7 text-gray-300 sm:text-lg">
 
-            </p >
+Source premium kitchen appliances, consumer electronics
+and commercial equipment directly from a reliable Chinese supplier.
 
+</p >
 
 
 
-            {/* Buttons */}
 
-            <div className="mt-8 flex flex-wrap gap-4">
+<div className="mt-7 flex flex-wrap gap-3">
 
 
-              <Link
-                href="/products"
-                className="flex items-center gap-2 rounded-lg bg-yellow-400 px-7 py-4 font-bold text-black transition hover:bg-yellow-300"
-              >
+<Link
+href="/products"
+className="flex items-center gap-2 rounded-lg bg-yellow-400 px-6 py-3 font-bold text-black hover:bg-yellow-300"
+>
 
-                Explore Products
+Explore Products
 
-                <ArrowRight size={20}/>
+<ArrowRight size={18}/>
 
-              </Link>
+</Link>
 
 
 
-              <Link
-                href="/quote"
-                className="rounded-lg border border-white px-7 py-4 font-bold text-white transition hover:bg-white hover:text-[#071F3D]"
-              >
+<Link
+href="/quote"
+className="rounded-lg border border-white px-6 py-3 font-bold text-white hover:bg-white hover:text-[#071F3D]"
+>
 
-                Request Quote
+Request Quote
 
-              </Link>
+</Link>
 
 
-            </div>
+</div>
 
 
-          </div>
 
+{/* TRUST */}
 
+<div className="mt-8 grid grid-cols-3 gap-3">
 
 
+<div className="rounded-lg bg-white/10 p-3">
 
+<Globe size={20} className="text-yellow-400"/>
 
-          {/* Right Product Showcase */}
+<p className="mt-2 text-xs">
+Worldwide
+Shipping
+</p >
 
-          <div className="relative">
+</div>
 
 
-            <div className="rounded-3xl bg-white/10 p-6 backdrop-blur-md">
 
+<div className="rounded-lg bg-white/10 p-3">
 
-              <Image
+<Truck size={20} className="text-yellow-400"/>
 
-                src="/images/airfryer.jpg"
+<p className="mt-2 text-xs">
+Fast
+Logistics
+</p >
 
-                alt="Featured appliance"
+</div>
 
-                width={600}
 
-                height={600}
 
-                className="rounded-2xl object-contain"
 
-              />
+<div className="rounded-lg bg-white/10 p-3">
 
+<ShieldCheck size={20} className="text-yellow-400"/>
 
-            </div>
+<p className="mt-2 text-xs">
+Quality
+Control
+</p >
 
+</div>
 
-          </div>
 
+</div>
 
-        </div>
 
+</motion.div>
 
 
 
 
 
-        {/* Trust bar */}
+{/* RIGHT PRODUCT IMAGE */}
 
-        <div className="mt-16 grid gap-5 rounded-2xl bg-white p-6 text-[#071F3D] sm:grid-cols-3">
 
+<motion.div
 
-          <div className="flex items-center gap-3">
+initial={{opacity:0, scale:0.9}}
 
-            <Globe2 className="text-[#0B4EA2]" />
+animate={{opacity:1, scale:1}}
 
-            <div>
+transition={{duration:0.6}}
 
-              <p className="font-bold">
-                Worldwide Shipping
-              </p >
+className="relative"
 
-              <p className="text-sm text-gray-600">
-                Export to global markets
-              </p >
+>
 
-            </div>
 
-          </div>
+<div className="rounded-3xl bg-white p-5 shadow-2xl">
 
 
+<Image
 
+src="/images/airfryer.jpg"
 
+alt="Featured product"
 
-          <div className="flex items-center gap-3">
+width={600}
 
-            <Truck className="text-[#0B4EA2]" />
+height={600}
 
-            <div>
+priority
 
-              <p className="font-bold">
-                Fast Logistics
-              </p >
+className="h-[300px] w-full object-contain sm:h-[420px]"
 
-              <p className="text-sm text-gray-600">
-                Reliable delivery solutions
-              </p >
+/>
 
-            </div>
 
-          </div>
+</div>
 
 
 
 
+{/* Floating card */}
 
-          <div className="flex items-center gap-3">
 
-            <ShieldCheck className="text-[#0B4EA2]" />
+<div className="absolute -bottom-5 left-5 rounded-xl bg-yellow-400 px-5 py-3 shadow-xl">
 
-            <div>
+<p className="text-xl font-extrabold text-black">
+500+
+</p >
 
-              <p className="font-bold">
-                Export Quality
-              </p >
+<p className="text-xs font-bold">
+Products
+</p >
 
-              <p className="text-sm text-gray-600">
-                Professional manufacturing
-              </p >
+</div>
 
-            </div>
 
-          </div>
 
+</motion.div>
 
 
-        </div>
 
+</div>
 
 
-      </div>
+</div>
 
 
-    </section>
+</section>
 
   );
 }

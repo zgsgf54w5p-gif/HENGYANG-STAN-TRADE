@@ -37,7 +37,7 @@ export default function CategorySection() {
 
       <div className="mx-auto max-w-7xl px-4">
 
-        <h2 className="mb-8 text-3xl font-bold text-[#071F3D]">
+        <h2 className="mb-8 text-3xl font-bold text-[#0F172A]">
           Shop By Category
         </h2>
 
@@ -58,11 +58,11 @@ export default function CategorySection() {
 
                 <Icon
                   size={35}
-                  className="text-[#0B4EA2]"
+                  className="text-[#2563EB]"
                 />
 
 
-                <h3 className="mt-4 font-bold text-[#071F3D]">
+                <h3 className="mt-4 font-bold text-[#0F172A]">
                   {category.name}
                 </h3>
 

@@ -24,7 +24,7 @@ export default function ProductsPage() {
 
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,_#f8fbff_0%,_#f2f6fb_45%,_#eef3f9_100%)] text-slate-900">
-      <section className="relative overflow-hidden bg-[linear-gradient(135deg,_#071F3D_0%,_#0B4EA2_55%,_#1E88E5_100%)] px-4 py-20 text-white sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-[linear-gradient(135deg,_#0F172A_0%,_#2563EB_55%,_#3B82F6_100%)] px-4 py-20 text-white sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,215,0,0.2)_0%,_transparent_35%)]" />
         <div className="relative mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
@@ -53,7 +53,7 @@ export default function ProductsPage() {
           </div>
 
           <p className="mt-6 text-center text-sm text-slate-200">
-            Showing <span className="font-semibold text-[#FFD700]">{filteredProducts.length}</span> curated products
+            Showing <span className="font-semibold text-[#F97316]">{filteredProducts.length}</span> curated products
           </p>
         </div>
       </section>
@@ -90,7 +90,7 @@ export default function ProductsPage() {
                   >
                     <div className="relative flex aspect-square items-center justify-center bg-[linear-gradient(135deg,_#f7fbff_0%,_#eef5ff_100%)] p-5">
                       {product.badge && (
-                        <span className="absolute left-4 top-4 rounded-full bg-[#FFD700] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-900">
+                        <span className="absolute left-4 top-4 rounded-full bg-[#F97316] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-900">
                           {product.badge}
                         </span>
                       )}
@@ -106,7 +106,7 @@ export default function ProductsPage() {
                     <div className="p-5">
                       <div className="flex items-start justify-between gap-3">
                         <div>
-                          <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#0B4EA2]">
+                          <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#2563EB]">
                             {product.category}
                           </p>
                           <h2 className="mt-2 text-xl font-bold text-slate-900 line-clamp-2">
@@ -124,7 +124,7 @@ export default function ProductsPage() {
                         {isExpanded ? description : previewText}
                       </p>
 
-                      <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-[#0B4EA2]">
+                      <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-[#2563EB]">
                         <Sparkles size={15} />
                         <span>{isExpanded ? "Tap to collapse" : "Tap to expand"}</span>
                       </div>
@@ -143,7 +143,7 @@ export default function ProductsPage() {
                           <div className="grid gap-3 sm:grid-cols-2">
                             {product.moq && (
                               <div className="rounded-2xl bg-slate-50 p-3">
-                                <div className="flex items-center gap-2 text-[#0B4EA2]">
+                                <div className="flex items-center gap-2 text-[#2563EB]">
                                   <Package size={15} />
                                   <span className="text-xs font-bold uppercase">MOQ</span>
                                 </div>
@@ -153,7 +153,7 @@ export default function ProductsPage() {
 
                             {product.voltage && (
                               <div className="rounded-2xl bg-slate-50 p-3">
-                                <div className="flex items-center gap-2 text-[#0B4EA2]">
+                                <div className="flex items-center gap-2 text-[#2563EB]">
                                   <Zap size={15} />
                                   <span className="text-xs font-bold uppercase">Voltage</span>
                                 </div>
@@ -163,7 +163,7 @@ export default function ProductsPage() {
 
                             {product.capacity && (
                               <div className="rounded-2xl bg-slate-50 p-3 sm:col-span-2">
-                                <div className="flex items-center gap-2 text-[#0B4EA2]">
+                                <div className="flex items-center gap-2 text-[#2563EB]">
                                   <ShieldCheck size={15} />
                                   <span className="text-xs font-bold uppercase">Capacity</span>
                                 </div>
@@ -175,7 +175,7 @@ export default function ProductsPage() {
                           <div className="flex flex-wrap gap-2">
                             <Link
                               href={`/products/${product.slug}`}
-                              className="inline-flex items-center gap-2 rounded-xl bg-[#0B4EA2] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#083879]"
+                              className="inline-flex items-center gap-2 rounded-xl bg-[#2563EB] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1D4ED8]"
                               onClick={(event) => event.stopPropagation()}
                             >
                               View Details
@@ -183,7 +183,7 @@ export default function ProductsPage() {
                             </Link>
                             <Link
                               href="/quote"
-                              className="inline-flex items-center rounded-xl border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-[#0B4EA2] hover:text-[#0B4EA2]"
+                              className="inline-flex items-center rounded-xl border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-[#2563EB] hover:text-[#2563EB]"
                               onClick={(event) => event.stopPropagation()}
                             >
                               Request Quote
@@ -200,13 +200,13 @@ export default function ProductsPage() {
         )}
       </section>
 
-      <section className="bg-[#071F3D] px-4 py-20 text-center text-white sm:px-6 lg:px-8">
+      <section className="bg-[#0F172A] px-4 py-20 text-center text-white sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <h2 className="text-3xl font-black sm:text-4xl">Looking for bulk orders?</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-300">
             We supply wholesalers, distributors, and importers worldwide with high-quality kitchen appliances at competitive factory prices.
           </p>
-          <Link href="/quote" className="mt-8 inline-flex items-center justify-center rounded-2xl bg-[#FFD700] px-7 py-3.5 text-lg font-bold text-slate-900 transition hover:bg-[#f4ce00]">
+          <Link href="/quote" className="mt-8 inline-flex items-center justify-center rounded-2xl bg-[#F97316] px-7 py-3.5 text-lg font-bold text-slate-900 transition hover:bg-[#fb923c]">
             Request a Quote
           </Link>
         </div>

@@ -3,9 +3,9 @@
 :root {
   --background: #f8fafc;
   --foreground: #0f172a;
-  --primary: #0B4EA2;
-  --secondary: #FFD700;
-  --dark: #071F3D;
+  --primary: #2563EB;
+  --secondary: #F97316;
+  --dark: #0F172A;
   --light: #ffffff;
 }
 
@@ -30,7 +30,7 @@ body {
 
 ::selection {
   background: rgba(11, 78, 162, 0.18);
-  color: #071F3D;
+  color: #0F172A;
 }
 
 .font-display {

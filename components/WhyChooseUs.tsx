@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
   return (
     <section className="bg-white py-20 sm:py-24 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-      <h2 className="text-center text-3xl font-bold text-[#0B4EA2] sm:text-4xl">
+      <h2 className="text-center text-3xl font-bold text-[#2563EB] sm:text-4xl">
         Why Choose Hengyang Stan Trade?
       </h2>
 
@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
               ✅
             </div>
 
-            <h3 className="mb-3 text-xl font-bold text-[#0B4EA2]">
+            <h3 className="mb-3 text-xl font-bold text-[#2563EB]">
               {item.title}
             </h3>
 

@@ -53,8 +53,8 @@ export default function ContactPage() {
       <div className="mx-auto max-w-7xl">
         <div className="rounded-[2rem] border border-slate-200 bg-white/90 p-8 shadow-[0_20px_80px_rgba(7,31,61,0.08)] backdrop-blur sm:p-10 lg:p-14">
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="rounded-[1.8rem] bg-[linear-gradient(135deg,_#071F3D_0%,_#0B4EA2_100%)] p-8 text-white">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-yellow-400">Contact us</p>
+            <div className="rounded-[1.8rem] bg-[linear-gradient(135deg,_#0F172A_0%,_#2563EB_100%)] p-8 text-white">
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-orange-400">Contact us</p>
               <h1 className="mt-4 text-3xl font-black sm:text-4xl">Let&apos;s talk sourcing, pricing, and growth.</h1>
               <p className="mt-5 text-lg leading-8 text-slate-200">
                 We would love to hear from you about product inquiries, quotations, OEM support, or new partnership opportunities.
@@ -74,7 +74,7 @@ export default function ContactPage() {
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                   required
-                  className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-800 outline-none ring-0 focus:border-[#0B4EA2]"
+                  className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-800 outline-none ring-0 focus:border-[#2563EB]"
                 />
                 <input
                   type="email"
@@ -82,14 +82,14 @@ export default function ContactPage() {
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   required
-                  className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-800 outline-none focus:border-[#0B4EA2]"
+                  className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-800 outline-none focus:border-[#2563EB]"
                 />
               </div>
               <input
                 placeholder="Phone"
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-800 outline-none focus:border-[#0B4EA2]"
+                className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-800 outline-none focus:border-[#2563EB]"
               />
               <textarea
                 placeholder="Your Message"
@@ -97,12 +97,12 @@ export default function ContactPage() {
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 required
-                className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-800 outline-none focus:border-[#0B4EA2]"
+                className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-800 outline-none focus:border-[#2563EB]"
               />
               <button
                 type="submit"
                 disabled={loading}
-                className="rounded-2xl bg-[#0B4EA2] px-5 py-3.5 text-lg font-semibold text-white transition hover:bg-[#083879] disabled:cursor-not-allowed disabled:opacity-70"
+                className="rounded-2xl bg-[#2563EB] px-5 py-3.5 text-lg font-semibold text-white transition hover:bg-[#1D4ED8] disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {loading ? "Sending..." : "Send Message"}
               </button>

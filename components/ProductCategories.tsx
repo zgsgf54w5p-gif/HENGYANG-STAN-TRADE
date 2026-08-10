@@ -17,11 +17,11 @@ export default function ProductCategories() {
           viewport={{ once: true }}
           className="mb-12 text-center sm:mb-16"
         >
-          <p className="text-[#0B4EA2] font-semibold uppercase tracking-widest">
+          <p className="text-[#2563EB] font-semibold uppercase tracking-widest">
             Our Categories
           </p >
 
-          <h2 className="mt-3 text-3xl font-bold text-[#071F3D] sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-bold text-[#0F172A] sm:text-4xl">
             Explore Our Product Range
           </h2>
 
@@ -55,7 +55,7 @@ export default function ProductCategories() {
 
                   <div className="p-7">
 
-                    <h3 className="text-2xl font-bold text-[#071F3D]">
+                    <h3 className="text-2xl font-bold text-[#0F172A]">
                       {category.name}
                     </h3>
 
@@ -63,7 +63,7 @@ export default function ProductCategories() {
                       {category.description}
                     </p >
 
-                    <div className="mt-8 inline-flex items-center text-[#0B4EA2] font-semibold group-hover:translate-x-2 transition">
+                    <div className="mt-8 inline-flex items-center text-[#2563EB] font-semibold group-hover:translate-x-2 transition">
                       Explore Category →
                     </div>
 

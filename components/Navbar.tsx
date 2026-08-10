@@ -3,123 +3,258 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { Menu, Search, User, FileText } from "lucide-react";
 
 export default function Navbar() {
-  const pathname = usePathname();
-  const [mobileOpen, setMobileOpen] = useState(false);
 
-  const links = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Products", href: "/products" },
-    { name: "Testimonials", href: "/testimonials" },
-    { name: "Contact", href: "/contact" },
+  const [open, setOpen] = useState(false);
+
+
+  const categories = [
+    "Kitchen Appliances",
+    "Commercial Equipment",
+    "Electronics",
+    "New Arrivals",
+    "Bulk Orders",
   ];
 
+
+  const links = [
+    {name:"Home", href:"/"},
+    {name:"Products", href:"/products"},
+    {name:"About", href:"/about"},
+    {name:"Testimonials", href:"/testimonials"},
+    {name:"Contact", href:"/contact"},
+  ];
+
+
   return (
-    <header className="relative z-50 bg-[#0B4EA2]/95 shadow-lg backdrop-blur-sm">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-12">
 
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-4">
-          <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-lg bg-white">
-            <Image
-              src="/images/logo2.jpg"
-              alt="Hengyang Stan Trade Development Co.,Ltd."
-              width={56}
-              height={56}
-              className="w-full h-full object-cover"
-            />
-          </div>
+<header className="sticky top-0 z-50 border-b border-slate-700/40 shadow-[0_12px_40px_rgba(2,6,23,0.22)]">
 
-          <div>
-            <h1 className="text-white font-bold text-2xl leading-none">
-              HENGYANG STAN
-            </h1>
-            <p className="text-yellow-400 font-semibold text-lg">
-              TRADE Development Co.,Ltd.
-            </p >
-          </div>
-        </Link>
 
-        <div className="flex items-center gap-4">
-          <nav className="hidden items-center gap-7 text-sm md:flex lg:gap-8">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`transition-all duration-300 font-medium ${
-                  pathname === link.href
-                    ? "text-yellow-400"
-                    : "text-white hover:text-yellow-400"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </nav>
+{/* MAIN HEADER */}
 
-          <Link
-            href="/quote"
-            className="hidden rounded-full bg-yellow-400 px-5 py-3 text-black font-bold hover:scale-105 hover:bg-yellow-300 transition-all duration-300 shadow-lg md:inline-flex"
-          >
-            Request Quote
-          </Link>
+<div className="bg-[linear-gradient(90deg,#0F172A_0%,#111827_40%,#1D4ED8_100%)]">
 
-          <button
-            type="button"
-            onClick={() => setMobileOpen((prev) => !prev)}
-            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white transition hover:bg-white/20 md:hidden"
-            aria-label="Open mobile menu"
-            aria-expanded={mobileOpen}
-          >
-            <span
-              className={`absolute block h-0.5 w-6 bg-white transition-all duration-300 ${
-                mobileOpen ? "rotate-45" : "-translate-y-1.5"
-              }`}
-            />
-            <span
-              className={`absolute block h-0.5 w-6 bg-white transition-all duration-300 ${
-                mobileOpen ? "opacity-0" : ""
-              }`}
-            />
-            <span
-              className={`absolute block h-0.5 w-6 bg-white transition-all duration-300 ${
-                mobileOpen ? "-rotate-45" : "translate-y-1.5"
-              }`}
-            />
-          </button>
-        </div>
-      </div>
+<div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
 
-      {mobileOpen ? (
-        <div className="border-t border-white/10 bg-[#0B4EA2]/95 px-4 py-4 text-center text-sm text-white shadow-xl md:hidden">
-          <div className="mx-auto flex max-w-7xl flex-col gap-4">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className={`block rounded-2xl px-4 py-3 transition-all duration-200 ${
-                  pathname === link.href
-                    ? "bg-white/10 text-yellow-400"
-                    : "hover:bg-white/10"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Link
-              href="/quote"
-              onClick={() => setMobileOpen(false)}
-              className="mx-auto inline-flex w-full justify-center rounded-full bg-yellow-400 px-6 py-3 font-bold text-black transition hover:bg-yellow-300"
-            >
-              Request Quote
-            </Link>
-          </div>
-        </div>
-      ) : null}
-    </header>
+
+{/* LOGO */}
+
+<Link href="/" className="flex items-center gap-2">
+
+<div className="h-10 w-10 overflow-hidden rounded-full bg-white">
+
+<Image
+src="/images/logo2.jpg"
+alt="logo"
+width={40}
+height={40}
+className="h-full w-full object-cover"
+/>
+
+</div>
+
+
+<div className="hidden sm:block">
+
+<h1 className="text-sm font-black tracking-[0.2em] text-white">
+HENGYANG STAN
+</h1>
+
+<p className="text-xs font-semibold uppercase tracking-[0.3em] text-orange-300">
+TRADE
+</p >
+
+</div>
+
+
+</Link>
+
+
+
+
+
+{/* SEARCH DESKTOP */}
+
+<div className="hidden flex-1 md:flex">
+
+<div className="flex w-full">
+
+<input
+placeholder="Search products..."
+className="h-11 flex-1 rounded-l-lg px-4 text-black outline-none"
+/>
+
+
+<button className="rounded-r-lg bg-[#F97316] px-5 text-white">
+
+<Search size={22}/>
+
+</button>
+
+
+</div>
+
+</div>
+
+
+
+
+
+{/* ACTIONS */}
+
+<div className="ml-auto flex items-center gap-4 text-white">
+
+
+<Link href="/quote"
+className="hidden rounded-full border border-white/20 bg-white/10 px-3 py-2 text-center text-xs font-semibold text-white sm:block"
+>
+
+<FileText
+size={18}
+className="mx-auto mb-1 text-[#F97316]"
+/>
+
+Quote
+
+</Link>
+
+
+
+<Link href="/contact"
+className="hidden rounded-full border border-white/20 bg-white/10 px-3 py-2 text-center text-xs font-semibold text-white sm:block"
+>
+
+<User
+size={18}
+className="mx-auto mb-1 text-[#F97316]"
+/>
+
+Account
+
+</Link>
+
+
+
+
+<button
+onClick={()=>setOpen(!open)}
+className="md:hidden"
+>
+
+<Menu size={30}/>
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+{/* MOBILE SEARCH */}
+
+<div className="px-4 pb-3 md:hidden">
+
+<div className="flex">
+
+<input
+placeholder="Search products..."
+className="h-10 flex-1 rounded-l-lg px-3 text-black"
+/>
+
+
+<button className="rounded-r-lg bg-[#F97316] px-4 text-white">
+
+<Search size={20}/>
+
+</button>
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+{/* CATEGORY BAR */}
+
+<div className="bg-[#1D4ED8]">
+
+
+<div className="flex gap-6 overflow-x-auto px-4 py-3 text-sm text-white scrollbar-hide sm:px-6 lg:px-8">
+
+
+{categories.map((item)=>(
+
+<Link
+key={item}
+href="/products"
+className="whitespace-nowrap font-semibold transition hover:text-orange-200"
+>
+
+{item}
+
+</Link>
+
+))}
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+{/* MOBILE MENU */}
+
+{open && (
+
+<div className="bg-white p-5 shadow-lg md:hidden">
+
+
+{links.map((link)=>(
+
+<Link
+key={link.href}
+href={link.href}
+onClick={()=>setOpen(false)}
+className="block border-b py-3 font-semibold text-[#071F3D]"
+>
+
+{link.name}
+
+</Link>
+
+))}
+
+
+</div>
+
+)}
+
+
+
+</header>
+
+
   );
 }

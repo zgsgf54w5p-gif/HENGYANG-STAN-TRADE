@@ -29,11 +29,11 @@ const steps = [
 
 export default function SourcingProcess() {
   return (
-    <section className="bg-[#071F3D] py-20 text-white sm:py-24 lg:py-28">
+    <section className="bg-[#0F172A] py-20 text-white sm:py-24 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-start lg:gap-24">
           <div className="lg:sticky lg:top-32">
-            <p className="text-sm font-bold uppercase tracking-[0.3em] text-yellow-400">A clearer way to source</p>
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-orange-400">A clearer way to source</p>
             <h2 className="mt-5 text-3xl font-extrabold leading-tight sm:text-4xl">From first conversation to final shipment.</h2>
             <p className="mt-6 max-w-lg text-lg leading-8 text-slate-300">
               Good international trade depends on clear steps. Our team keeps every stage visible so you can make decisions with better information.
@@ -47,10 +47,10 @@ export default function SourcingProcess() {
               return (
                 <article key={step.number} className="rounded-2xl border border-white/15 bg-white/10 p-7 backdrop-blur-sm transition hover:-translate-y-1 hover:bg-white/15">
                   <div className="flex items-center justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-400 text-[#071F3D]">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F97316] text-[#0F172A]">
                       <Icon size={23} strokeWidth={2.2} aria-hidden="true" />
                     </div>
-                    <span className="text-sm font-bold text-yellow-400">{step.number}</span>
+                    <span className="text-sm font-bold text-orange-400">{step.number}</span>
                   </div>
                   <h3 className="mt-7 text-xl font-bold">{step.title}</h3>
                   <p className="mt-4 leading-7 text-slate-300">{step.text}</p>

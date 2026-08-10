@@ -124,7 +124,7 @@ export default function ProductGallery({
           <button
             type="button"
             onClick={() => setSelectedImage(null)}
-            className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white text-3xl leading-none text-slate-900 shadow-lg transition hover:bg-yellow-400"
+            className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white text-3xl leading-none text-slate-900 shadow-lg transition hover:bg-[#F97316]"
             aria-label="Close full-screen image"
           >
             &times;

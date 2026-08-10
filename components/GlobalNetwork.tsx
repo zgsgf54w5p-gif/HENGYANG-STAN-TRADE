@@ -9,7 +9,7 @@ export default function GlobalNetwork() {
   return (
     <section
       style={{
-        background: "#0B4EA2",
+        background: "#2563EB",
         color: "white",
         padding: "80px 24px",
       }}
@@ -62,7 +62,7 @@ export default function GlobalNetwork() {
                 style={{
                   fontSize: "48px",
                   margin: 0,
-                  color: "#FFD700",
+                  color: "#F97316",
                 }}
               >
                 {item.number}

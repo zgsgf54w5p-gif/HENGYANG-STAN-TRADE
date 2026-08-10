@@ -18,11 +18,11 @@ export default function AboutPreview() {
 
         {/* Right Content */}
         <div className="flex-1">
-          <p className="mb-5 text-sm font-bold uppercase tracking-[6px] text-[#0B4EA2]">
+          <p className="mb-5 text-sm font-bold uppercase tracking-[6px] text-[#2563EB]">
             About Our Company
           </p >
 
-          <h2 className="font-display mb-6 text-5xl font-semibold leading-tight text-[#071F3D] sm:text-6xl">
+          <h2 className="font-display mb-6 text-5xl font-semibold leading-tight text-[#0F172A] sm:text-6xl">
             Trusted Export Solutions <br /> from China
           </h2>
 
@@ -40,29 +40,29 @@ export default function AboutPreview() {
 
           <div className="mb-8 grid grid-cols-2 gap-4 sm:gap-6">
             <div className="rounded-2xl bg-blue-50 p-6 shadow-md">
-              <h3 className="text-3xl font-bold text-[#0B4EA2]">500+</h3>
+              <h3 className="text-3xl font-bold text-[#2563EB]">500+</h3>
               <p className="mt-2 text-gray-600">Products Available</p >
             </div>
 
             <div className="rounded-2xl bg-blue-50 p-6 shadow-md">
-              <h3 className="text-3xl font-bold text-[#0B4EA2]">20+</h3>
+              <h3 className="text-3xl font-bold text-[#2563EB]">20+</h3>
               <p className="mt-2 text-gray-600">Countries Served</p >
             </div>
 
             <div className="rounded-2xl bg-blue-50 p-6 shadow-md">
-              <h3 className="text-3xl font-bold text-[#0B4EA2]">1000+</h3>
+              <h3 className="text-3xl font-bold text-[#2563EB]">1000+</h3>
               <p className="mt-2 text-gray-600">Happy Clients</p >
             </div>
 
             <div className="rounded-2xl bg-blue-50 p-6 shadow-md">
-              <h3 className="text-3xl font-bold text-[#0B4EA2]">24/7</h3>
+              <h3 className="text-3xl font-bold text-[#2563EB]">24/7</h3>
               <p className="mt-2 text-gray-600">Customer Support</p >
             </div>
           </div>
 
           <Link
             href="/about"
-            className="inline-block rounded-xl bg-[#0B4EA2] px-10 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-[#1E88E5]"
+            className="inline-block rounded-xl bg-[#2563EB] px-10 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-[#3B82F6]"
           >
             Learn More →
           </Link>

@@ -92,11 +92,11 @@ export default function TestimonialsPage() {
       .sort((a, b) => b.id - a.id)
       .map((entry) => (
         <li key={entry.id} className={`group space-y-4 rounded-3xl border border-white/15 bg-white/10 p-6 shadow-xl backdrop-blur-sm ${
-          level > 0 ? "ml-8 border-l-4 border-yellow-400" : ""
+          level > 0 ? "ml-8 border-l-4 border-orange-400" : ""
         }`}>
           <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
             <div>
-              <div className="flex flex-wrap items-center gap-3 text-sm font-semibold text-yellow-300">
+              <div className="flex flex-wrap items-center gap-3 text-sm font-semibold text-orange-300">
                 <span>{entry.name}</span>
                 <span className="text-slate-300">•</span>
                 <span>{entry.location}</span>
@@ -167,7 +167,7 @@ export default function TestimonialsPage() {
                 <div className="flex flex-wrap gap-2">
                   <button
                     type="submit"
-                    className="rounded-2xl bg-yellow-400 px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-yellow-300"
+                    className="rounded-2xl bg-[#F97316] px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-orange-600"
                   >
                     Submit reply
                   </button>
@@ -298,7 +298,7 @@ export default function TestimonialsPage() {
     <main className="min-h-screen bg-linear-to-br from-[#0b4ea2] via-[#072f5d] to-[#091a2e] px-6 py-20 text-white">
       <div className="mx-auto flex max-w-6xl flex-col items-center">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-yellow-400">Customer testimonials</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-400">Customer testimonials</p>
           <h1 className="mb-4 mt-4 text-4xl font-bold sm:text-5xl">Trusted feedback from buyers around the world</h1>
           <p className="mt-6 text-lg leading-8 text-slate-100">
             Trusted by importers and distributors around the world. Share your impression or ask a question about a product and it will appear here.
@@ -351,7 +351,7 @@ export default function TestimonialsPage() {
           <div className="mt-5 flex flex-col items-center gap-3 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
             <button
               type="submit"
-              className="rounded-xl bg-yellow-400 px-5 py-3 font-semibold text-slate-900 transition hover:bg-yellow-300"
+              className="rounded-xl bg-[#F97316] px-5 py-3 font-semibold text-slate-900 transition hover:bg-orange-600"
             >
               Submit comment
             </button>

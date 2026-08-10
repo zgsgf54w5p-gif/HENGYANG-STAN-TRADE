@@ -111,7 +111,7 @@ ${form.message}
       >
         <h1
           style={{
-            color: "#071F3D",
+            color: "#0F172A",
             fontSize: "42px",
             marginBottom: "10px",
           }}
@@ -224,7 +224,7 @@ ${form.message}
           <button
             type="submit"
             style={{
-              background: "#0B4EA2",
+              background: "#2563EB",
               color: "white",
               border: "none",
               padding: "18px",

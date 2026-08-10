@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#071F3D] px-6 pb-7 pt-16 text-white sm:px-8 lg:px-12">
+    <footer className="bg-[#0F172A] px-6 pb-7 pt-16 text-white sm:px-8 lg:px-12">
       <div className="mx-auto mb-11 grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr] lg:gap-12">
         <div>
           <h2 className="mb-4 text-xl font-bold">Hengyang Stan Trade Development Co.,Ltd</h2>
@@ -16,11 +16,11 @@ export default function Footer() {
         <div>
           <h3 className="mb-4 font-bold">Quick Links</h3>
           <nav className="space-y-3 text-slate-300">
-            <p><Link href="/" className="transition hover:text-yellow-400">Home</Link></p>
-            <p><Link href="/about" className="transition hover:text-yellow-400">About</Link></p>
-            <p><Link href="/products" className="transition hover:text-yellow-400">Products</Link></p>
-            <p><Link href="/testimonials" className="transition hover:text-yellow-400">Testimonials</Link></p>
-            <p><Link href="/contact" className="transition hover:text-yellow-400">Contact</Link></p>
+            <p><Link href="/" className="transition hover:text-orange-400">Home</Link></p>
+            <p><Link href="/about" className="transition hover:text-orange-400">About</Link></p>
+            <p><Link href="/products" className="transition hover:text-orange-400">Products</Link></p>
+            <p><Link href="/testimonials" className="transition hover:text-orange-400">Testimonials</Link></p>
+            <p><Link href="/contact" className="transition hover:text-orange-400">Contact</Link></p>
           </nav>
         </div>
 

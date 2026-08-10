@@ -34,11 +34,11 @@ export default async function ProductPage({
         <div className="mb-8 rounded-[30px] border border-slate-200 bg-white/80 p-6 shadow-[0_16px_60px_rgba(7,31,61,0.08)] backdrop-blur sm:p-8">
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#0B4EA2]">Product Detail</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#2563EB]">Product Detail</p>
               <h1 className="mt-2 text-3xl font-black text-slate-900 sm:text-4xl">{product.name}</h1>
             </div>
             {product.badge && (
-              <span className="inline-flex w-fit items-center rounded-full bg-[#FFD700] px-4 py-2 text-sm font-semibold text-slate-900">
+              <span className="inline-flex w-fit items-center rounded-full bg-[#F97316] px-4 py-2 text-sm font-semibold text-slate-900">
                 {product.badge}
               </span>
             )}
@@ -60,7 +60,7 @@ export default async function ProductPage({
           </section>
 
           <aside className="h-fit rounded-[32px] border border-slate-200 bg-white p-6 shadow-[0_20px_70px_rgba(7,31,61,0.1)] sm:p-8 lg:sticky lg:top-24">
-            <div className="rounded-[24px] bg-[linear-gradient(135deg,_#0B4EA2_0%,_#1E88E5_100%)] p-5 text-white">
+            <div className="rounded-[24px] bg-[linear-gradient(135deg,_#2563EB_0%,_#3B82F6_100%)] p-5 text-white">
               <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-slate-100">
                 <Sparkles size={16} />
                 Wholesale-ready offer
@@ -71,7 +71,7 @@ export default async function ProductPage({
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               {product.moq && (
                 <div className="rounded-2xl bg-slate-50 p-4">
-                  <div className="flex items-center gap-2 text-[#0B4EA2]">
+                  <div className="flex items-center gap-2 text-[#2563EB]">
                     <Package size={16} />
                     <span className="text-xs font-bold uppercase">MOQ</span>
                   </div>
@@ -80,7 +80,7 @@ export default async function ProductPage({
               )}
               {product.voltage && (
                 <div className="rounded-2xl bg-slate-50 p-4">
-                  <div className="flex items-center gap-2 text-[#0B4EA2]">
+                  <div className="flex items-center gap-2 text-[#2563EB]">
                     <ShieldCheck size={16} />
                     <span className="text-xs font-bold uppercase">Voltage</span>
                   </div>
@@ -89,7 +89,7 @@ export default async function ProductPage({
               )}
               {product.capacity && (
                 <div className="rounded-2xl bg-slate-50 p-4 sm:col-span-2">
-                  <div className="flex items-center gap-2 text-[#0B4EA2]">
+                  <div className="flex items-center gap-2 text-[#2563EB]">
                     <CheckCircle2 size={16} />
                     <span className="text-xs font-bold uppercase">Capacity</span>
                   </div>
@@ -99,7 +99,7 @@ export default async function ProductPage({
             </div>
 
             <div className="mt-6 space-y-3">
-              <a href="/quote" className="flex items-center justify-center gap-2 rounded-2xl bg-[#0B4EA2] px-5 py-4 text-lg font-bold text-white transition hover:bg-[#083879]">
+              <a href="/quote" className="flex items-center justify-center gap-2 rounded-2xl bg-[#2563EB] px-5 py-4 text-lg font-bold text-white transition hover:bg-[#1D4ED8]">
                 Request a Quote
                 <ArrowRight size={18} />
               </a>
@@ -107,7 +107,7 @@ export default async function ProductPage({
                 href={`https://wa.me/8613510151112?text=${encodeURIComponent(`Hello Hengyang Stan Trade, I am interested in the ${product.name}.`)}`}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-5 py-4 text-lg font-bold text-white transition hover:bg-[#1EBE5A]"
+                className="flex items-center justify-center gap-2 rounded-2xl bg-[#2563EB] px-5 py-4 text-lg font-bold text-white transition hover:bg-[#1D4ED8]"
               >
                 <MessageCircle size={18} />
                 Chat on WhatsApp
@@ -129,10 +129,10 @@ export default async function ProductPage({
             <div className="mt-8 rounded-[24px] border border-slate-200 bg-[#F8FBFF] p-5">
               <h3 className="text-lg font-bold text-slate-900">Why importers choose us</h3>
               <ul className="mt-4 space-y-3 text-sm text-slate-600">
-                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#0B4EA2]" /> Factory direct pricing</li>
-                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#0B4EA2]" /> OEM & ODM support</li>
-                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#0B4EA2]" /> Worldwide shipping</li>
-                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#0B4EA2]" /> Fast export logistics</li>
+                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#2563EB]" /> Factory direct pricing</li>
+                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#2563EB]" /> OEM & ODM support</li>
+                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#2563EB]" /> Worldwide shipping</li>
+                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#2563EB]" /> Fast export logistics</li>
               </ul>
             </div>
           </aside>

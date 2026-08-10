@@ -31,7 +31,7 @@ export default function ProductCard({ product }: { product: Product }) {
       {/* Content */}
       <div className="p-5">
 
-        <h3 className="line-clamp-2 text-lg font-bold text-[#071F3D]">
+        <h3 className="line-clamp-2 text-lg font-bold text-[#0F172A]">
           {product.name}
         </h3>
 
@@ -46,14 +46,14 @@ export default function ProductCard({ product }: { product: Product }) {
         </p >
 
 
-        <p className="mt-4 text-xl font-bold text-[#0B4EA2]">
+        <p className="mt-4 text-xl font-bold text-[#2563EB]">
           {product.price}
         </p >
 
 
         <Link
           href="/quote"
-          className="mt-4 block rounded-lg bg-yellow-400 py-3 text-center font-bold text-black transition hover:bg-yellow-300"
+          className="mt-4 block rounded-lg bg-[#F97316] py-3 text-center font-bold text-black transition hover:bg-orange-600"
         >
           Request Quote
         </Link>

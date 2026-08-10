@@ -9,7 +9,7 @@ export default function TestimonialsPage() {
     >
       <h1
         style={{
-          color: "#0B4EA2",
+          color: "#2563EB",
           fontSize: "48px",
           textAlign: "center",
         }}

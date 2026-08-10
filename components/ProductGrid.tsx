@@ -18,13 +18,13 @@ export default function ProductGrid() {
     <section className="bg-gray-100 py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mb-12">
-          <span className="rounded-md bg-blue-100 px-4 py-2 text-sm font-bold uppercase tracking-wider text-[#0B4EA2]">
+          <span className="rounded-md bg-orange-100 px-4 py-2 text-sm font-bold uppercase tracking-wider text-[#2563EB]">
             Featured Products
           </span>
 
           <div className="mt-5 flex items-center justify-between">
             <div>
-              <h2 className="text-4xl font-bold text-[#071F3D]">
+              <h2 className="text-4xl font-bold text-[#0F172A]">
                 Explore Our Products
               </h2>
 
@@ -35,7 +35,7 @@ export default function ProductGrid() {
 
             <Link
               href="/products"
-              className="hidden font-semibold text-[#0B4EA2] hover:text-yellow-500 md:block"
+              className="hidden font-semibold text-[#2563EB] hover:text-orange-600 md:block"
             >
               View All →
             </Link>
@@ -62,7 +62,7 @@ export default function ProductGrid() {
                 >
                   <div className="relative flex aspect-square items-center justify-center bg-linear-to-br from-white to-slate-50 p-4">
                     {product.badge && (
-                      <span className="absolute left-3 top-3 z-10 rounded-full bg-yellow-400 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-[#071F3D]">
+                      <span className="absolute left-3 top-3 z-10 rounded-full bg-[#F97316] px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-[#0F172A]">
                         {product.badge}
                       </span>
                     )}
@@ -79,10 +79,10 @@ export default function ProductGrid() {
                   <div className="p-4">
                     <div className="flex items-start justify-between gap-3">
                       <div>
-                        <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#0B4EA2]">
+                        <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#2563EB]">
                           Kitchen & Commercial Equipment
                         </p>
-                        <h3 className="mt-2 text-base font-bold text-[#071F3D] line-clamp-2">
+                        <h3 className="mt-2 text-base font-bold text-[#0F172A] line-clamp-2">
                           {product.name}
                         </h3>
                       </div>
@@ -96,7 +96,7 @@ export default function ProductGrid() {
                       {product.description}
                     </p>
 
-                    <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-[#0B4EA2]">
+                    <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-[#2563EB]">
                       <Sparkles size={15} />
                       <span>Tap to expand</span>
                     </div>
@@ -115,31 +115,31 @@ export default function ProductGrid() {
                         <div className="grid gap-3 sm:grid-cols-2">
                           {product.moq && (
                             <div className="rounded-lg bg-gray-50 p-3">
-                              <div className="flex items-center gap-2 text-[#0B4EA2]">
+                              <div className="flex items-center gap-2 text-[#2563EB]">
                                 <Package size={15} />
                                 <span className="text-xs font-bold">MOQ</span>
                               </div>
-                              <p className="mt-1 text-sm font-bold text-[#071F3D]">{product.moq}</p>
+                              <p className="mt-1 text-sm font-bold text-[#0F172A]">{product.moq}</p>
                             </div>
                           )}
 
                           {product.voltage && (
                             <div className="rounded-lg bg-gray-50 p-3">
-                              <div className="flex items-center gap-2 text-[#0B4EA2]">
+                              <div className="flex items-center gap-2 text-[#2563EB]">
                                 <Zap size={15} />
                                 <span className="text-xs font-bold">Voltage</span>
                               </div>
-                              <p className="mt-1 text-sm font-bold text-[#071F3D]">{product.voltage}</p>
+                              <p className="mt-1 text-sm font-bold text-[#0F172A]">{product.voltage}</p>
                             </div>
                           )}
 
                           {product.capacity && (
                             <div className="rounded-lg bg-gray-50 p-3 sm:col-span-2">
-                              <div className="flex items-center gap-2 text-[#0B4EA2]">
+                              <div className="flex items-center gap-2 text-[#2563EB]">
                                 <ShieldCheck size={15} />
                                 <span className="text-xs font-bold">Capacity</span>
                               </div>
-                              <p className="mt-1 text-sm font-bold text-[#071F3D]">{product.capacity}</p>
+                              <p className="mt-1 text-sm font-bold text-[#0F172A]">{product.capacity}</p>
                             </div>
                           )}
                         </div>
@@ -157,7 +157,7 @@ export default function ProductGrid() {
                         <div className="flex flex-wrap gap-2">
                           <Link
                             href={`/products/${product.slug}`}
-                            className="inline-flex items-center gap-2 rounded-lg bg-[#0B4EA2] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#083879]"
+                            className="inline-flex items-center gap-2 rounded-lg bg-[#2563EB] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#1D4ED8]"
                             onClick={(event) => event.stopPropagation()}
                           >
                             View Details
@@ -165,7 +165,7 @@ export default function ProductGrid() {
                           </Link>
                           <Link
                             href="/quote"
-                            className="inline-flex items-center rounded-lg border border-gray-300 px-3 py-2 text-sm font-semibold text-[#071F3D] transition hover:border-[#0B4EA2] hover:text-[#0B4EA2]"
+                            className="inline-flex items-center rounded-lg border border-gray-300 px-3 py-2 text-sm font-semibold text-[#0F172A] transition hover:border-[#2563EB] hover:text-[#2563EB]"
                             onClick={(event) => event.stopPropagation()}
                           >
                             Request Quote

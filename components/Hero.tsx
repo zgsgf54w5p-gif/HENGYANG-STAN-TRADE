@@ -1,150 +1,228 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowRight, Globe2, Truck, ShieldCheck } from "lucide-react";
 
 export default function Hero() {
+
   return (
-    <section className="relative overflow-hidden bg-[#071F3D] text-white">
 
-      <Image
-        src="/hero.jpg"
-        alt="Products prepared for international export"
-        fill
-        priority
-        className="object-cover object-center opacity-25"
-        sizes="100vw"
-      />
+    <section className="relative overflow-hidden bg-[#071F3D]">
 
-      {/* Background Overlay */}
-      <div className="absolute inset-0 bg-linear-to-r from-[#071F3D] via-[#071F3D]/90 to-[#0B4EA2]/60" />
 
-      {/* Decorative Blur */}
-      <div className="absolute -left-32 top-20 h-96 w-96 rounded-full bg-yellow-400/10 blur-3xl"></div>
-      <div className="absolute right-0 bottom-0 h-125 w-125 rounded-full bg-blue-400/10 blur-3xl"></div>
+      {/* Background */}
 
-      <div className="relative mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl items-center px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <div className="absolute inset-0">
 
-        <div className="max-w-5xl">
-
-          {/* Badge */}
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex rounded-full bg-yellow-400 px-6 py-3 text-xs font-bold uppercase tracking-[0.3em] text-black shadow-xl sm:px-8 sm:text-sm"
-          >
-            Global Import & Export
-          </motion.span>
-
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="font-script mt-8 text-4xl text-yellow-300 sm:text-5xl"
-          >
-            Trade with intention
-          </motion.p>
-
-          {/* Heading */}
-          <motion.h1
-            initial={{ opacity: 0, y: 35 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="font-display mt-5 text-5xl font-semibold leading-[0.95] tracking-tight md:text-7xl xl:text-8xl"
-          >
-            Premium Products
-            <br />
-            From China
-            <br />
-            To The World
-          </motion.h1>
-
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 35 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9 }}
-            className="mt-10 max-w-3xl text-xl leading-9 text-gray-200"
-          >
-            Hengyang Stan Trade Development Co., Ltd. specializes in supplying
-            premium home appliances, consumer electronics, kitchen equipment and
-            commercial products. We provide reliable sourcing, competitive
-            pricing and worldwide export solutions to importers, wholesalers and
-            distributors.
-          </motion.p>
-
-          {/* Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.1 }}
-            className="mt-10 flex flex-wrap gap-4"
-          >
-            <Link
-              href="/products"
-              className="rounded-xl bg-yellow-400 px-8 py-4 text-base font-bold text-black shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-300 hover:shadow-2xl sm:px-10 sm:py-5 sm:text-lg"
-            >
-              Explore Products
-            </Link>
-
-            <Link
-              href="/quote"
-              className="rounded-xl border-2 border-white px-8 py-4 text-base font-bold transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#0B4EA2] sm:px-10 sm:py-5 sm:text-lg"
-            >
-              Request Quote
-            </Link>
-          </motion.div>
-
-          {/* Statistics */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.3 }}
-            className="mt-20 grid grid-cols-2 gap-x-10 gap-y-10 md:grid-cols-4 lg:gap-x-16"
-          >
-            <div>
-              <h3 className="text-5xl font-extrabold text-yellow-400">
-                500+
-              </h3>
-              <p className="mt-4 text-lg text-gray-300">
-                Products
-              </p >
-            </div>
-
-            <div>
-              <h3 className="text-5xl font-extrabold text-yellow-400">
-                20+
-              </h3>
-              <p className="mt-4 text-lg text-gray-300">
-                Export Markets
-              </p >
-            </div>
-
-            <div>
-              <h3 className="text-5xl font-extrabold text-yellow-400">
-                1000+
-              </h3>
-              <p className="mt-4 text-lg text-gray-300">
-                Happy Customers
-              </p >
-            </div>
-
-            <div>
-              <h3 className="text-5xl font-extrabold text-yellow-400">
-                24/7
-              </h3>
-              <p className="mt-4 text-lg text-gray-300">
-                Customer Support
-              </p >
-            </div>
-          </motion.div>
-
-        </div>
+        <Image
+          src="/images/ban.jpg"
+          alt="Kitchen appliances supplier"
+          fill
+          priority
+          className="object-cover opacity-40"
+        />
 
       </div>
 
+
+
+      <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+
+
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+
+
+          {/* Left Content */}
+
+          <div className="text-white">
+
+
+            <span className="inline-flex rounded-full bg-yellow-400 px-5 py-2 text-sm font-bold text-black">
+
+              GLOBAL APPLIANCE SUPPLIER
+
+            </span>
+
+
+
+            <h1 className="mt-6 text-5xl font-extrabold leading-tight lg:text-6xl">
+
+              Quality Kitchen Appliances
+
+              <span className="block text-yellow-400">
+
+                For Global Importers
+
+              </span>
+
+            </h1>
+
+
+
+
+            <p className="mt-6 max-w-xl text-lg leading-8 text-gray-200">
+
+              Hengyang Stan Trade Development Co.,Ltd provides
+              reliable home appliances and commercial equipment
+              with worldwide shipping solutions.
+
+            </p >
+
+
+
+
+            {/* Buttons */}
+
+            <div className="mt-8 flex flex-wrap gap-4">
+
+
+              <Link
+                href="/products"
+                className="flex items-center gap-2 rounded-lg bg-yellow-400 px-7 py-4 font-bold text-black transition hover:bg-yellow-300"
+              >
+
+                Explore Products
+
+                <ArrowRight size={20}/>
+
+              </Link>
+
+
+
+              <Link
+                href="/quote"
+                className="rounded-lg border border-white px-7 py-4 font-bold text-white transition hover:bg-white hover:text-[#071F3D]"
+              >
+
+                Request Quote
+
+              </Link>
+
+
+            </div>
+
+
+          </div>
+
+
+
+
+
+
+          {/* Right Product Showcase */}
+
+          <div className="relative">
+
+
+            <div className="rounded-3xl bg-white/10 p-6 backdrop-blur-md">
+
+
+              <Image
+
+                src="/images/airfryer.jpg"
+
+                alt="Featured appliance"
+
+                width={600}
+
+                height={600}
+
+                className="rounded-2xl object-contain"
+
+              />
+
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+
+
+
+
+        {/* Trust bar */}
+
+        <div className="mt-16 grid gap-5 rounded-2xl bg-white p-6 text-[#071F3D] sm:grid-cols-3">
+
+
+          <div className="flex items-center gap-3">
+
+            <Globe2 className="text-[#0B4EA2]" />
+
+            <div>
+
+              <p className="font-bold">
+                Worldwide Shipping
+              </p >
+
+              <p className="text-sm text-gray-600">
+                Export to global markets
+              </p >
+
+            </div>
+
+          </div>
+
+
+
+
+
+          <div className="flex items-center gap-3">
+
+            <Truck className="text-[#0B4EA2]" />
+
+            <div>
+
+              <p className="font-bold">
+                Fast Logistics
+              </p >
+
+              <p className="text-sm text-gray-600">
+                Reliable delivery solutions
+              </p >
+
+            </div>
+
+          </div>
+
+
+
+
+
+          <div className="flex items-center gap-3">
+
+            <ShieldCheck className="text-[#0B4EA2]" />
+
+            <div>
+
+              <p className="font-bold">
+                Export Quality
+              </p >
+
+              <p className="text-sm text-gray-600">
+                Professional manufacturing
+              </p >
+
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
     </section>
+
   );
 }

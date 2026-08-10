@@ -8,31 +8,55 @@ import { products } from "../data/products";
 
 export default function ProductGrid() {
   return (
-    <section className="bg-[#F8FAFC] py-24">
+    <section className="bg-gray-100 py-20">
+
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
+
 
         {/* Heading */}
 
-        <div className="mb-20 text-center">
+        <div className="mb-12">
 
-          <span className="rounded-full bg-blue-100 px-5 py-2 text-sm font-bold uppercase tracking-[3px] text-[#0B4EA2]">
+          <span className="rounded-md bg-blue-100 px-4 py-2 text-sm font-bold uppercase tracking-wider text-[#0B4EA2]">
             Featured Products
           </span>
 
-          <h2 className="mt-6 text-5xl font-extrabold text-[#071F3D]">
-            Discover Our Premium Collection
-          </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
-            High-quality commercial kitchen equipment and home appliances
-            designed for importers, wholesalers and distributors worldwide.
-          </p >
+          <div className="mt-5 flex items-center justify-between">
+
+            <div>
+
+              <h2 className="text-4xl font-bold text-[#071F3D]">
+                Explore Our Products
+              </h2>
+
+
+              <p className="mt-3 max-w-2xl text-gray-600">
+                Premium kitchen appliances and commercial equipment
+                supplied worldwide for wholesalers, distributors and importers.
+              </p >
+
+            </div>
+
+
+            <Link
+              href="/products"
+              className="hidden font-semibold text-[#0B4EA2] hover:text-yellow-500 md:block"
+            >
+              View All →
+            </Link>
+
+          </div>
 
         </div>
 
-        {/* Grid */}
 
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 xl:grid-cols-4">
+
+
+        {/* Product Grid */}
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
 
           {products.map((product, index) => (
 
@@ -42,25 +66,38 @@ export default function ProductGrid() {
               className="group"
             >
 
+
               <motion.article
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+
+                initial={{
+                  opacity: 0,
+                  y: 30,
+                }}
+
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+
+                viewport={{
+                  once:true,
+                }}
+
                 transition={{
-                  duration: 0.45,
-                  delay: index * 0.05,
+                  duration:0.4,
+                  delay:index * 0.05,
                 }}
-                whileHover={{
-                  y: -10,
-                }}
-                className="flex h-[720px] flex-col overflow-hidden rounded-[30px] border border-slate-200 bg-white shadow-lg transition-all duration-500 group-hover:shadow-2xl"
+
+                className="relative flex h-[620px] flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
               >
+
+
 
                 {/* Badge */}
 
                 {product.badge && (
 
-                  <div className="absolute ml-5 mt-5 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 px-4 py-2 text-xs font-bold uppercase tracking-[2px] text-[#071F3D] shadow-lg">
+                  <div className="absolute left-4 top-4 z-10 rounded-full bg-yellow-400 px-3 py-1 text-xs font-bold text-[#071F3D]">
 
                     {product.badge}
 
@@ -68,129 +105,212 @@ export default function ProductGrid() {
 
                 )}
 
-                {/* Image */}
 
-                <div className="overflow-hidden bg-slate-100">
+
+                {/* Product Image */}
+
+                <div className="flex h-[260px] items-center justify-center bg-white p-5">
+
 
                   <Image
+
                     src={product.images[0]}
+
                     alt={product.name}
-                    width={700}
-                    height={700}
-                    className="h-[300px] w-full object-cover transition duration-700 group-hover:scale-105"
+
+                    width={400}
+
+                    height={400}
+
+                    className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+
                   />
+
 
                 </div>
 
-                {/* Content */}
 
-                <div className="flex flex-1 flex-col p-7">
 
-                  <p className="text-sm font-semibold uppercase tracking-[2px] text-[#0B4EA2]">
-                    Commercial Equipment
+
+                {/* Information */}
+
+                <div className="flex flex-1 flex-col p-5">
+
+
+                  <p className="text-xs font-bold uppercase tracking-wider text-[#0B4EA2]">
+
+                    Kitchen & Commercial Equipment
+
                   </p >
 
-                  <h3 className="mt-3 min-h-[70px] text-2xl font-extrabold leading-tight text-[#071F3D]">
+
+
+
+                  <h3 className="mt-2 line-clamp-2 text-xl font-bold text-[#071F3D]">
+
                     {product.name}
+
                   </h3>
 
-                  <p className="mt-5 min-h-[120px] text-[15px] leading-7 text-slate-600 line-clamp-4">
+
+
+
+                  {/* Rating */}
+
+                  <div className="mt-2 flex items-center gap-2">
+
+                    <span className="text-yellow-500">
+                      ★★★★★
+                    </span>
+
+                    <span className="text-xs text-gray-500">
+                      Trusted Supplier
+                    </span>
+
+                  </div>
+
+
+
+
+                  <p className="mt-3 line-clamp-3 text-sm leading-6 text-gray-600">
+
                     {product.description}
+
                   </p >
+
+
+
 
                   {/* Specs */}
 
-                  <div className="mt-6 grid grid-cols-2 gap-3">
+                  <div className="mt-4 grid grid-cols-2 gap-3">
+
 
                     {product.moq && (
 
-                      <div className="rounded-2xl bg-slate-50 p-3">
+                      <div className="rounded-lg bg-gray-50 p-3">
 
                         <div className="flex items-center gap-2 text-[#0B4EA2]">
 
-                          <Package size={16} />
+                          <Package size={15}/>
 
-                          <span className="text-xs font-semibold uppercase">
+                          <span className="text-xs font-bold">
                             MOQ
                           </span>
 
                         </div>
 
-                        <p className="mt-2 font-bold text-[#071F3D]">
+
+                        <p className="mt-1 text-sm font-bold text-[#071F3D]">
+
                           {product.moq}
+
                         </p >
 
                       </div>
 
                     )}
 
+
+
+
+
                     {product.voltage && (
 
-                      <div className="rounded-2xl bg-slate-50 p-3">
+                      <div className="rounded-lg bg-gray-50 p-3">
 
                         <div className="flex items-center gap-2 text-[#0B4EA2]">
 
-                          <Zap size={16} />
+                          <Zap size={15}/>
 
-                          <span className="text-xs font-semibold uppercase">
+                          <span className="text-xs font-bold">
                             Voltage
                           </span>
 
                         </div>
 
-                        <p className="mt-2 font-bold text-[#071F3D]">
+
+                        <p className="mt-1 text-sm font-bold text-[#071F3D]">
+
                           {product.voltage}
+
                         </p >
+
 
                       </div>
 
                     )}
 
+
                   </div>
+
+
+
+
 
                   {/* Trust */}
 
-                  <div className="mt-6 flex items-center gap-2 rounded-2xl bg-[#F5F8FC] p-4">
+                  <div className="mt-4 flex items-center gap-2 rounded-lg bg-green-50 p-3">
 
                     <ShieldCheck
-                      size={18}
+                      size={17}
                       className="text-green-600"
                     />
 
-                    <span className="text-sm font-medium text-slate-700">
+                    <span className="text-xs font-semibold text-gray-700">
+
                       Factory Direct • Export Quality
+
                     </span>
 
+
                   </div>
+
+
+
+
 
                   {/* Button */}
 
-                  <div className="mt-auto pt-8">
+                  <div className="mt-auto pt-5">
 
-                    <div className="flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-[#0B4EA2] to-[#1E88E5] py-4 font-bold text-white transition duration-300 group-hover:shadow-xl">
 
-                      View Details
+                    <div className="flex items-center justify-center gap-2 rounded-lg bg-[#0B4EA2] py-3 font-bold text-white transition group-hover:bg-[#083879]">
+
+
+                      Request Quote
+
 
                       <ArrowRight
                         size={18}
-                        className="transition-transform duration-300 group-hover:translate-x-1"
+                        className="transition group-hover:translate-x-1"
                       />
+
 
                     </div>
 
+
                   </div>
+
 
                 </div>
 
+
               </motion.article>
+
 
             </Link>
 
+
           ))}
+
 
         </div>
 
+
       </div>
+
+
     </section>
   );
 }

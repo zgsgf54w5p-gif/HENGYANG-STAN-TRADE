@@ -183,7 +183,7 @@ height={600}
 
 priority
 
-className="h-[300px] w-full object-contain sm:h-[420px]"
+className="h-75 w-full object-contain sm:h-[420px]"
 
 />
 

@@ -3,11 +3,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { Menu, Search, User, FileText } from "lucide-react";
 
 export default function Navbar() {
-
+  const router = useRouter();
   const [open, setOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
 
   const categories = [
@@ -27,6 +29,13 @@ export default function Navbar() {
     {name:"Contact", href:"/contact"},
   ];
 
+  const handleSearch = (event?: React.FormEvent) => {
+    event?.preventDefault();
+    const trimmed = searchQuery.trim();
+    const target = trimmed ? `/products?search=${encodeURIComponent(trimmed)}` : "/products";
+    router.push(target);
+    setOpen(false);
+  };
 
   return (
 
@@ -78,17 +87,19 @@ TRADE
 
 {/* SEARCH DESKTOP */}
 
-<div className="hidden flex-1 md:flex">
+<form onSubmit={handleSearch} className="hidden flex-1 md:flex">
 
 <div className="flex w-full">
 
 <input
+value={searchQuery}
+onChange={(event) => setSearchQuery(event.target.value)}
 placeholder="Search products..."
 className="h-11 flex-1 rounded-l-lg px-4 text-black outline-none"
 />
 
 
-<button className="rounded-r-lg bg-[#F97316] px-5 text-white">
+<button type="submit" className="rounded-r-lg bg-[#F97316] px-5 text-white">
 
 <Search size={22}/>
 
@@ -97,7 +108,7 @@ className="h-11 flex-1 rounded-l-lg px-4 text-black outline-none"
 
 </div>
 
-</div>
+</form>
 
 
 
@@ -161,17 +172,19 @@ className="md:hidden"
 
 {/* MOBILE SEARCH */}
 
-<div className="px-4 pb-3 md:hidden">
+<form onSubmit={handleSearch} className="px-4 pb-3 md:hidden">
 
 <div className="flex">
 
 <input
+value={searchQuery}
+onChange={(event) => setSearchQuery(event.target.value)}
 placeholder="Search products..."
 className="h-10 flex-1 rounded-l-lg px-3 text-black"
 />
 
 
-<button className="rounded-r-lg bg-[#F97316] px-4 text-white">
+<button type="submit" className="rounded-r-lg bg-[#F97316] px-4 text-white">
 
 <Search size={20}/>
 
@@ -180,7 +193,7 @@ className="h-10 flex-1 rounded-l-lg px-3 text-black"
 
 </div>
 
-</div>
+</form>
 
 
 

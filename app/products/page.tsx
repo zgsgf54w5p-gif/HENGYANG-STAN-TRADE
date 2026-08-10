@@ -4,14 +4,29 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, ChevronUp, Package, Search, ShieldCheck, Sparkles, Zap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { Suspense } from "react";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import { products } from "@/data/products";
 
 const DESCRIPTION_LIMIT = 110;
 
 export default function ProductsPage() {
+  return (
+    <Suspense fallback={<main className="min-h-screen bg-slate-50" />}> 
+      <ProductsContent />
+    </Suspense>
+  );
+}
+
+function ProductsContent() {
+  const searchParams = useSearchParams();
   const [search, setSearch] = useState("");
   const [expandedSlug, setExpandedSlug] = useState<string | null>(null);
+
+  useEffect(() => {
+    setSearch(searchParams.get("search") ?? "");
+  }, [searchParams]);
 
   const filteredProducts = products.filter((product) => {
     const keyword = search.toLowerCase();

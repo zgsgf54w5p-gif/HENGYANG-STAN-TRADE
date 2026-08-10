@@ -7,6 +7,7 @@ import SourcingProcess from "@/components/SourcingProcess";
 import TradeSupport from "@/components/TradeSupport";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export default function Home() {
@@ -28,7 +29,7 @@ export default function Home() {
               </h2>
             </div>
             <Link href="/products" className="inline-flex items-center font-bold text-[#2563EB] transition hover:text-[#1D4ED8]">
-              View All <span className="ml-2">?</span>
+              View All <span className="ml-2">→</span>
             </Link>
           </div>
           <ProductGrid />
@@ -55,6 +56,7 @@ export default function Home() {
       </section>
 
       <WhatsAppButton />
+      <Footer />
     </main>
   );
 }

@@ -49,115 +49,72 @@ export default function ContactPage() {
   };
 
   return (
-    <main
-      style={{
-        padding: "80px 10%",
-        background: "#F8FAFC",
-        minHeight: "100vh",
-      }}
-    >
-      <h1
-        style={{
-          textAlign: "center",
-          fontSize: "48px",
-          color: "#0B4EA2",
-          marginBottom: "20px",
-        }}
-      >
-        Contact Us
-      </h1>
+    <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,_#f8fbff_0%,_#f2f6fb_45%,_#eef3f9_100%)] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+      <div className="mx-auto max-w-7xl">
+        <div className="rounded-[2rem] border border-slate-200 bg-white/90 p-8 shadow-[0_20px_80px_rgba(7,31,61,0.08)] backdrop-blur sm:p-10 lg:p-14">
+          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+            <div className="rounded-[1.8rem] bg-[linear-gradient(135deg,_#071F3D_0%,_#0B4EA2_100%)] p-8 text-white">
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-yellow-400">Contact us</p>
+              <h1 className="mt-4 text-3xl font-black sm:text-4xl">Let&apos;s talk sourcing, pricing, and growth.</h1>
+              <p className="mt-5 text-lg leading-8 text-slate-200">
+                We would love to hear from you about product inquiries, quotations, OEM support, or new partnership opportunities.
+              </p>
+              <div className="mt-8 space-y-4 text-sm sm:text-base">
+                <p>📍 Hengyang, Hunan, China</p>
+                <p>📧 kitchenware@foxmail.com</p>
+                <p>📱 +86 191 6460 1883</p>
+                <p>🌐 Worldwide export support</p>
+              </div>
+            </div>
 
-      <p
-        style={{
-          textAlign: "center",
-          color: "#555",
-          maxWidth: "700px",
-          margin: "0 auto 60px",
-          lineHeight: "1.8",
-        }}
-      >
-        We'd love to hear from you. Contact Hengyang Stan Trade for product
-        inquiries, quotations, OEM services, or partnership opportunities.
-      </p >
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <input
+                  placeholder="Your Name"
+                  value={form.name}
+                  onChange={(e) => setForm({ ...form, name: e.target.value })}
+                  required
+                  className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-800 outline-none ring-0 focus:border-[#0B4EA2]"
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  value={form.email}
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
+                  required
+                  className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-800 outline-none focus:border-[#0B4EA2]"
+                />
+              </div>
+              <input
+                placeholder="Phone"
+                value={form.phone}
+                onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-800 outline-none focus:border-[#0B4EA2]"
+              />
+              <textarea
+                placeholder="Your Message"
+                rows={6}
+                value={form.message}
+                onChange={(e) => setForm({ ...form, message: e.target.value })}
+                required
+                className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-800 outline-none focus:border-[#0B4EA2]"
+              />
+              <button
+                type="submit"
+                disabled={loading}
+                className="rounded-2xl bg-[#0B4EA2] px-5 py-3.5 text-lg font-semibold text-white transition hover:bg-[#083879] disabled:cursor-not-allowed disabled:opacity-70"
+              >
+                {loading ? "Sending..." : "Send Message"}
+              </button>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "50px",
-        }}
-      >
-        <div>
-          <h2>Our Information</h2>
-          <p>📍 Hengyang, Hunan, China</p >
-          <p>📧 kitchenware@foxmail.com</p >
-          <p>📱 Phone: +86 191 6460 1883</p >
-          <p>🌐 Worldwide Export</p >
+              {status && (
+                <p className={`text-sm font-medium ${status.includes("successfully") ? "text-emerald-600" : "text-rose-600"}`}>
+                  {status}
+                </p>
+              )}
+            </form>
+          </div>
         </div>
-
-        <form
-          onSubmit={handleSubmit}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "20px",
-          }}
-        >
-          <input
-            placeholder="Your Name"
-            value={form.name}
-            onChange={(e) => setForm({ ...form, name: e.target.value })}
-            required
-            style={{ padding: "15px", fontSize: "16px" }}
-          />
-
-          <input
-            type="email"
-            placeholder="Email"
-            value={form.email}
-            onChange={(e) => setForm({ ...form, email: e.target.value })}
-            required
-            style={{ padding: "15px", fontSize: "16px" }}
-          />
-
-          <input
-            placeholder="Phone"
-            value={form.phone}
-            onChange={(e) => setForm({ ...form, phone: e.target.value })}
-            style={{ padding: "15px", fontSize: "16px" }}
-          />
-
-          <textarea
-            placeholder="Your Message"
-            rows={6}
-            value={form.message}
-            onChange={(e) => setForm({ ...form, message: e.target.value })}
-            required
-            style={{ padding: "15px", fontSize: "16px" }}
-          />
-
-          <button
-            type="submit"
-            disabled={loading}
-            style={{
-              background: "#0B4EA2",
-              color: "white",
-              padding: "15px",
-              border: "none",
-              borderRadius: "8px",
-              fontSize: "18px",
-              cursor: "pointer",
-            }}
-          >
-            {loading ? "Sending..." : "Send Message"}
-          </button>
-
-          {status && (
-            <p style={{ color: status.includes("successfully") ? "green" : "red" }}>
-              {status}
-            </p >
-          )}
-        </form>
       </div>
     </main>
   );

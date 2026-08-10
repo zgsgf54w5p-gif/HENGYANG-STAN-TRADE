@@ -1,6 +1,7 @@
-﻿import { notFound } from "next/navigation";
-import { products } from "@/data/products";
+﻿import { ArrowRight, CheckCircle2, MessageCircle, Package, ShieldCheck, Sparkles } from "lucide-react";
+import { notFound } from "next/navigation";
 import ProductGallery from "@/components/ProductGallery";
+import { products } from "@/data/products";
 
 export default async function ProductPage({
   params,
@@ -8,206 +9,134 @@ export default async function ProductPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-
   const product = products.find((item) => item.slug === slug);
 
   if (!product) {
     notFound();
   }
 
+  const specs = [
+    ["MOQ", product.moq],
+    ["Voltage", product.voltage],
+    ["Capacity", product.capacity],
+    ["Power", product.power],
+    ["Material", product.material],
+    ["Fuel Type", product.fuelType],
+    ["Cooking Area", product.cookingArea],
+    ["Dimensions", product.dimensions],
+    ["Weight", product.weight],
+    ["Color", product.color],
+  ].filter(([, value]) => value);
+
   return (
-    <main className="bg-[#F8FAFC] py-12">
-      <div className="mx-auto max-w-7xl px-6">
+    <main className="bg-[radial-gradient(circle_at_top_left,_#f8fbff_0%,_#f2f6fb_45%,_#eef3f9_100%)] py-10 sm:py-14">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-8 rounded-[30px] border border-slate-200 bg-white/80 p-6 shadow-[0_16px_60px_rgba(7,31,61,0.08)] backdrop-blur sm:p-8">
+          <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#0B4EA2]">Product Detail</p>
+              <h1 className="mt-2 text-3xl font-black text-slate-900 sm:text-4xl">{product.name}</h1>
+            </div>
+            {product.badge && (
+              <span className="inline-flex w-fit items-center rounded-full bg-[#FFD700] px-4 py-2 text-sm font-semibold text-slate-900">
+                {product.badge}
+              </span>
+            )}
+          </div>
+        </div>
 
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_0.9fr]">
-
-          {/* Left Side */}
-
+        <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
           <section>
-
-            <ProductGallery
-              images={product.images}
-              productName={product.name}
-              productSlug={product.slug}
-            />
+            <ProductGallery images={product.images} productName={product.name} productSlug={product.slug} />
 
             {product.video && (
-              <div className="mt-10 rounded-3xl bg-white p-6 shadow-lg">
-                <h2 className="mb-5 text-2xl font-bold text-[#071F3D]">
-                  Product Video
-                </h2>
-
-                <video
-                  controls
-                  className="w-full rounded-2xl"
-                  poster={product.images[0]}
-                >
+              <div className="mt-8 rounded-[28px] border border-slate-200 bg-white p-6 shadow-[0_16px_50px_rgba(7,31,61,0.08)]">
+                <h2 className="text-2xl font-bold text-slate-900">Product Video</h2>
+                <video controls className="mt-5 w-full rounded-2xl" poster={product.images[0]}>
                   <source src={product.video} type="video/mp4" />
                 </video>
               </div>
             )}
-
           </section>
 
-          {/* Right Side */}
+          <aside className="h-fit rounded-[32px] border border-slate-200 bg-white p-6 shadow-[0_20px_70px_rgba(7,31,61,0.1)] sm:p-8 lg:sticky lg:top-24">
+            <div className="rounded-[24px] bg-[linear-gradient(135deg,_#0B4EA2_0%,_#1E88E5_100%)] p-5 text-white">
+              <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-slate-100">
+                <Sparkles size={16} />
+                Wholesale-ready offer
+              </div>
+              <p className="mt-3 text-lg leading-8 text-slate-100">{product.description}</p>
+            </div>
 
-          <aside className="sticky top-24 h-fit rounded-3xl bg-white p-8 shadow-xl border border-slate-200">
-
-            {product.badge && (
-              <span className="rounded-full bg-[#0B4EA2] px-4 py-2 text-sm font-semibold text-white">
-                {product.badge}
-              </span>
-            )}
-
-            <h1 className="mt-6 text-4xl font-extrabold text-[#071F3D]">
-              {product.name}
-            </h1>
-
-            <p className="mt-6 text-lg leading-8 text-slate-600">
-              {product.description}
-            </p >
-
-            <div className="mt-8 grid grid-cols-2 gap-4">
-
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
               {product.moq && (
                 <div className="rounded-2xl bg-slate-50 p-4">
-                  <p className="text-xs uppercase text-slate-500">
-                    MOQ
-                  </p >
-
-                  <p className="mt-2 font-bold">
-                    {product.moq}
-                  </p >
+                  <div className="flex items-center gap-2 text-[#0B4EA2]">
+                    <Package size={16} />
+                    <span className="text-xs font-bold uppercase">MOQ</span>
+                  </div>
+                  <p className="mt-2 font-semibold text-slate-900">{product.moq}</p>
                 </div>
               )}
-
               {product.voltage && (
                 <div className="rounded-2xl bg-slate-50 p-4">
-                  <p className="text-xs uppercase text-slate-500">
-                    Voltage
-                  </p >
-
-                  <p className="mt-2 font-bold">
-                    {product.voltage}
-                  </p >
+                  <div className="flex items-center gap-2 text-[#0B4EA2]">
+                    <ShieldCheck size={16} />
+                    <span className="text-xs font-bold uppercase">Voltage</span>
+                  </div>
+                  <p className="mt-2 font-semibold text-slate-900">{product.voltage}</p>
                 </div>
               )}
-
               {product.capacity && (
-                <div className="rounded-2xl bg-slate-50 p-4">
-                  <p className="text-xs uppercase text-slate-500">
-                    Capacity
-                  </p >
-
-                  <p className="mt-2 font-bold">
-                    {product.capacity}
-                  </p >
+                <div className="rounded-2xl bg-slate-50 p-4 sm:col-span-2">
+                  <div className="flex items-center gap-2 text-[#0B4EA2]">
+                    <CheckCircle2 size={16} />
+                    <span className="text-xs font-bold uppercase">Capacity</span>
+                  </div>
+                  <p className="mt-2 font-semibold text-slate-900">{product.capacity}</p>
                 </div>
               )}
-
-              {product.power && (
-                <div className="rounded-2xl bg-slate-50 p-4">
-                  <p className="text-xs uppercase text-slate-500">
-                    Power
-                  </p >
-
-                  <p className="mt-2 font-bold">
-                    {product.power}
-                  </p >
-                </div>
-              )}
-
             </div>
 
-            <div className="mt-10 space-y-4">
-
-              <a
-                href=" "
-                className="block rounded-xl bg-[#0B4EA2] py-4 text-center text-lg font-bold text-white transition hover:bg-[#1565C0]"
-              >
+            <div className="mt-6 space-y-3">
+              <a href="/quote" className="flex items-center justify-center gap-2 rounded-2xl bg-[#0B4EA2] px-5 py-4 text-lg font-bold text-white transition hover:bg-[#083879]">
                 Request a Quote
-              </a >
-
+                <ArrowRight size={18} />
+              </a>
               <a
-                href={`https://wa.me/8613510151112?text=${encodeURIComponent(
-                  `Hello Hengyang Stan Trade, I am interested in the ${product.name}.`
-                )}`}
+                href={`https://wa.me/8613510151112?text=${encodeURIComponent(`Hello Hengyang Stan Trade, I am interested in the ${product.name}.`)}`}
                 target="_blank"
                 rel="noreferrer"
-                className="block rounded-xl bg-[#25D366] py-4 text-center text-lg font-bold text-white transition hover:bg-[#1EBE5A]"
+                className="flex items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-5 py-4 text-lg font-bold text-white transition hover:bg-[#1EBE5A]"
               >
+                <MessageCircle size={18} />
                 Chat on WhatsApp
-              </a >
-
+              </a>
             </div>
 
-            <div className="mt-10">
-
-              <h2 className="mb-5 text-2xl font-bold text-[#071F3D]">
-                Product Specifications
-              </h2>
-
-              <div className="overflow-hidden rounded-2xl border border-slate-200">
-
-                {[
-                  ["MOQ", product.moq],
-                  ["Voltage", product.voltage],
-                  ["Capacity", product.capacity],
-                  ["Power", product.power],
-                  ["Material", product.material],
-                  ["Fuel Type", product.fuelType],
-                  ["Cooking Area", product.cookingArea],
-                  ["Dimensions", product.dimensions],
-                  ["Weight", product.weight],
-                  ["Color", product.color],
-                ]
-                  .filter(([, value]) => value)
-                  .map(([label, value], index, array) => (
-                    <div
-                      key={String(label)}
-                      className={`grid grid-cols-[170px_1fr] ${
-                        index !== array.length - 1
-                          ? "border-b border-slate-200"
-                          : ""
-                      }`}
-                    >
-                      <div className="bg-slate-50 px-5 py-4 font-semibold text-[#071F3D]">
-                        {label}
-                      </div>
-
-                      <div className="px-5 py-4 text-slate-600">
-                        {value}
-                      </div>
-                    </div>
-                  ))}
-
+            <div className="mt-8 rounded-[24px] border border-slate-200 bg-slate-50 p-5">
+              <h2 className="text-xl font-bold text-slate-900">Product Specifications</h2>
+              <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200 bg-white">
+                {specs.map(([label, value], index, array) => (
+                  <div key={String(label)} className={`grid grid-cols-[140px_1fr] ${index !== array.length - 1 ? "border-b border-slate-200" : ""}`}>
+                    <div className="bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-700">{label}</div>
+                    <div className="px-4 py-3 text-sm text-slate-600">{value}</div>
+                  </div>
+                ))}
               </div>
-
             </div>
 
-            <div className="mt-10 rounded-2xl bg-[#F5F8FC] p-6">
-
-              <h3 className="text-xl font-bold text-[#071F3D]">
-                Why Choose Hengyang Stan Trade?
-              </h3>
-
-              <ul className="mt-5 space-y-3 text-slate-600">
-
-                <li>✔ Factory Direct Pricing</li>
-                <li>✔ OEM & ODM Service</li>
-                <li>✔ Worldwide Shipping</li>
-                <li>✔ Quality Inspection</li>
-                <li>✔ Fast Delivery</li>
-                <li>✔ Professional Export Team</li>
-
+            <div className="mt-8 rounded-[24px] border border-slate-200 bg-[#F8FBFF] p-5">
+              <h3 className="text-lg font-bold text-slate-900">Why importers choose us</h3>
+              <ul className="mt-4 space-y-3 text-sm text-slate-600">
+                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#0B4EA2]" /> Factory direct pricing</li>
+                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#0B4EA2]" /> OEM & ODM support</li>
+                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#0B4EA2]" /> Worldwide shipping</li>
+                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#0B4EA2]" /> Fast export logistics</li>
               </ul>
-
             </div>
-
           </aside>
-
         </div>
-
       </div>
     </main>
   );

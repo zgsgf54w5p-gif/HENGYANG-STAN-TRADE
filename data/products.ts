@@ -567,7 +567,7 @@ export const products : Product[]= [
       "/images/F4.jpg",
     ],
     description:
-      "Kitchen Appliance Color: Silver Capacity: Above 1.2L Operation: Mechanical control Functions: Baby food making, highspeed grinding Suitable for 36 people Product Size: 220×200×520 mm Weight: 3.25 KG Material: 9525 stainlesssteel version, EU standard, 2in1 /3in1 option",
+      "",
     badge: "New Arrival",
     moq: "200 Units",
     voltage: "220V",
@@ -606,7 +606,108 @@ export const products : Product[]= [
     capacity:"N/A",
     power: "N/A",
     certification: "CE / RoHS",
+  },
+   {
+    slug: "MultiSize-Aluminum-NonStick-Frying-Pan",
+    category: "kitchen-appliances",
+    name: "MultiSize Aluminum NonStick Frying Pan",
+    images:[ 
+      "/images/F10.jpg"
+    ],
+    description:
+      "Material: Aluminum alloy pan body & pan bottom, durable and fastheating;Handle: Sturdy commercial steel handle;Coating: Nonstick surface, easytoclean;Applicable Stoves: Universal for gas stove and induction cooker;Lid: No lid included;Sizes: 18cm,20cm,22cm,24cm,26cm,28cm,30cm,32cm,34cm;Customization: Support custom logo printing & OEM processing;**Grade: Firstclass product",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+  {
+    slug:"Cast-Iron-Skillet",
+    category: "kitchen-appliances",
+    name: "Cast Iron Skillet",
+    images:[ 
+      "/images/F11.jpg"
+    ],
+    description:
+      "Material: Cast iron body, durable and heat-retaining;Handle: Sturdy wooden or steel handle;Coating: Seasoned surface, naturally non-stick;Applicable Stoves: Universal for gas stove and induction cooker;Lid: No lid included;Sizes: 18cm,20cm,22cm,24cm,26cm,28cm,30cm,32cm,34cm;Customization: Support custom logo printing & OEM processing;**Grade: Firstclass product",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+   {
+    slug:"Aluminum-Alloy-Non‑Stick-Frying-Pan",
+    category: "kitchen-appliances",
+    name: "Aluminum Alloy Non‑Stick Frying Pan",
+    images:[ 
+      "/images/F12.jpg"
+    ],
+    description:
+      "Material: Aluminum alloy body, durable and heat-retaining;Handle: Sturdy wooden or steel handle;Coating: Non‑stick surface, easy‑to‑clean;Applicable Stoves: Universal for gas stove and induction cooker;Lid: No lid included;Sizes: 18cm,20cm,22cm,24cm,26cm,28cm,30cm,32cm,34cm;Customization: Support custom logo printing & OEM processing;**Grade: Firstclass product",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+  {
+    slug: "Traditional-Chinese-Carbon-Steel-Wok",
+    category: "kitchen-appliances",
+    name: "Traditional Chinese Carbon Steel Wok",
+    images:[ 
+      "/images/F15.jpg"
+    ],
+    description:
+      "Material: Carbon steel body, durable and heat-retaining;Handle: Sturdy wooden or steel handle;Coating: Seasoned surface, naturally non-stick;Applicable Stoves: Universal for gas stove and induction cooker;Lid: No lid included;Sizes: 18cm,20cm,22cm,24cm,26cm,28cm,30cm,32cm,34cm;Customization: Support custom logo printing & OEM processing;**Grade: Firstclass product",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+  {
+    slug: "Kitchen-Storage-Rack-with-Hooks",
+    category: "kitchen-appliances",
+    name: "Kitchen Storage Rack with Hooks",
+    images:[ 
+      "/images/A31 (2).jpg",
+      "/images/A31 C.jpg",
+    ],
+    description:
+      "Material: Stainless steel body, durable and rust-resistant;Design: Multi-tiered rack with hooks for hanging utensils;Applicable Use: Suitable for kitchen countertops or wall mounting;Sizes: Various sizes available to fit different kitchen spaces;Customization: Support custom logo printing & OEM processing;**Grade: First class product",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+   {
+    slug: "Carbon-Steel-OvertheSink-Kitchen-Storage-Rack",
+    category: "kitchen-appliances",
+    name: "Carbon Steel OvertheSink Kitchen-Storage-Rack",
+    images:[ 
+      "/images/A32 (1).jpg",
+    ],
+    description:
+      "Material: Carbon steel body, durable and rust-resistant;Design: Over-the-sink rack with multiple tiers for storage;Applicable Use: Suitable for kitchen sinks to hold dishes and utensils;Sizes: Various sizes available to fit different sink dimensions;Customization: Support custom logo printing & OEM processing;**Grade: First class product",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
   }
+
+
+
+
 
 
 

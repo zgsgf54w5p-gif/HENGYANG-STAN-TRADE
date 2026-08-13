@@ -61,7 +61,7 @@ export default function Navbar() {
 <div className="bg-[linear-gradient(90deg,#0F172A_0%,#111827_40%,#1D4ED8_100%)]">
 
 
-<div className="mx-auto flex h-16 max-w-7xl items-center gap-6 px-4 sm:px-6 lg:px-8">
+ <div className="flex h-16 w-full items-center gap-6 px-6 lg:px-10">
 
 
 {/* LOGO */}
@@ -148,6 +148,23 @@ className="flex h-11 w-12 items-center justify-center rounded-r-lg bg-[#FFD700] 
 
 
 {/* ACTION BUTTONS */}
+<nav className="hidden lg:flex items-center gap-7">
+
+{links.map((link)=>(
+
+<Link
+key={link.href}
+href={link.href}
+className="text-sm font-semibold text-white transition hover:text-orange-300"
+>
+
+{link.name}
+
+</Link>
+
+))}
+
+</nav>
 
 
 <div className="ml-auto flex items-center gap-2 text-white">

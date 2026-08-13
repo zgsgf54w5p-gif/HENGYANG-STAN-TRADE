@@ -19,7 +19,7 @@ export default function Hero() {
           alt="Products background"
           fill
           priority
-          className="scale-125 object-cover blur-3xl opacity-45"
+          className="scale-110 object-cover blur-lg opacity-35"
         />
 
       </div>
@@ -29,7 +29,7 @@ export default function Hero() {
 
       {/* DARK OVERLAY */}
 
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/35" />
 
 
 

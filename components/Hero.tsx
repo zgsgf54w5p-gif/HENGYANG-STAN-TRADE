@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="absolute inset-0">
 
         <Image
-          src="/images/comboproduits.jpg"
+          src="/images/company-banner.jpg"
           alt="Products background"
           fill
           priority

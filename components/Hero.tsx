@@ -10,7 +10,7 @@ export default function Hero() {
     <section className="relative overflow-hidden text-white">
 
 
-      {/* BLURRED FULL BACKGROUND IMAGE */}
+      {/* BLURRED PRODUCT IMAGE BACKGROUND */}
 
       <div className="absolute inset-0">
 
@@ -19,7 +19,7 @@ export default function Hero() {
           alt="Products background"
           fill
           priority
-          className="scale-110 object-cover blur-lg opacity-35"
+          className="scale-110 object-cover blur-md opacity-60"
         />
 
       </div>
@@ -27,16 +27,19 @@ export default function Hero() {
 
 
 
-      {/* DARK OVERLAY */}
 
-      <div className="absolute inset-0 bg-black/35" />
+      {/* BLUE GRADIENT FROM DARK LEFT TO LIGHT RIGHT */}
+
+      <div className="absolute inset-0 bg-gradient-to-r from-[#071F3D]/95 via-[#1D4ED8]/65 to-[#60A5FA]/25" />
 
 
 
 
-      {/* BLUE BRAND LIGHT EFFECT */}
 
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(37,99,235,0.45)_0%,_transparent_45%)]" />
+      {/* SOFT LIGHT ON RIGHT SIDE */}
+
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_50%,rgba(255,255,255,0.18),transparent_35%)]" />
+
 
 
 
@@ -82,7 +85,6 @@ export default function Hero() {
 
 
 
-
             <h1 className="mt-7 text-4xl font-black leading-[1.05] sm:text-5xl lg:text-6xl">
 
 
@@ -104,7 +106,6 @@ export default function Hero() {
 
 
 
-
             <p className="mt-7 max-w-xl text-lg leading-9 text-slate-200 sm:text-xl">
 
               Source premium kitchen appliances, consumer electronics and commercial equipment directly from a reliable Chinese supplier.
@@ -117,9 +118,7 @@ export default function Hero() {
 
 
 
-
             <div className="mt-10 flex flex-wrap gap-4">
-
 
 
               <Link
@@ -179,7 +178,6 @@ export default function Hero() {
 
 
 
-
               <div className="rounded-3xl border border-white/20 bg-white/10 p-5 backdrop-blur-md">
 
                 <Truck
@@ -194,7 +192,6 @@ export default function Hero() {
                 </p >
 
               </div>
-
 
 
 
@@ -219,7 +216,6 @@ export default function Hero() {
 
 
             </div>
-
 
 
 
@@ -252,10 +248,9 @@ export default function Hero() {
 
 
 
-            {/* PRODUCT IMAGE CARD */}
-
 
             <div className="rounded-[2.5rem] border border-white/30 bg-white/90 p-6 shadow-[0_25px_80px_rgba(0,0,0,0.45)] backdrop-blur">
+
 
 
               <Image
@@ -275,8 +270,8 @@ export default function Hero() {
               />
 
 
-            </div>
 
+            </div>
 
 
 
@@ -306,8 +301,6 @@ export default function Hero() {
 
 
 
-
-
             </div>
 
 
@@ -321,12 +314,10 @@ export default function Hero() {
 
 
 
-
         </div>
 
 
       </div>
-
 
 
     </section>

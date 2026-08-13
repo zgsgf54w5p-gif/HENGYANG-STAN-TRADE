@@ -7,28 +7,65 @@ import { ArrowRight, Globe, Truck, ShieldCheck } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(135deg,_#0F172A_0%,_#1D4ED8_45%,_#2563EB_100%)] text-white">
-
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(249,115,22,0.2)_0%,_transparent_35%)]" />
+    <section className="relative overflow-hidden bg-[#0F172A] text-white">
 
 
-      <div className="relative mx-auto flex min-h-[92vh] max-w-7xl items-center px-4 py-16 sm:px-6 lg:px-8">
+      {/* BLURRED BACKGROUND IMAGE */}
+
+      <div className="absolute inset-0">
+
+        <Image
+          src="/images/comboproduits.jpg"
+          alt="Products background"
+          fill
+          priority
+          className="scale-110 object-cover opacity-25 blur-3xl"
+        />
+
+      </div>
 
 
-        <div className="grid w-full items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+
+      {/* DARK BLUE GRADIENT OVERLAY */}
+
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,_rgba(15,23,42,0.96)_0%,_rgba(29,78,216,0.88)_45%,_rgba(37,99,235,0.85)_100%)]" />
+
+
+
+      {/* ORANGE LIGHT EFFECT */}
+
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(249,115,22,0.22)_0%,_transparent_35%)]" />
+
+
+
+
+
+      <div className="relative flex min-h-[92vh] w-full items-center px-6 py-16 lg:px-12">
+
+
+        <div className="grid w-full items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+
+
 
 
 
           <motion.div
+
             initial={{ opacity:0, x:-40 }}
+
             animate={{ opacity:1, x:0 }}
+
             transition={{ duration:0.6 }}
+
             className="max-w-2xl"
+
           >
 
 
 
-            <span className="inline-flex rounded-full border border-white/20 bg-white/10 px-5 py-3 text-xs font-bold uppercase tracking-[0.3em] text-orange-200 leading-relaxed">
+
+
+            <span className="inline-flex rounded-full border border-white/20 bg-white/10 px-5 py-3 text-xs font-bold uppercase tracking-[0.3em] leading-relaxed text-orange-200 backdrop-blur">
 
               Global supplier from China
 
@@ -38,17 +75,24 @@ export default function Hero() {
 
 
 
+
+
             <h1 className="mt-7 text-4xl font-black leading-[1.05] sm:text-5xl lg:text-6xl">
+
 
               Premium products
 
-              <span className="mt-4 block text-[#F97316] leading-tight">
+
+              <span className="mt-4 block leading-tight text-[#F97316]">
 
                 for global importers
 
               </span>
 
+
             </h1>
+
+
 
 
 
@@ -65,20 +109,20 @@ export default function Hero() {
 
 
 
+
             <div className="mt-10 flex flex-wrap gap-4">
+
 
 
               <Link
 
-              href="/products"
+                href="/products"
 
-              className="inline-flex items-center gap-3 rounded-2xl bg-[#F97316] px-8 py-5 text-base font-bold leading-none text-white shadow-[0_14px_45px_rgba(249,115,22,0.35)] transition hover:-translate-y-0.5 hover:bg-orange-600"
+                className="inline-flex items-center gap-3 rounded-2xl bg-[#F97316] px-8 py-5 text-base font-bold leading-none text-white shadow-[0_14px_45px_rgba(249,115,22,0.35)] transition hover:-translate-y-0.5 hover:bg-orange-600"
 
               >
 
-                <span>
-                  Explore Products
-                </span>
+                Explore Products
 
                 <ArrowRight size={19}/>
 
@@ -88,11 +132,12 @@ export default function Hero() {
 
 
 
+
               <Link
 
-              href="/quote"
+                href="/quote"
 
-              className="rounded-2xl border border-white/40 bg-white/10 px-8 py-5 text-base font-bold leading-none text-white transition hover:bg-white/20"
+                className="rounded-2xl border border-white/40 bg-white/10 px-8 py-5 text-base font-bold leading-none text-white backdrop-blur transition hover:bg-white/20"
 
               >
 
@@ -101,16 +146,8 @@ export default function Hero() {
               </Link>
 
 
-            </div>
 
-
-
-
-
-
-
-            <div className="mt-10 grid gap-4 sm:grid-cols-3">
-
+            </div>            <div className="mt-10 grid gap-4 sm:grid-cols-3">
 
 
               <div className="rounded-3xl border border-white/15 bg-white/10 p-5 backdrop-blur">
@@ -145,6 +182,7 @@ export default function Hero() {
 
 
 
+
               <div className="rounded-3xl border border-white/15 bg-white/10 p-5 backdrop-blur">
 
                 <ShieldCheck size={22} className="text-[#F97316]" />
@@ -163,8 +201,6 @@ export default function Hero() {
 
 
 
-
-
           </motion.div>
 
 
@@ -177,40 +213,44 @@ export default function Hero() {
 
           <motion.div
 
-          initial={{opacity:0, scale:0.95}}
+            initial={{opacity:0, scale:0.95}}
 
-          animate={{opacity:1, scale:1}}
+            animate={{opacity:1, scale:1}}
 
-          transition={{duration:0.6}}
+            transition={{duration:0.6}}
 
-          className="relative mx-auto w-full max-w-2xl"
+            className="relative mx-auto w-full max-w-2xl"
 
           >
 
 
 
 
-            <div className="rounded-[2.5rem] border border-white/20 bg-white p-6 shadow-[0_25px_80px_rgba(2,6,23,0.35)]">
+
+            <div className="rounded-[2.5rem] border border-white/30 bg-white/90 p-6 shadow-[0_25px_80px_rgba(2,6,23,0.35)] backdrop-blur">
+
 
 
               <Image
 
-              src="/images/comboproduits.jpg"
+                src="/images/comboproduits.jpg"
 
-              alt="Featured product"
+                alt="Featured product"
 
-              width={700}
+                width={700}
 
-              height={700}
+                height={700}
 
-              priority
+                priority
 
-              className="h-[420px] w-full rounded-[2rem] object-contain sm:h-[560px]"
+                className="h-[420px] w-full rounded-[2rem] object-contain sm:h-[560px]"
 
               />
 
 
+
             </div>
+
 
 
 
@@ -227,6 +267,7 @@ export default function Hero() {
               </p >
 
 
+
               <p className="mt-2 text-xs font-semibold uppercase tracking-[0.25em] leading-relaxed text-orange-50">
 
                 Products
@@ -234,12 +275,14 @@ export default function Hero() {
               </p >
 
 
+
             </div>
 
 
 
-          </motion.div>
 
+
+          </motion.div>
 
 
 

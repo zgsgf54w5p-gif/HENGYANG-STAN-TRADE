@@ -3,7 +3,14 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ChevronDown, Package, ShieldCheck, Sparkles, Zap } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronDown,
+  Package,
+  ShieldCheck,
+  Sparkles,
+  Zap,
+} from "lucide-react";
 import { useState } from "react";
 import { products } from "../data/products";
 
@@ -23,9 +30,10 @@ export default function ProductGrid() {
         <div className="mb-12">
 
 
-          <span className="inline-flex items-center rounded-full bg-orange-100 px-5 py-3 text-sm font-bold uppercase tracking-wider leading-none text-[#2563EB]">
+          <span className="inline-flex items-center rounded-full bg-orange-100 px-5 py-3 text-sm font-bold uppercase tracking-wider text-[#2563EB]">
             Featured Products
           </span>
+
 
 
 
@@ -42,8 +50,8 @@ export default function ProductGrid() {
                 Premium kitchen appliances and commercial equipment supplied worldwide for wholesalers, distributors and importers.
               </p >
 
-
             </div>
+
 
 
 
@@ -64,10 +72,11 @@ export default function ProductGrid() {
 
 
 
+
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
 
-          {products.map((product,index)=>{
+          {products.map((product, index) => {
 
             const isExpanded = expandedSlug === product.slug;
 
@@ -76,17 +85,20 @@ export default function ProductGrid() {
 
               <motion.article
 
-              key={product.slug}
+                key={product.slug}
 
-              initial={{opacity:0,y:20}}
+                initial={{ opacity: 0, y: 20 }}
 
-              whileInView={{opacity:1,y:0}}
+                whileInView={{ opacity: 1, y: 0 }}
 
-              viewport={{once:true}}
+                viewport={{ once: true }}
 
-              transition={{duration:0.35,delay:index*0.04}}
+                transition={{
+                  duration: 0.35,
+                  delay: index * 0.04
+                }}
 
-              className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition hover:shadow-lg"
+                className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition hover:shadow-lg"
 
               >
 
@@ -95,13 +107,14 @@ export default function ProductGrid() {
 
                 <button
 
-                type="button"
+                  type="button"
 
-                onClick={()=>toggleExpanded(product.slug)}
+                  onClick={() => toggleExpanded(product.slug)}
 
-                className="group w-full text-left"
+                  className="group w-full text-left"
 
                 >
+
 
 
 
@@ -111,7 +124,7 @@ export default function ProductGrid() {
 
                     {product.badge && (
 
-                      <span className="absolute left-4 top-4 z-10 inline-flex items-center rounded-full bg-[#F97316] px-5 py-2 text-[11px] font-bold uppercase tracking-wide leading-none text-[#0F172A] shadow-sm">
+                      <span className="absolute left-4 top-4 z-10 inline-flex items-center rounded-full bg-[#F97316] px-6 py-3 text-xs font-black uppercase tracking-[0.15em] text-white shadow-lg">
 
                         {product.badge}
 
@@ -123,17 +136,18 @@ export default function ProductGrid() {
 
 
 
+
                     <Image
 
-                    src={product.images[0]}
+                      src={product.images[0]}
 
-                    alt={product.name}
+                      alt={product.name}
 
-                    width={320}
+                      width={320}
 
-                    height={320}
+                      height={320}
 
-                    className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+                      className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
 
                     />
 
@@ -146,7 +160,6 @@ export default function ProductGrid() {
 
 
                   <div className="p-6">
-
 
 
                     <div className="flex items-start justify-between gap-4">
@@ -170,26 +183,23 @@ export default function ProductGrid() {
                         </h3>
 
 
-
                       </div>
-
 
 
 
 
                       <ChevronDown
 
-                      size={18}
+                        size={18}
 
-                      className={`mt-1 shrink-0 text-gray-500 transition ${
-                        isExpanded ? "rotate-180" : ""
-                      }`}
+                        className={`mt-1 shrink-0 text-gray-500 transition ${
+                          isExpanded ? "rotate-180" : ""
+                        }`}
 
                       />
 
 
                     </div>
-
 
 
 
@@ -205,24 +215,72 @@ export default function ProductGrid() {
 
 
 
-
                     <div className="mt-5 flex items-center gap-2 text-sm font-semibold text-[#2563EB]">
 
-                      <Sparkles size={15}/>
+                      <Sparkles size={15} />
 
-                      <span className="leading-none">
+                      <span>
                         Tap to expand
                       </span>
 
-
                     </div>
-
 
 
                   </div>
 
 
-                </button>
+                </button>                <AnimatePresence initial={false}>
+
+                  {isExpanded && (
+
+                    <motion.div
+
+                      initial={{ height: 0, opacity: 0 }}
+
+                      animate={{ height: "auto", opacity: 1 }}
+
+                      exit={{ height: 0, opacity: 0 }}
+
+                      className="overflow-hidden border-t border-gray-100"
+
+                    >
+
+
+
+                      <div className="space-y-5 p-6">
+
+
+
+                        <div className="grid gap-4 sm:grid-cols-2">
+
+
+
+                          {product.moq && (
+
+                            <div className="rounded-xl bg-gray-50 p-4">
+
+
+                              <div className="flex items-center gap-2 text-[#2563EB]">
+
+                                <Package size={15} />
+
+                                <span className="text-xs font-bold">
+                                  MOQ
+                                </span>
+
+                              </div>
+
+
+                              <p className="mt-2 text-sm font-bold text-[#0F172A]">
+
+                                {product.moq}
+
+                              </p >
+
+
+                            </div>
+
+                          )}
 
 
 
@@ -230,205 +288,172 @@ export default function ProductGrid() {
 
 
 
-                <AnimatePresence initial={false}>
+                          {product.voltage && (
 
-                {isExpanded && (
-
-                <motion.div
-
-                initial={{height:0,opacity:0}}
-
-                animate={{height:"auto",opacity:1}}
-
-                exit={{height:0,opacity:0}}
-
-                className="overflow-hidden border-t border-gray-100"
-
-                >
+                            <div className="rounded-xl bg-gray-50 p-4">
 
 
+                              <div className="flex items-center gap-2 text-[#2563EB]">
 
-                  <div className="space-y-5 p-6">
+                                <Zap size={15} />
+
+                                <span className="text-xs font-bold">
+                                  Voltage
+                                </span>
+
+                              </div>
 
 
 
-                    <div className="grid gap-4 sm:grid-cols-2">
+                              <p className="mt-2 text-sm font-bold text-[#0F172A]">
+
+                                {product.voltage}
+
+                              </p >
 
 
-                    {product.moq && (
+                            </div>
 
-                    <div className="rounded-xl bg-gray-50 p-4">
+                          )}
 
 
-                      <div className="flex items-center gap-2 text-[#2563EB]">
 
-                        <Package size={15}/>
 
-                        <span className="text-xs font-bold">
-                          MOQ
-                        </span>
+
+
+
+                          {product.capacity && (
+
+                            <div className="rounded-xl bg-gray-50 p-4 sm:col-span-2">
+
+
+                              <div className="flex items-center gap-2 text-[#2563EB]">
+
+                                <ShieldCheck size={15} />
+
+                                <span className="text-xs font-bold">
+                                  Capacity
+                                </span>
+
+                              </div>
+
+
+
+
+                              <p className="mt-2 text-sm font-bold text-[#0F172A]">
+
+                                {product.capacity}
+
+                              </p >
+
+
+
+                            </div>
+
+                          )}
+
+
+
+                        </div>
+
+
+
+
+
+
+
+                        <div className="rounded-3xl bg-slate-50 p-5">
+
+
+                          <div className="flex items-center gap-2 text-green-700">
+
+                            <ShieldCheck size={16} />
+
+                            <span className="text-sm font-semibold">
+
+                              Factory direct • export quality
+
+                            </span>
+
+
+                          </div>
+
+
+
+
+
+                          <p className="mt-3 text-sm leading-7 text-gray-600">
+
+                            Ready for wholesale orders, private-label projects, and international sourcing support.
+
+                          </p >
+
+
+
+                        </div>
+
+
+
+
+
+
+
+                        <div className="flex flex-wrap gap-3">
+
+
+
+                          <Link
+
+                            href={`/products/${product.slug}`}
+
+                            className="inline-flex items-center gap-2 rounded-xl bg-[#2563EB] px-5 py-3 text-sm font-semibold leading-none text-white transition hover:bg-[#1D4ED8]"
+
+                            onClick={(event) => event.stopPropagation()}
+
+                          >
+
+                            View Details
+
+                            <ArrowRight size={15} />
+
+                          </Link>
+
+
+
+
+
+
+
+                          <Link
+
+                            href="/quote"
+
+                            className="inline-flex items-center rounded-xl border border-gray-300 px-5 py-3 text-sm font-semibold leading-none text-[#0F172A] transition hover:border-[#2563EB] hover:text-[#2563EB]"
+
+                            onClick={(event) => event.stopPropagation()}
+
+                          >
+
+                            Request Quote
+
+                          </Link>
+
+
+
+
+                        </div>
+
+
+
 
                       </div>
 
 
-                      <p className="mt-2 text-sm font-bold text-[#0F172A]">
-                        {product.moq}
-                      </p >
 
+                    </motion.div>
 
-                    </div>
 
-                    )}
-
-
-
-
-
-                    {product.voltage && (
-
-                    <div className="rounded-xl bg-gray-50 p-4">
-
-
-                      <div className="flex items-center gap-2 text-[#2563EB]">
-
-                        <Zap size={15}/>
-
-                        <span className="text-xs font-bold">
-                          Voltage
-                        </span>
-
-                      </div>
-
-
-                      <p className="mt-2 text-sm font-bold text-[#0F172A]">
-                        {product.voltage}
-                      </p >
-
-
-                    </div>
-
-                    )}
-
-
-
-
-
-
-                    {product.capacity && (
-
-                    <div className="rounded-xl bg-gray-50 p-4 sm:col-span-2">
-
-
-                      <div className="flex items-center gap-2 text-[#2563EB]">
-
-                        <ShieldCheck size={15}/>
-
-                        <span className="text-xs font-bold">
-                          Capacity
-                        </span>
-
-                      </div>
-
-
-
-                      <p className="mt-2 text-sm font-bold text-[#0F172A]">
-
-                        {product.capacity}
-
-                      </p >
-
-
-                    </div>
-
-                    )}
-
-
-                    </div>
-
-
-
-
-
-
-                    <div className="rounded-2xl bg-slate-50 p-5">
-
-
-                      <div className="flex items-center gap-2 text-green-700">
-
-                        <ShieldCheck size={16}/>
-
-                        <span className="text-sm font-semibold">
-                          Factory direct • export quality
-                        </span>
-
-                      </div>
-
-
-
-                      <p className="mt-3 leading-7 text-sm text-gray-600">
-
-                        Ready for wholesale orders, private-label projects, and international sourcing support.
-
-                      </p >
-
-
-                    </div>
-
-
-
-
-
-
-                    <div className="flex flex-wrap gap-3">
-
-
-                      <Link
-
-                      href={`/products/${product.slug}`}
-
-                      className="inline-flex items-center gap-2 rounded-xl bg-[#2563EB] px-5 py-3 text-sm font-semibold leading-none text-white transition hover:bg-[#1D4ED8]" 
-
-                      onClick={(event)=>event.stopPropagation()}
-
-                      >
-
-                        View Details
-
-                        <ArrowRight size={15}/>
-
-                      </Link>
-
-
-
-
-
-                      <Link
-
-                      href="/quote"
-
-                      className="inline-flex items-center rounded-xl border border-gray-300 px-5 py-3 text-sm font-semibold leading-none text-[#0F172A] transition hover:border-[#2563EB] hover:text-[#2563EB]"
-
-                      onClick={(event)=>event.stopPropagation()}
-
-                      >
-
-                        Request Quote
-
-                      </Link>
-
-
-
-                    </div>
-
-
-
-                  </div>
-
-
-
-                </motion.div>
-
-                )}
+                  )}
 
 
                 </AnimatePresence>
@@ -444,9 +469,12 @@ export default function ProductGrid() {
           })}
 
 
+
         </div>
 
+
       </div>
+
 
     </section>
   );

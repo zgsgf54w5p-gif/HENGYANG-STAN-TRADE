@@ -280,7 +280,7 @@ export default function Hero() {
 
 
 
-            <div className="absolute -bottom-6 left-6 rounded-4x3 bg-[#F97316] px-7 py-5 shadow-xl">
+            <div className="absolute -bottom-6 left-6 rounded-6x3 bg-[#F97316] px-7 py-5 shadow-xl">
 
 
               <p className="text-3xl font-black leading-none text-white">

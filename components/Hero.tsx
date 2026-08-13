@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Globe, Truck, ShieldCheck } from "lucide-react";
+import { ArrowRight, Globe, Truck, ShieldCheck, ArrowRightFromLine } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -131,7 +131,7 @@ export default function Hero() {
 
                 Explore Products
 
-                <ArrowRight size={19}/>
+                <ArrowRightFromLine size={19}/>
 
               </Link>
 
@@ -255,7 +255,7 @@ export default function Hero() {
 
               <Image
 
-                src="/images/comboproduits.jpg"
+                src="/images/company-banner.jpg"
 
                 alt="Featured product"
 

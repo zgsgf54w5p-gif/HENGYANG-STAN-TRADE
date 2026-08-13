@@ -123,7 +123,7 @@ onChange={(e)=>setSearchQuery(e.target.value)}
 
 placeholder="Search products..."
 
-className="h-11 flex-1 rounded-l-lg px-4 text-black outline-none"
+className="h-11 flex-1 rounded-l-lg px-4 text-white outline-none"
 
 />
 

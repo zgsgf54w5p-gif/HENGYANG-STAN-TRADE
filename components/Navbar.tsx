@@ -129,13 +129,11 @@ className="h-11 flex-1 rounded-l-lg px-4 text-white outline-none"
 
 
 
-<button 
+<button
 type="submit"
-className="rounded-r-lg bg-[#F97316] px-5 text-white"
+className="flex h-11 w-12 items-center justify-center rounded-r-lg bg-[#FFD700] text-[#0F172A] transition hover:bg-yellow-400"
 >
-
-<Search size={22}/>
-
+<Search size={12}/>
 </button>
 
 
@@ -264,22 +262,17 @@ onChange={(e)=>setSearchQuery(e.target.value)}
 
 placeholder="Search products..."
 
-className="h-10 flex-1 rounded-l-lg px-3 text-black"
+className="h-10 flex-1 rounded-l-lg px-3 text-white"
 
 />
 
 
 
 <button
-
 type="submit"
-
-className="rounded-r-lg bg-[#F97316] px-4 text-white"
-
+className="flex h-10 w-11 items-center justify-center rounded-r-lg bg-[#FFD700] text-[#0F172A] transition hover:bg-yellow-400"
 >
-
-<Search size={20}/>
-
+<Search size={19}/>
 </button>
 
 

@@ -18,7 +18,9 @@ export default function ProductGrid() {
   const [expandedSlug, setExpandedSlug] = useState<string | null>(null);
 
   const toggleExpanded = (slug: string) => {
-    setExpandedSlug((current) => (current === slug ? null : slug));
+    setExpandedSlug((current) =>
+      current === slug ? null : slug
+    );
   };
 
   return (
@@ -29,12 +31,9 @@ export default function ProductGrid() {
 
         <div className="mb-12">
 
-
-          <span className="inline-flex items-center rounded-full bg-orange-100 px-5 py-3 text-sm font-bold uppercase tracking-wider text-[#2563EB]">
+          <span className="inline-flex items-center bg-orange-100 px-5 py-3 text-sm font-bold uppercase tracking-wider text-[#2563EB]">
             Featured Products
           </span>
-
-
 
 
           <div className="mt-6 flex items-center justify-between">
@@ -53,8 +52,6 @@ export default function ProductGrid() {
             </div>
 
 
-
-
             <Link
               href="/products"
               className="hidden font-semibold text-[#2563EB] transition hover:text-orange-600 md:block"
@@ -66,8 +63,6 @@ export default function ProductGrid() {
           </div>
 
         </div>
-
-
 
 
 
@@ -103,8 +98,6 @@ export default function ProductGrid() {
               >
 
 
-
-
                 <button
 
                   type="button"
@@ -116,24 +109,18 @@ export default function ProductGrid() {
                 >
 
 
-
-
                   <div className="relative flex aspect-square items-center justify-center bg-linear-to-br from-white to-slate-50 p-5">
-
 
 
                     {product.badge && (
 
-                      <span className="absolute left-4 top-4 z-10 inline-flex items-center rounded-full bg-[#F97316] px-6 py-3 text-xs font-black uppercase tracking-[0.15em] text-white shadow-lg">
+                      <span className="absolute left-4 top-4 z-10 bg-[#F97316] px-6 py-3 text-xs font-black uppercase tracking-[0.25em] text-white shadow-lg">
 
                         {product.badge}
 
                       </span>
 
                     )}
-
-
-
 
 
 
@@ -150,7 +137,6 @@ export default function ProductGrid() {
                       className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
 
                     />
-
 
 
                   </div>
@@ -175,7 +161,6 @@ export default function ProductGrid() {
                         </p >
 
 
-
                         <h3 className="mt-3 text-base font-bold leading-snug text-[#0F172A] line-clamp-2">
 
                           {product.name}
@@ -184,8 +169,6 @@ export default function ProductGrid() {
 
 
                       </div>
-
-
 
 
                       <ChevronDown
@@ -203,15 +186,11 @@ export default function ProductGrid() {
 
 
 
-
-
                     <p className="mt-4 line-clamp-2 text-sm leading-7 text-gray-600">
 
                       {product.description}
 
                     </p >
-
-
 
 
 
@@ -246,7 +225,6 @@ export default function ProductGrid() {
                     >
 
 
-
                       <div className="space-y-5 p-6">
 
 
@@ -272,16 +250,13 @@ export default function ProductGrid() {
 
 
                               <p className="mt-2 text-sm font-bold text-[#0F172A]">
-
                                 {product.moq}
-
                               </p >
 
 
                             </div>
 
                           )}
-
 
 
 
@@ -306,9 +281,7 @@ export default function ProductGrid() {
 
 
                               <p className="mt-2 text-sm font-bold text-[#0F172A]">
-
                                 {product.voltage}
-
                               </p >
 
 
@@ -339,13 +312,11 @@ export default function ProductGrid() {
 
 
 
-
                               <p className="mt-2 text-sm font-bold text-[#0F172A]">
 
                                 {product.capacity}
 
                               </p >
-
 
 
                             </div>
@@ -370,24 +341,16 @@ export default function ProductGrid() {
                             <ShieldCheck size={16} />
 
                             <span className="text-sm font-semibold">
-
                               Factory direct • export quality
-
                             </span>
-
 
                           </div>
 
 
 
-
-
                           <p className="mt-3 text-sm leading-7 text-gray-600">
-
                             Ready for wholesale orders, private-label projects, and international sourcing support.
-
                           </p >
-
 
 
                         </div>
@@ -399,7 +362,6 @@ export default function ProductGrid() {
 
 
                         <div className="flex flex-wrap gap-3">
-
 
 
                           <Link
@@ -423,7 +385,6 @@ export default function ProductGrid() {
 
 
 
-
                           <Link
 
                             href="/quote"
@@ -440,9 +401,7 @@ export default function ProductGrid() {
 
 
 
-
                         </div>
-
 
 
 
@@ -452,9 +411,7 @@ export default function ProductGrid() {
 
                     </motion.div>
 
-
                   )}
-
 
                 </AnimatePresence>
 

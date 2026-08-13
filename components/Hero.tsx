@@ -19,7 +19,7 @@ export default function Hero() {
           alt="Products background"
           fill
           priority
-          className="scale-110 object-cover blur-md opacity-60"
+          className="scale-110 object-cover blur-md opacity-30"
         />
 
       </div>

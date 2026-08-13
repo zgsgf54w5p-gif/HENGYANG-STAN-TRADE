@@ -61,7 +61,7 @@ export default function Navbar() {
 <div className="bg-[linear-gradient(90deg,#0F172A_0%,#111827_40%,#1D4ED8_100%)]">
 
 
- <div className="flex h-16 w-full items-center gap-6 px-6 lg:px-10">
+ <div className="flex h-20-full items-center gap-6 px-6 lg:px-18">
 
 
 {/* LOGO */}
@@ -91,7 +91,7 @@ HENGYANG STAN
 
 
 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-orange-300">
-TRADE
+TRADE Development Co., Ltd
 </p >
 
 
@@ -133,7 +133,7 @@ className="h-11 flex-1 rounded-l-lg px-4 text-white outline-none"
 type="submit"
 className="flex h-11 w-12 items-center justify-center rounded-r-lg bg-[#FFD700] text-[#0F172A] transition hover:bg-yellow-400"
 >
-<Search size={12}/>
+<Search size={18}/>
 </button>
 
 
@@ -186,7 +186,7 @@ className="hidden rounded-full border border-white/20 bg-white/10 px-3 py-2 text
 
 size={18}
 
-className="mx-auto mb-1 text-[#F97316]"
+className="mx-auto mb-1 text-[#d6b913]"
 
 />
 
@@ -215,7 +215,7 @@ className="hidden rounded-full border border-white/20 bg-white/10 px-3 py-2 text
 
 size={18}
 
-className="mx-auto mb-1 text-[#F97316]"
+className="mx-auto mb-1 text-[#d6b913]"
 
 />
 

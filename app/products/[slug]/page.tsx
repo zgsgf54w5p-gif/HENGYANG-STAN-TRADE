@@ -30,7 +30,7 @@ export default async function ProductPage({
 
   return (
     <main className="bg-[radial-gradient(circle_at_top_left,_#f8fbff_0%,_#f2f6fb_45%,_#eef3f9_100%)] py-10 sm:py-14">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
         <div className="mb-8 rounded-[30px] border border-slate-200 bg-white/80 p-6 shadow-[0_16px_60px_rgba(7,31,61,0.08)] backdrop-blur sm:p-8">
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>

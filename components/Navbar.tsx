@@ -61,7 +61,7 @@ export default function Navbar() {
 <div className="bg-[linear-gradient(90deg,#0F172A_0%,#111827_40%,#1D4ED8_100%)]">
 
 
-<div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
+<div className="mx-auto flex h-16 max-w-7xl items-center gap-6 px-4 sm:px-6 lg:px-8">
 
 
 {/* LOGO */}
@@ -107,8 +107,8 @@ TRADE
 {/* SEARCH */}
 
 <form 
-onSubmit={handleSearch}
-className="hidden flex-1 md:flex"
+onSubmit={handleSearch} 
+className="hidden w-[320px] lg:flex xl:w-[380px]"
 >
 
 
@@ -150,7 +150,7 @@ className="flex h-11 w-12 items-center justify-center rounded-r-lg bg-[#FFD700] 
 {/* ACTION BUTTONS */}
 
 
-<div className="ml-auto flex items-center gap-4 text-white">
+<div className="ml-auto flex items-center gap-2 text-white">
 
 
 
@@ -270,9 +270,9 @@ className="h-10 flex-1 rounded-l-lg px-3 text-white"
 
 <button
 type="submit"
-className="flex h-10 w-11 items-center justify-center rounded-r-lg bg-[#FFD700] text-[#0F172A] transition hover:bg-yellow-400"
+className="flex h-10 w-11 items-center justify-center rounded-r-lg bg-[#FFD700] text-[#1b44a4] transition hover:bg-yellow-400"
 >
-<Search size={19}/>
+<Search size={12}/>
 </button>
 
 

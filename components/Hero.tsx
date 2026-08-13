@@ -259,9 +259,9 @@ export default function Hero() {
 
                 alt="Featured product"
 
-                width={800}
+                width={700}
 
-                height={1000}
+                height={700}
 
                 priority
 

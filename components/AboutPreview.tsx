@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function AboutPreview() {
   return (
     <section className="bg-white py-20 sm:py-24 lg:py-28">
-      <div className="flex w-full flex-col items-center gap-12 px-6 sm:px-8 lg:flex-row lg:gap-20 lg:px-12 xl:px-16">
+      <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-12 px-6 sm:px-8 lg:flex-row lg:gap-20 lg:px-10">
         {/* Left Image */}
         <div className="flex-1">
           <Image

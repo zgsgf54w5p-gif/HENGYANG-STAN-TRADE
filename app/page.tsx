@@ -18,7 +18,7 @@ export default function Home() {
       <AboutPreview />
 
       <section className="w-full bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full px-6 lg:px-10">
           <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <span className="text-sm font-bold uppercase tracking-[0.3em] text-[#2563EB]">

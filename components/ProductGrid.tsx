@@ -114,7 +114,7 @@ export default function ProductGrid() {
 
                     {product.badge && (
 
-                      <span className="absolute left-4 top-4 z-10 bg-[#F97316] px-6 py-3 text-xs font-black uppercase tracking-[0.25em] text-white shadow-lg">
+                        <span className="absolute left-4 top-4 z-10 inline-flex items-center rounded-full bg-gradient-to-r from-[#FFD700] to-[#F59E0B] px-5 py-2.5 text-xs font-black uppercase tracking-[0.18em] text-[#0F172A] shadow-lg ring-1 ring-white/30">
 
                         {product.badge}
 

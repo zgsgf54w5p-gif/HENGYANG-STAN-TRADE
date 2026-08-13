@@ -195,7 +195,7 @@ export default function Hero() {
 
               <Image
 
-              src="/images/airfryer.jpg"
+              src="/images/comboproduits.jpg"
 
               alt="Featured product"
 

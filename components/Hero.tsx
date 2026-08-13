@@ -7,10 +7,10 @@ import { ArrowRight, Globe, Truck, ShieldCheck } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#0F172A] text-white">
+    <section className="relative overflow-hidden text-white">
 
 
-      {/* BLURRED BACKGROUND IMAGE */}
+      {/* BLURRED FULL BACKGROUND IMAGE */}
 
       <div className="absolute inset-0">
 
@@ -19,22 +19,25 @@ export default function Hero() {
           alt="Products background"
           fill
           priority
-          className="scale-110 object-cover opacity-25 blur-3xl"
+          className="scale-125 object-cover blur-3xl opacity-45"
         />
 
       </div>
 
 
 
-      {/* DARK BLUE GRADIENT OVERLAY */}
 
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,_rgba(15,23,42,0.96)_0%,_rgba(29,78,216,0.88)_45%,_rgba(37,99,235,0.85)_100%)]" />
+      {/* DARK OVERLAY */}
+
+      <div className="absolute inset-0 bg-black/50" />
 
 
 
-      {/* ORANGE LIGHT EFFECT */}
 
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(249,115,22,0.22)_0%,_transparent_35%)]" />
+      {/* BLUE BRAND LIGHT EFFECT */}
+
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(37,99,235,0.45)_0%,_transparent_45%)]" />
+
 
 
 
@@ -44,6 +47,7 @@ export default function Hero() {
 
 
         <div className="grid w-full items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+
 
 
 
@@ -65,11 +69,13 @@ export default function Hero() {
 
 
 
+
             <span className="inline-flex rounded-full border border-white/20 bg-white/10 px-5 py-3 text-xs font-bold uppercase tracking-[0.3em] leading-relaxed text-orange-200 backdrop-blur">
 
               Global supplier from China
 
             </span>
+
 
 
 
@@ -98,11 +104,13 @@ export default function Hero() {
 
 
 
+
             <p className="mt-7 max-w-xl text-lg leading-9 text-slate-200 sm:text-xl">
 
               Source premium kitchen appliances, consumer electronics and commercial equipment directly from a reliable Chinese supplier.
 
             </p >
+
 
 
 
@@ -133,6 +141,7 @@ export default function Hero() {
 
 
 
+
               <Link
 
                 href="/quote"
@@ -146,13 +155,16 @@ export default function Hero() {
               </Link>
 
 
-
             </div>            <div className="mt-10 grid gap-4 sm:grid-cols-3">
 
 
-              <div className="rounded-3xl border border-white/15 bg-white/10 p-5 backdrop-blur">
 
-                <Globe size={22} className="text-[#F97316]" />
+              <div className="rounded-3xl border border-white/20 bg-white/10 p-5 backdrop-blur-md">
+
+                <Globe
+                  size={22}
+                  className="text-[#F97316]"
+                />
 
                 <p className="mt-3 text-sm font-semibold leading-relaxed">
 
@@ -166,9 +178,14 @@ export default function Hero() {
 
 
 
-              <div className="rounded-3xl border border-white/15 bg-white/10 p-5 backdrop-blur">
 
-                <Truck size={22} className="text-[#F97316]" />
+
+              <div className="rounded-3xl border border-white/20 bg-white/10 p-5 backdrop-blur-md">
+
+                <Truck
+                  size={22}
+                  className="text-[#F97316]"
+                />
 
                 <p className="mt-3 text-sm font-semibold leading-relaxed">
 
@@ -183,9 +200,13 @@ export default function Hero() {
 
 
 
-              <div className="rounded-3xl border border-white/15 bg-white/10 p-5 backdrop-blur">
 
-                <ShieldCheck size={22} className="text-[#F97316]" />
+              <div className="rounded-3xl border border-white/20 bg-white/10 p-5 backdrop-blur-md">
+
+                <ShieldCheck
+                  size={22}
+                  className="text-[#F97316]"
+                />
 
                 <p className="mt-3 text-sm font-semibold leading-relaxed">
 
@@ -198,6 +219,9 @@ export default function Hero() {
 
 
             </div>
+
+
+
 
 
 
@@ -227,8 +251,11 @@ export default function Hero() {
 
 
 
-            <div className="rounded-[2.5rem] border border-white/30 bg-white/90 p-6 shadow-[0_25px_80px_rgba(2,6,23,0.35)] backdrop-blur">
 
+            {/* PRODUCT IMAGE CARD */}
+
+
+            <div className="rounded-[2.5rem] border border-white/30 bg-white/90 p-6 shadow-[0_25px_80px_rgba(0,0,0,0.45)] backdrop-blur">
 
 
               <Image
@@ -248,8 +275,9 @@ export default function Hero() {
               />
 
 
-
             </div>
+
+
 
 
 
@@ -268,11 +296,15 @@ export default function Hero() {
 
 
 
+
+
               <p className="mt-2 text-xs font-semibold uppercase tracking-[0.25em] leading-relaxed text-orange-50">
 
                 Products
 
               </p >
+
+
 
 
 
@@ -288,9 +320,13 @@ export default function Hero() {
 
 
 
+
+
         </div>
 
+
       </div>
+
 
 
     </section>

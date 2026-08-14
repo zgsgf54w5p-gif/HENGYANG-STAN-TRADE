@@ -73,14 +73,14 @@ function ProductsContent() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         {filteredProducts.length === 0 ? (
           <div className="rounded-3xl border border-slate-200 bg-white/80 px-8 py-16 text-center shadow-sm">
             <h2 className="text-3xl font-bold text-slate-900">No products match your search</h2>
             <p className="mt-3 text-lg text-slate-600">Try another keyword or browse the full catalog.</p>
           </div>
         ) : (
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
             {filteredProducts.map((product, index) => {
               const description = product.description ?? "";
               const isExpanded = expandedSlug === product.slug;
@@ -190,7 +190,7 @@ function ProductsContent() {
                           <div className="flex flex-wrap gap-2">
                             <Link
                               href={`/products/${product.slug}`}
-                              className="inline-flex items-center gap-2 rounded-xl bg-[#2563EB] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1D4ED8]"
+                              className="inline-flex items-center gap-2 rounded-xl bg-[#2563EB] px-7 py-4 text-base font-semibold text-white transition hover:bg-[#1D4ED8]"
                               onClick={(event) => event.stopPropagation()}
                             >
                               View Details
@@ -198,7 +198,7 @@ function ProductsContent() {
                             </Link>
                             <Link
                               href="/quote"
-                              className="inline-flex items-center rounded-xl border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-[#2563EB] hover:text-[#2563EB]"
+                              className="inline-flex items-center rounded-xl border border-slate-300 px-7 py-4 text-base font-semibold text-slate-700 transition hover:border-[#2563EB] hover:text-[#2563EB]"
                               onClick={(event) => event.stopPropagation()}
                             >
                               Request Quote
@@ -221,7 +221,7 @@ function ProductsContent() {
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-300">
             We supply wholesalers, distributors, and importers worldwide with high-quality kitchen appliances at competitive factory prices.
           </p>
-          <Link href="/quote" className="mt-8 inline-flex items-center justify-center rounded-2xl bg-[#F97316] px-7 py-3.5 text-lg font-bold text-slate-900 transition hover:bg-[#fb923c]">
+          <Link href="/quote" className="mt-10 inline-flex items-center justify-center rounded-2xl bg-[#F97316] px-10 py-5 text-xl font-bold text-slate-900 transition hover:bg-[#fb923c]">
             Request a Quote
           </Link>
         </div>

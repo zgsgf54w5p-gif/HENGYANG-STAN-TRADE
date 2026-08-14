@@ -99,7 +99,7 @@ export default async function ProductPage({
             </div>
 
             <div className="mt-6 space-y-3">
-              <a href="/quote" className="flex items-center justify-center gap-2 rounded-2xl bg-[#2563EB] px-5 py-4 text-lg font-bold text-white transition hover:bg-[#1D4ED8]">
+              <a href="/quote" className="flex items-center justify-center gap-2 rounded-2xl bg-[#2563EB] px-8 py-5 text-xl font-bold text-white transition hover:bg-[#1D4ED8]">
                 Request a Quote
                 <ArrowRight size={18} />
               </a>
@@ -107,7 +107,7 @@ export default async function ProductPage({
                 href={`https://wa.me/8613510151112?text=${encodeURIComponent(`Hello Hengyang Stan Trade, I am interested in the ${product.name}.`)}`}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-center gap-2 rounded-2xl bg-[#2563EB] px-5 py-4 text-lg font-bold text-white transition hover:bg-[#1D4ED8]"
+                className="flex items-center justify-center gap-2 rounded-2xl bg-[#2563EB] px-8 py-5 text-xl font-bold text-white transition hover:bg-[#1D4ED8]"
               >
                 <MessageCircle size={18} />
                 Chat on WhatsApp

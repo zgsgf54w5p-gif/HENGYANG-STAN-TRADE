@@ -53,7 +53,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
         <Link
           href="/quote"
-          className="mt-4 block rounded-lg bg-[#F97316] py-3 text-center font-bold text-black transition hover:bg-orange-600"
+          className="mt-6 block rounded-lg bg-[#F97316] py-4 text-lg font-bold text-black transition hover:bg-orange-600"
         >
           Request Quote
         </Link>

@@ -28,21 +28,21 @@ export default function TradeSupport() {
   return (
     <section className="bg-white py-20 sm:py-24 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-        <div className="flex flex-col gap-7 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-2xl">
+        <div className="flex flex-col items-center justify-between gap-8 text-center">
+          <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#2563EB]">More than a product list</p>
             <h2 className="mt-5 text-3xl font-extrabold leading-tight text-[#0F172A] sm:text-4xl">The details that make international buying easier.</h2>
           </div>
           <Link href="/about" className="inline-flex shrink-0 items-center font-bold text-[#2563EB] transition hover:text-[#3B82F6]">Learn about our company <span className="ml-2" aria-hidden="true">→</span></Link>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => {
             const Icon = service.icon;
 
             return (
-              <article key={service.title} className="border-t-2 border-slate-200 pt-6 transition hover:border-orange-400">
-                <Icon className="text-[#2563EB]" size={28} strokeWidth={1.8} aria-hidden="true" />
+              <article key={service.title} className="flex flex-col items-center border-t-2 border-slate-200 pt-8 text-center transition hover:border-orange-400">
+                <Icon className="text-[#2563EB]" size={32} strokeWidth={1.8} aria-hidden="true" />
                 <h3 className="mt-6 text-xl font-bold text-[#0F172A]">{service.title}</h3>
                 <p className="mt-4 leading-7 text-slate-600">{service.text}</p>
               </article>

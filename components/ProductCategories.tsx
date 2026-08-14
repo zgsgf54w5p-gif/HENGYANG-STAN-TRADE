@@ -31,7 +31,7 @@ export default function ProductCategories() {
           </p >
         </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
           {categories.map((category, index) => (
             <motion.div
               key={category.slug}
@@ -53,7 +53,7 @@ export default function ProductCategories() {
                     />
                   </div>
 
-                  <div className="p-7">
+                  <div className="p-8">
 
                     <h3 className="text-2xl font-bold text-[#0F172A]">
                       {category.name}

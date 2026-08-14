@@ -51,7 +51,7 @@ function QuoteForm() {
           <input name="quantity" placeholder="Quantity" value={formData.quantity} onChange={handleChange} className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-800 outline-none focus:border-[#2563EB]" />
           <input name="destination" placeholder="Destination Port" value={formData.destination} onChange={handleChange} className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-800 outline-none focus:border-[#2563EB]" />
           <textarea name="message" rows={5} placeholder="Tell us more about your project" value={formData.message} onChange={handleChange} className="md:col-span-2 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-800 outline-none focus:border-[#2563EB]" />
-          <button type="submit" className="md:col-span-2 rounded-2xl bg-[#2563EB] px-5 py-3.5 text-lg font-semibold text-white transition hover:bg-[#1D4ED8]">
+          <button type="submit" className="md:col-span-2 rounded-2xl bg-[#2563EB] px-8 py-5 text-xl font-semibold text-white transition hover:bg-[#1D4ED8]">
             Send Quote Request
           </button>
         </form>

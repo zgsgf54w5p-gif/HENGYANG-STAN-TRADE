@@ -29,7 +29,7 @@ const steps = [
 
 export default function SourcingProcess() {
   return (
-    <section className="bg-[#0F172A] py-20 text-white sm:py-24 lg:py-28">
+    <section className="bg-[#0F172A] py-24 text-white sm:py-28 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-start lg:gap-24">
           <div className="lg:sticky lg:top-32">
@@ -40,12 +40,12 @@ export default function SourcingProcess() {
             </p>
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-2">
             {steps.map((step) => {
               const Icon = step.icon;
 
               return (
-                <article key={step.number} className="rounded-2xl border border-white/15 bg-white/10 p-7 backdrop-blur-sm transition hover:-translate-y-1 hover:bg-white/15">
+                <article key={step.number} className="rounded-2xl border border-white/15 bg-white/10 p-8 backdrop-blur-sm transition hover:-translate-y-1 hover:bg-white/15">
                   <div className="flex items-center justify-between">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F97316] text-[#0F172A]">
                       <Icon size={23} strokeWidth={2.2} aria-hidden="true" />

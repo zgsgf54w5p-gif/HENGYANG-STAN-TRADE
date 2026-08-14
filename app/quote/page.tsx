@@ -149,7 +149,7 @@ ${form.message}
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: "18px",
+            gap: "22px",
           }}
         >
           <input
@@ -227,9 +227,9 @@ ${form.message}
               background: "#2563EB",
               color: "white",
               border: "none",
-              padding: "18px",
+              padding: "20px",
               borderRadius: "12px",
-              fontSize: "18px",
+              fontSize: "20px",
               fontWeight: "bold",
               cursor: "pointer",
             }}

@@ -42,10 +42,10 @@ export default function AboutPage() {
               Hengyang Stan Trade Development Co., Ltd. helps importers, wholesalers and distributors source practical, quality-focused products from China with confidence.
             </p>
             <div className="mt-9 flex flex-wrap justify-center gap-4">
-              <Link href="/products" className="rounded-2xl bg-[#F97316] px-7 py-4 font-bold text-slate-950 transition hover:bg-orange-600">
+              <Link href="/products" className="rounded-2xl bg-[#F97316] px-10 py-5 text-lg font-bold text-slate-950 transition hover:bg-orange-600">
                 Explore products
               </Link>
-              <Link href="/quote" className="rounded-2xl border border-white/40 px-7 py-4 font-bold text-white transition hover:border-white hover:bg-white/10">
+              <Link href="/quote" className="rounded-2xl border border-white/40 px-10 py-5 text-lg font-bold text-white transition hover:border-white hover:bg-white/10">
                 Start a conversation
               </Link>
             </div>
@@ -111,7 +111,7 @@ export default function AboutPage() {
             <p className="text-sm font-bold uppercase tracking-[0.3em] text-orange-400">Ready to source?</p>
             <h2 className="mt-3 text-3xl font-black sm:text-4xl">Let&apos;s build the right supply solution for your market.</h2>
           </div>
-          <Link href="/quote" className="shrink-0 rounded-2xl bg-[#F97316] px-7 py-4 text-center font-bold text-slate-950 transition hover:bg-orange-600">Request a quotation</Link>
+          <Link href="/quote" className="shrink-0 rounded-2xl bg-[#F97316] px-10 py-5 text-lg text-center font-bold text-slate-950 transition hover:bg-orange-600">Request a quotation</Link>
         </div>
       </section>
     </main>

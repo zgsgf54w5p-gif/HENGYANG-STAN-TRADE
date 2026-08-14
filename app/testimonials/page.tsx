@@ -167,13 +167,13 @@ export default function TestimonialsPage() {
                 <div className="flex flex-wrap gap-2">
                   <button
                     type="submit"
-                    className="rounded-2xl bg-[#F97316] px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-orange-600"
+                    className="rounded-2xl bg-[#F97316] px-6 py-3 text-base font-semibold text-slate-900 transition hover:bg-orange-600"
                   >
                     Submit reply
                   </button>
                   <button
                     type="button"
-                    className="rounded-2xl border border-white/15 bg-slate-950/30 px-4 py-2 text-sm text-white transition hover:bg-white/10"
+                    className="rounded-2xl border border-white/15 bg-slate-950/30 px-6 py-3 text-base text-white transition hover:bg-white/10"
                     onClick={() => setActiveReplyId(null)}
                   >
                     Cancel
@@ -351,7 +351,7 @@ export default function TestimonialsPage() {
           <div className="mt-5 flex flex-col items-center gap-3 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
             <button
               type="submit"
-              className="rounded-xl bg-[#F97316] px-5 py-3 font-semibold text-slate-900 transition hover:bg-orange-600"
+              className="rounded-xl bg-[#F97316] px-7 py-4 text-lg font-semibold text-slate-900 transition hover:bg-orange-600"
             >
               Submit comment
             </button>

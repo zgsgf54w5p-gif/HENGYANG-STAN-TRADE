@@ -177,7 +177,7 @@ className="text-sm font-semibold text-white transition hover:text-orange-300"
 
 href="/quote"
 
-className="hidden rounded-full border border-white/20 bg-white/10 px-3 py-2 text-center text-xs font-semibold text-white sm:block"
+className="hidden rounded-full border border-white/20 bg-white/10 px-4 py-3 text-center text-sm font-semibold text-white sm:block"
 
 >
 
@@ -206,7 +206,7 @@ Quote
 
 href="/contact"
 
-className="hidden rounded-full border border-white/20 bg-white/10 px-3 py-2 text-center text-xs font-semibold text-white sm:block"
+className="hidden rounded-full border border-white/20 bg-white/10 px-4 py-3 text-center text-sm font-semibold text-white sm:block"
 
 >
 

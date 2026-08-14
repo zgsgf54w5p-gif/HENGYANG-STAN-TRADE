@@ -46,10 +46,10 @@ export default function Hero() {
 
 
 
-      <div className="relative flex min-h-[92vh] w-full items-center px-6 py-16 lg:px-12">
+      <div className="relative flex min-h-[92vh] w-full items-center px-6 py-20 lg:px-16">
 
 
-        <div className="grid w-full items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
 
 
 
@@ -64,7 +64,7 @@ export default function Hero() {
 
             transition={{ duration:0.6 }}
 
-            className="max-w-2xl"
+            className="mx-auto max-w-2xl text-center sm:text-left"
 
           >
 
@@ -118,14 +118,14 @@ export default function Hero() {
 
 
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-12 flex flex-wrap justify-center gap-5 sm:justify-start">
 
 
               <Link
 
                 href="/products"
 
-                className="inline-flex items-center gap-3 rounded-2xl bg-[#F97316] px-8 py-5 text-base font-bold leading-none text-white shadow-[0_14px_45px_rgba(249,115,22,0.35)] transition hover:-translate-y-0.5 hover:bg-orange-600"
+                className="inline-flex items-center gap-3 rounded-2xl bg-[#F97316] px-10 py-6 text-lg font-bold leading-none text-white shadow-[0_14px_45px_rgba(249,115,22,0.35)] transition hover:-translate-y-0.5 hover:bg-orange-600"
 
               >
 
@@ -145,7 +145,7 @@ export default function Hero() {
 
                 href="/quote"
 
-                className="rounded-2xl border border-white/40 bg-white/10 px-8 py-5 text-base font-bold leading-none text-white backdrop-blur transition hover:bg-white/20"
+                className="rounded-2xl border border-white/40 bg-white/10 px-10 py-6 text-lg font-bold leading-none text-white backdrop-blur transition hover:bg-white/20"
 
               >
 
@@ -154,15 +154,15 @@ export default function Hero() {
               </Link>
 
 
-            </div>            <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            </div>            <div className="mt-12 grid gap-5 sm:grid-cols-3">
 
 
 
-              <div className="rounded-3xl border border-white/20 bg-white/10 p-5 backdrop-blur-md">
+              <div className="rounded-3xl border border-white/20 bg-white/10 p-6 text-center backdrop-blur-md">
 
                 <Globe
-                  size={22}
-                  className="text-[#F97316]"
+                  size={24}
+                  className="mx-auto text-[#F97316]"
                 />
 
                 <p className="mt-3 text-sm font-semibold leading-relaxed">
@@ -178,11 +178,11 @@ export default function Hero() {
 
 
 
-              <div className="rounded-3xl border border-white/20 bg-white/10 p-5 backdrop-blur-md">
+              <div className="rounded-3xl border border-white/20 bg-white/10 p-6 text-center backdrop-blur-md">
 
                 <Truck
-                  size={22}
-                  className="text-[#F97316]"
+                  size={24}
+                  className="mx-auto text-[#F97316]"
                 />
 
                 <p className="mt-3 text-sm font-semibold leading-relaxed">
@@ -198,11 +198,11 @@ export default function Hero() {
 
 
 
-              <div className="rounded-3xl border border-white/20 bg-white/10 p-5 backdrop-blur-md">
+              <div className="rounded-3xl border border-white/20 bg-white/10 p-6 text-center backdrop-blur-md">
 
                 <ShieldCheck
-                  size={22}
-                  className="text-[#F97316]"
+                  size={24}
+                  className="mx-auto text-[#F97316]"
                 />
 
                 <p className="mt-3 text-sm font-semibold leading-relaxed">

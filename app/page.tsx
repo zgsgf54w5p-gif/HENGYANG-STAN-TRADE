@@ -17,14 +17,14 @@ export default function Home() {
       <CategorySection />
       <AboutPreview />
 
-      <section className="w-full bg-white py-16 sm:py-20">
-        <div className="mx-auto w-full px-6 lg:px-10">
-          <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <section className="w-full bg-white py-20 sm:py-24">
+        <div className="mx-auto w-full max-w-7xl px-6 lg:px-10">
+          <div className="mb-14 flex flex-col items-center gap-5 text-center">
             <div>
               <span className="text-sm font-bold uppercase tracking-[0.3em] text-[#2563EB]">
                 Popular Products
               </span>
-              <h2 className="mt-2 text-3xl font-black text-[#0F172A] sm:text-4xl">
+              <h2 className="mt-3 text-4xl font-black text-[#0F172A] sm:text-5xl">
                 Featured Collection
               </h2>
             </div>
@@ -49,7 +49,7 @@ export default function Home() {
           <p className="mt-4 text-lg leading-8 text-slate-200">
             Get professional sourcing support and competitive quotations for your market.
           </p>
-          <Link href="/quote" className="mt-8 inline-flex items-center justify-center rounded-2xl bg-[#F97316] px-8 py-4 text-lg font-bold text-white shadow-[0_12px_40px_rgba(249,115,22,0.35)] transition hover:-translate-y-0.5 hover:bg-orange-600">
+          <Link href="/quote" className="mt-10 inline-flex items-center justify-center rounded-2xl bg-[#F97316] px-10 py-5 text-xl font-bold text-white shadow-[0_12px_40px_rgba(249,115,22,0.35)] transition hover:-translate-y-0.5 hover:bg-orange-600">
             Request Quote
           </Link>
         </div>

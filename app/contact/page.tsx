@@ -67,7 +67,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
               <div className="grid gap-4 sm:grid-cols-2">
                 <input
                   placeholder="Your Name"
@@ -102,7 +102,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="rounded-2xl bg-[#2563EB] px-5 py-3.5 text-lg font-semibold text-white transition hover:bg-[#1D4ED8] disabled:cursor-not-allowed disabled:opacity-70"
+                className="rounded-2xl bg-[#2563EB] px-8 py-5 text-xl font-semibold text-white transition hover:bg-[#1D4ED8] disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {loading ? "Sending..." : "Send Message"}
               </button>

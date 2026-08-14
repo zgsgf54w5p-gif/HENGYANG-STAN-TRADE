@@ -24,28 +24,28 @@ export default function ProductGrid() {
   };
 
   return (
-    <section className="bg-gray-100 py-20">
+    <section className="bg-gray-100 py-24">
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
 
-        <div className="mb-12">
+        <div className="mb-12 text-center">
 
           <span className="inline-flex items-center bg-orange-100 px-5 py-3 text-sm font-bold uppercase tracking-wider text-[#2563EB]">
             Featured Products
           </span>
 
 
-          <div className="mt-6 flex items-center justify-between">
+          <div className="mt-6 flex flex-col items-center justify-center gap-6 md:flex-row md:justify-between">
 
             <div>
 
-              <h2 className="text-4xl font-bold leading-tight text-[#0F172A]">
+              <h2 className="text-4xl font-bold leading-tight text-[#0F172A] sm:text-5xl">
                 Explore Our Products
               </h2>
 
 
-              <p className="mt-4 max-w-2xl leading-8 text-gray-600">
+              <p className="mx-auto mt-5 max-w-2xl leading-8 text-gray-600">
                 Premium kitchen appliances and commercial equipment supplied worldwide for wholesalers, distributors and importers.
               </p >
 
@@ -54,7 +54,7 @@ export default function ProductGrid() {
 
             <Link
               href="/products"
-              className="hidden font-semibold text-[#2563EB] transition hover:text-orange-600 md:block"
+              className="mt-2 inline-flex font-semibold text-[#2563EB] transition hover:text-orange-600"
             >
               View All →
             </Link>
@@ -68,7 +68,7 @@ export default function ProductGrid() {
 
 
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
 
           {products.map((product, index) => {
@@ -368,7 +368,7 @@ export default function ProductGrid() {
 
                             href={`/products/${product.slug}`}
 
-                            className="inline-flex items-center gap-2 rounded-xl bg-[#2563EB] px-5 py-3 text-sm font-semibold leading-none text-white transition hover:bg-[#1D4ED8]"
+                            className="inline-flex items-center gap-2 rounded-xl bg-[#2563EB] px-7 py-4 text-base font-semibold leading-none text-white transition hover:bg-[#1D4ED8]"
 
                             onClick={(event) => event.stopPropagation()}
 
@@ -389,7 +389,7 @@ export default function ProductGrid() {
 
                             href="/quote"
 
-                            className="inline-flex items-center rounded-xl border border-gray-300 px-5 py-3 text-sm font-semibold leading-none text-[#0F172A] transition hover:border-[#2563EB] hover:text-[#2563EB]"
+                            className="inline-flex items-center rounded-xl border border-gray-300 px-7 py-4 text-base font-semibold leading-none text-[#0F172A] transition hover:border-[#2563EB] hover:text-[#2563EB]"
 
                             onClick={(event) => event.stopPropagation()}
 

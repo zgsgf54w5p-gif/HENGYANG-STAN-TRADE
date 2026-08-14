@@ -38,23 +38,23 @@ export default function AboutPreview() {
             prices, reliable logistics and professional customer service.
           </p >
 
-          <div className="mb-8 grid grid-cols-2 gap-4 sm:gap-6">
-            <div className="rounded-2xl bg-blue-50 p-6 shadow-md">
+          <div className="mb-10 grid grid-cols-2 gap-5 sm:gap-8">
+            <div className="rounded-2xl bg-blue-50 p-8 text-center shadow-md">
               <h3 className="text-3xl font-bold text-[#2563EB]">500+</h3>
               <p className="mt-2 text-gray-600">Products Available</p >
             </div>
 
-            <div className="rounded-2xl bg-blue-50 p-6 shadow-md">
+            <div className="rounded-2xl bg-blue-50 p-8 text-center shadow-md">
               <h3 className="text-3xl font-bold text-[#2563EB]">20+</h3>
               <p className="mt-2 text-gray-600">Countries Served</p >
             </div>
 
-            <div className="rounded-2xl bg-blue-50 p-6 shadow-md">
+            <div className="rounded-2xl bg-blue-50 p-8 text-center shadow-md">
               <h3 className="text-3xl font-bold text-[#2563EB]">1000+</h3>
               <p className="mt-2 text-gray-600">Happy Clients</p >
             </div>
 
-            <div className="rounded-2xl bg-blue-50 p-6 shadow-md">
+            <div className="rounded-2xl bg-blue-50 p-8 text-center shadow-md">
               <h3 className="text-3xl font-bold text-[#2563EB]">24/7</h3>
               <p className="mt-2 text-gray-600">Customer Support</p >
             </div>
@@ -62,7 +62,7 @@ export default function AboutPreview() {
 
           <Link
             href="/about"
-            className="inline-block rounded-xl bg-[#2563EB] px-10 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-[#3B82F6]"
+            className="inline-block rounded-xl bg-[#2563EB] px-12 py-5 text-xl font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-[#3B82F6]"
           >
             Learn More →
           </Link>

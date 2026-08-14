@@ -11,7 +11,7 @@ export default function GlobalNetwork() {
       style={{
         background: "#2563EB",
         color: "white",
-        padding: "80px 24px",
+        padding: "100px 40px",
       }}
     >
       <div
@@ -46,7 +46,7 @@ export default function GlobalNetwork() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: "24px",
+            gap: "32px",
           }}
         >
           {stats.map((item) => (
@@ -54,8 +54,8 @@ export default function GlobalNetwork() {
               key={item.label}
               style={{
                 background: "rgba(255,255,255,0.1)",
-                borderRadius: "15px",
-                padding: "28px",
+                borderRadius: "20px",
+                padding: "34px",
               }}
             >
               <h3

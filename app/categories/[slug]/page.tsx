@@ -52,10 +52,10 @@ export default async function CategoryPage({
                   <Image src={product.images[0]} alt={product.name} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                   {product.badge ? <span className="absolute left-4 top-4 rounded-full bg-[#F97316] px-3 py-2 text-xs font-bold text-[#0F172A]">{product.badge}</span> : null}
                 </div>
-                <div className="p-6">
+                <div className="p-7">
                   <h3 className="text-xl font-bold text-[#0F172A]">{product.name}</h3>
-                  <p className="mt-3 min-h-14 leading-7 text-slate-600">{product.description}</p>
-                  <div className="mt-5 flex items-center justify-between gap-4 border-t border-slate-100 pt-4 text-sm">
+                  <p className="mt-4 min-h-14 leading-7 text-slate-600">{product.description}</p>
+                  <div className="mt-6 flex items-center justify-between gap-4 border-t border-slate-100 pt-5 text-sm">
                     <span className="font-bold text-[#2563EB]">MOQ: {product.moq}</span>
                     <span className="font-bold text-[#2563EB] transition group-hover:text-[#3B82F6]">View details →</span>
                   </div>
@@ -67,7 +67,7 @@ export default async function CategoryPage({
           <div className="rounded-2xl border border-dashed border-slate-300 bg-white p-12 text-center">
             <h2 className="text-2xl font-bold text-[#0F172A]">Products are being added soon</h2>
             <p className="mt-3 text-slate-600">Contact our team for sourcing options in this category.</p>
-            <Link href="/quote" className="mt-6 inline-flex rounded-xl bg-[#2563EB] px-6 py-3 font-bold text-white transition hover:bg-[#3B82F6]">Request a quotation</Link>
+            <Link href="/quote" className="mt-6 inline-flex rounded-xl bg-[#2563EB] px-8 py-4 text-lg font-bold text-white transition hover:bg-[#3B82F6]">Request a quotation</Link>
           </div>
         )}
       </section>

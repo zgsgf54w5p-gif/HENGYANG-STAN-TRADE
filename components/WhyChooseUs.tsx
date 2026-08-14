@@ -38,10 +38,10 @@ export default function WhyChooseUs() {
         competitive prices and professional service.
       </p>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {items.map((item) => (
-          <div key={item.title} className="rounded-2xl bg-[#F8FAFC] p-7 shadow-[0_10px_30px_rgba(0,0,0,.08)] transition hover:-translate-y-1">
-            <div className="mb-4 text-4xl">
+          <div key={item.title} className="rounded-3xl bg-[#F8FAFC] p-9 text-center shadow-[0_10px_30px_rgba(0,0,0,.08)] transition hover:-translate-y-1">
+            <div className="mb-5 text-5xl">
               ✅
             </div>
 

@@ -80,7 +80,7 @@ function ProductsContent() {
             <p className="mt-3 text-lg text-slate-600">Try another keyword or browse the full catalog.</p>
           </div>
         ) : (
-          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          <div className="flex flex-wrap justify-center gap-8">
             {filteredProducts.map((product, index) => {
               const description = product.description ?? "";
               const isExpanded = expandedSlug === product.slug;
@@ -96,7 +96,7 @@ function ProductsContent() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.35, delay: index * 0.04 }}
-                  className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_18px_50px_rgba(7,31,61,0.08)]"
+                  className="w-full overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_18px_50px_rgba(7,31,61,0.08)] md:w-[calc(50%-1rem)] xl:w-[calc(33.333%-1.334rem)]"
                 >
                   <button
                     type="button"

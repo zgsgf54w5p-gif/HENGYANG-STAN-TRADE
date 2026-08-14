@@ -255,9 +255,9 @@ export default function Hero() {
 
               <Image
 
-                src="/images/company-banner.jpg"
+                src="/images/logo2.jpg"
 
-                alt="Featured product"
+                alt="Hengyang Stan Trade logo"
 
                 width={700}
 

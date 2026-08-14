@@ -67,7 +67,7 @@ export default function ProductGrid() {
 
 
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="flex flex-wrap justify-center gap-8">
 
 
           {products.map((product, index) => {
@@ -92,7 +92,7 @@ export default function ProductGrid() {
                   delay: index * 0.04
                 }}
 
-                className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition hover:shadow-lg"
+                className="w-full overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition hover:shadow-lg sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)] xl:w-[calc(25%-1.5rem)]"
 
               >
 

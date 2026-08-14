@@ -26,8 +26,7 @@ export default function ProductGrid() {
   return (
     <section className="bg-gray-100 py-24">
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-
+      <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
 
         <div className="mb-12 text-center">
 
@@ -36,7 +35,7 @@ export default function ProductGrid() {
           </span>
 
 
-          <div className="mt-6 flex flex-col items-center justify-center gap-6 md:flex-row md:justify-between">
+          <div className="mt-6 flex flex-col items-center justify-center gap-6 text-center">
 
             <div>
 
@@ -54,9 +53,9 @@ export default function ProductGrid() {
 
             <Link
               href="/products"
-              className="mt-2 inline-flex font-semibold text-[#2563EB] transition hover:text-orange-600"
+              className="mt-3 inline-flex items-center gap-2 rounded-2xl bg-[#F97316] px-10 py-5 text-xl font-bold text-slate-900 shadow-[0_12px_40px_rgba(249,115,22,0.35)] transition hover:bg-orange-600 animate-float"
             >
-              View All →
+              View All <span>→</span>
             </Link>
 
 

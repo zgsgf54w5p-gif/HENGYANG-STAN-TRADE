@@ -91,3 +91,18 @@ select {
 section {
   scroll-margin-top: 90px;
 }
+
+/* ---------- WhatsApp-style auto float animation ---------- */
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.animate-float {
+  animation: floatY 2.6s ease-in-out infinite;
+}

@@ -17,24 +17,7 @@ export default function Home() {
       <CategorySection />
       <AboutPreview />
 
-      <section className="w-full bg-white py-20 sm:py-24">
-        <div className="mx-auto w-full max-w-7xl px-6 lg:px-10">
-          <div className="mb-14 flex flex-col items-center gap-5 text-center">
-            <div>
-              <span className="text-sm font-bold uppercase tracking-[0.3em] text-[#2563EB]">
-                Popular Products
-              </span>
-              <h2 className="mt-3 text-4xl font-black text-[#0F172A] sm:text-5xl">
-                Featured Collection
-              </h2>
-            </div>
-            <Link href="/products" className="inline-flex items-center font-bold text-[#2563EB] transition hover:text-[#1D4ED8]">
-              View All <span className="ml-2">→</span>
-            </Link>
-          </div>
-          <ProductGrid />
-        </div>
-      </section>
+      <ProductGrid />
 
       <TradeSupport />
       <WhyChooseUs />

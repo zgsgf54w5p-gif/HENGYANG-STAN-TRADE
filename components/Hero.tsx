@@ -239,7 +239,7 @@ export default function Hero() {
 
             transition={{duration:0.6}}
 
-            className="relative mx-auto w-full max-w-2xl"
+            className="relative mx-auto w-full max-w-2xl lg:translate-x-6"
 
           >
 
@@ -249,7 +249,7 @@ export default function Hero() {
 
 
 
-            <div className="rounded-[2.5rem] border border-white/30 bg-white/90 p-6 shadow-[0_25px_80px_rgba(0,0,0,0.45)] backdrop-blur">
+            <div className="relative mx-auto aspect-square w-full rounded-full bg-white/95 p-6 shadow-[0_25px_80px_rgba(0,0,0,0.45)]">
 
 
 
@@ -265,7 +265,7 @@ export default function Hero() {
 
                 priority
 
-                className="h-[420px] w-full rounded-[2rem] object-contain sm:h-[560px]"
+                className="h-full w-full rounded-full object-contain"
 
               />
 

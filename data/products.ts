@@ -791,6 +791,38 @@ export const products : Product[]= [
     capacity:"N/A",
     power: "N/A",
     certification: "CE / RoHS",
+  },
+  {
+    slug: "2L 1800W Countertop Blender MultiFunction Mixer 111240V",
+    category: "kitchen-appliances",
+    name: "2L 1800W Countertop Blender MultiFunction Mixer 111240V",
+    images:[ 
+      "/images/A41.jpg",
+    ],
+    description:
+      "Material: plastic, durable and heat-resistant;Design: Countertop blender with multi-function capabilities;Capacity: 2L for blending, mixing, and more;Power: 1800W for efficient operation;Voltage: 111-240V for global compatibility;Applicable Use: Suitable for home, office, or café use;Customization: Support custom logo printing & OEM processing;**Grade: First class product",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "111-240V",
+    capacity:"2L",
+    power: "1800W",
+    certification: "CE / RoHS",
+  },
+  {
+    slug: "Commercial Silent Blender with Cover MultiFunction Smoothie Machine for Milk Tea Shop",
+    category: "kitchen-appliances",
+    name: "Commercial Silent Blender with Cover MultiFunction Smoothie Machine for Milk Tea Shop",
+    images:[ 
+      "/images/A42.jpg",
+    ],
+    description:
+      "Material: plastic, durable and heat-resistant;Design: Commercial silent blender with cover for smoothie making;Capacity: 2L for blending, mixing, and more;Power: 1800W for efficient operation;Voltage: 220V for global compatibility;Applicable Use: Suitable for milk tea shops, cafes, or commercial kitchens;Customization: Support custom logo printing & OEM processing;**Grade: First class product",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "220V",
+    capacity:"2L",
+    power: "1800W",
+    certification: "CE / RoHS",
   }
 
 

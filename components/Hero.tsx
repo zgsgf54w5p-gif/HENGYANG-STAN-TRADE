@@ -125,7 +125,7 @@ export default function Hero() {
 
                 href="/products"
 
-                className="inline-flex items-center gap-3 rounded-2xl bg-[#F97316] px-10 py-6 text-lg font-bold leading-none text-white shadow-[0_14px_45px_rgba(249,115,22,0.35)] transition hover:-translate-y-0.5 hover:bg-orange-600"
+                className="inline-flex items-center gap-3 rounded-2xl bg-[#F97316] px-12 py-7 text-xl font-bold leading-none text-white shadow-[0_14px_45px_rgba(249,115,22,0.35)] transition hover:-translate-y-0.5 hover:bg-orange-600 animate-float"
 
               >
 
@@ -145,7 +145,7 @@ export default function Hero() {
 
                 href="/quote"
 
-                className="rounded-2xl border border-white/40 bg-white/10 px-10 py-6 text-lg font-bold leading-none text-white backdrop-blur transition hover:bg-white/20"
+                className="rounded-2xl border border-white/40 bg-white/10 px-12 py-7 text-xl font-bold leading-none text-white backdrop-blur transition hover:bg-white/20 animate-float [animation-delay:1.3s]"
 
               >
 

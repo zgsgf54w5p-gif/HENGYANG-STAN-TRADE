@@ -61,7 +61,7 @@ export default function Navbar() {
 <div className="bg-[linear-gradient(90deg,#0F172A_0%,#111827_40%,#1D4ED8_100%)]">
 
 
- <div className="flex h-20-full items-center gap-6 px-6 lg:px-18">
+ <div className="mx-auto flex h-24 w-full max-w-[1440px] items-center gap-6 px-6 lg:px-8">
 
 
 {/* LOGO */}
@@ -69,13 +69,13 @@ export default function Navbar() {
 <Link href="/" className="flex items-center gap-2">
 
 
-<div className="h-10 w-10 overflow-hidden rounded-full bg-white">
+<div className="h-12 w-12 overflow-hidden rounded-full bg-white">
 
 <Image
 src="/images/logo2.jpg"
 alt="Hengyang Stan Logo"
-width={40}
-height={40}
+width={48}
+height={48}
 className="h-full w-full object-cover"
 />
 
@@ -85,12 +85,12 @@ className="h-full w-full object-cover"
 
 <div className="hidden sm:block">
 
-<h1 className="text-sm font-black tracking-[0.2em] text-white">
+<h1 className="text-lg font-black tracking-[0.2em] text-white">
 HENGYANG STAN
 </h1>
 
 
-<p className="text-xs font-semibold uppercase tracking-[0.3em] text-orange-300">
+<p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-300">
 TRADE Development Co., Ltd
 </p >
 
@@ -108,7 +108,7 @@ TRADE Development Co., Ltd
 
 <form 
 onSubmit={handleSearch} 
-className="hidden w-[320px] lg:flex xl:w-[380px]"
+className="hidden w-[360px] lg:flex xl:w-[420px]"
 >
 
 
@@ -123,7 +123,7 @@ onChange={(e)=>setSearchQuery(e.target.value)}
 
 placeholder="Search products..."
 
-className="h-11 flex-1 rounded-l-lg px-4 text-white outline-none"
+className="h-12 flex-1 rounded-l-lg px-4 text-white outline-none"
 
 />
 
@@ -131,9 +131,9 @@ className="h-11 flex-1 rounded-l-lg px-4 text-white outline-none"
 
 <button
 type="submit"
-className="flex h-11 w-12 items-center justify-center rounded-r-lg bg-[#FFD700] text-[#0F172A] transition hover:bg-yellow-400"
+className="flex h-12 w-14 items-center justify-center rounded-r-lg bg-[#FFD700] text-[#0F172A] transition hover:bg-yellow-400"
 >
-<Search size={18}/>
+<Search size={20}/>
 </button>
 
 
@@ -155,7 +155,7 @@ className="flex h-11 w-12 items-center justify-center rounded-r-lg bg-[#FFD700] 
 <Link
 key={link.href}
 href={link.href}
-className="text-sm font-semibold text-white transition hover:text-orange-300"
+className="text-base font-semibold text-white transition hover:text-orange-300"
 >
 
 {link.name}
@@ -177,14 +177,14 @@ className="text-sm font-semibold text-white transition hover:text-orange-300"
 
 href="/quote"
 
-className="hidden rounded-full border border-white/20 bg-white/10 px-4 py-3 text-center text-sm font-semibold text-white sm:block"
+className="hidden rounded-full border border-white/20 bg-white/10 px-5 py-4 text-center text-base font-semibold text-white sm:block"
 
 >
 
 
 <FileText
 
-size={18}
+size={20}
 
 className="mx-auto mb-1 text-[#d6b913]"
 
@@ -206,14 +206,14 @@ Quote
 
 href="/contact"
 
-className="hidden rounded-full border border-white/20 bg-white/10 px-4 py-3 text-center text-sm font-semibold text-white sm:block"
+className="hidden rounded-full border border-white/20 bg-white/10 px-5 py-4 text-center text-base font-semibold text-white sm:block"
 
 >
 
 
 <User
 
-size={18}
+size={20}
 
 className="mx-auto mb-1 text-[#d6b913]"
 
@@ -239,7 +239,7 @@ className="md:hidden"
 
 >
 
-<Menu size={30}/>
+<Menu size={32}/>
 
 </button>
 
@@ -315,7 +315,7 @@ className="flex h-10 w-11 items-center justify-center rounded-r-lg bg-[#FFD700] 
 <div className="bg-[#1D4ED8]">
 
 
-<div className="flex gap-6 overflow-x-auto px-4 py-3 text-sm text-white scrollbar-hide sm:px-6 lg:px-8">
+<div className="mx-auto flex w-full max-w-[1440px] items-center justify-center gap-6 overflow-x-auto px-4 py-4 text-base text-white scrollbar-hide sm:px-6 lg:px-8">
 
 
 {categories.map((item)=>(

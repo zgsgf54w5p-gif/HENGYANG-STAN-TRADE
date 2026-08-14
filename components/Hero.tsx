@@ -118,7 +118,7 @@ export default function Hero() {
 
 
 
-            <div className="mt-12 flex flex-wrap justify-center gap-5 sm:justify-start">
+            <div className="mt-12 flex flex-wrap justify-center gap-5">
 
 
               <Link

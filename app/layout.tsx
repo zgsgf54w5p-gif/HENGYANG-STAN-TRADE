@@ -17,12 +17,14 @@ export default function RootLayout({
     <html lang="en">
       <body
         style={{
-          margin: 0,
+          marginLeft: "auto",
+          marginRight: "auto",
           padding: 0,
           width: "100%",
-          maxWidth: "100%",
+          maxWidth: "1440px",
           fontFamily: "Arial, Helvetica, sans-serif",
-          backgroundColor: "#f5f7fa",
+          backgroundColor: "#e2e8f0",
+          boxShadow: "0 0 80px rgba(2, 6, 23, 0.28)",
         }}
       >
         <Navbar />

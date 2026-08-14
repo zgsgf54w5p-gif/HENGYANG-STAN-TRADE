@@ -61,10 +61,10 @@ img {
 }
 
 /* ---------- Full-screen responsive layout ---------- */
-html,
-body {
+html {
   max-width: 100%;
   overflow-x: hidden;
+  background: #e2e8f0;
 }
 
 body {

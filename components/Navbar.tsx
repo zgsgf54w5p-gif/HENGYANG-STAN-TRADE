@@ -15,12 +15,13 @@ export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
 
 
-  const categories = [
-    "Kitchen Appliances",
-    "Commercial Equipment",
-    "Electronics",
-    "New Arrivals",
-    "Bulk Orders",
+    const categories = [
+    { name: "Kitchen Appliances", href: "/categories/kitchen-appliances" },
+    { name: "Home Appliances", href: "/categories/home-appliances" },
+    { name: "Commercial Equipment", href: "/categories/commercial-equipment" },
+    { name: "Electronics", href: "/categories/electronics" },
+    { name: "New Arrivals", href: "/products" },
+    { name: "Bulk Orders", href: "/products" },
   ];
 
 
@@ -155,7 +156,7 @@ className="flex h-12 w-14 items-center justify-center rounded-r-lg bg-[#FFD700] 
 <Link
 key={link.href}
 href={link.href}
-className="text-base font-semibold text-white transition hover:text-orange-300"
+className={`relative border-b-2 pb-1 text-base font-semibold transition hover:text-orange-300 ${(pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href))) ? "border-orange-400 text-orange-300" : "border-transparent text-white"}`}
 >
 
 {link.name}
@@ -322,16 +323,16 @@ className="flex h-10 w-11 items-center justify-center rounded-r-lg bg-[#FFD700] 
 
 <Link
 
-key={item}
+key={item.name}
 
-href="/products"
+href={item.href}
 
-className="whitespace-nowrap font-semibold transition hover:text-orange-200"
+className={`whitespace-nowrap font-semibold transition hover:text-orange-200 ${pathname === item.href ? "text-orange-300 underline underline-offset-8" : "text-white"}`}
 
 >
 
 
-{item}
+{item.name}
 
 
 </Link>

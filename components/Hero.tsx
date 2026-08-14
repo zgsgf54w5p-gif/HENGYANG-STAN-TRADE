@@ -19,7 +19,7 @@ export default function Hero() {
           alt="Products background"
           fill
           priority
-          className="scale-110 object-cover blur-md opacity-30"
+          className="scale-110 object-cover blur-sm opacity-70"
         />
 
       </div>
@@ -30,7 +30,7 @@ export default function Hero() {
 
       {/* BLUE GRADIENT FROM DARK LEFT TO LIGHT RIGHT */}
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#071F3D]/95 via-[#1D4ED8]/65 to-[#60A5FA]/25" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#071F3D]/95 via-[#1D4ED8]/50 to-[#60A5FA]/5" />
 
 
 
@@ -38,7 +38,7 @@ export default function Hero() {
 
       {/* SOFT LIGHT ON RIGHT SIDE */}
 
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_50%,rgba(255,255,255,0.18),transparent_35%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_50%,rgba(255,255,255,0.08),transparent_40%)]" />
 
 
 

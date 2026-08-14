@@ -823,6 +823,22 @@ export const products : Product[]= [
     capacity:"2L",
     power: "1800W",
     certification: "CE / RoHS",
+  },
+   {
+    slug: "Automatic Commercial Ice Blender With Cover Quiet Milkshake Ice Shaver TeaExtracting Blender",
+    category: "kitchen-appliances",
+    name: "Automatic Commercial Ice Blender With Cover Quiet Milkshake Ice Shaver TeaExtracting Blender",
+    images:[ 
+      "/images/A43.jpg",
+    ],
+    description:
+      "Type: Automatic commercial ice blender with shield;Capacity: 2L, comes with blender cup;Dimension: 34×28×50 cm;Volume: 47600 cm³;Weight: 6750 g;Functions: ice crushing, milkshake making, tea extracting, smoothie processing;Fully automatic operation, silent design;Application: milk tea shops, beverage commercial use",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"2L, comes with blender cup",
+    power: "N/A",
+    certification: "CE / RoHS",
   }
 
 

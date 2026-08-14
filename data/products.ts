@@ -703,6 +703,94 @@ export const products : Product[]= [
     capacity:"N/A",
     power: "N/A",
     certification: "CE / RoHS",
+  },
+  {
+    slug: "Ceramic-Coffee-Mug-With-Handle",
+    category: "kitchen-appliances",
+    name: "Ceramic Coffee Mug With Handle",
+    images:[ 
+      "/images/A36-1.jpg",
+      "/images/A36-2.jpg",
+      "/images/A36-3.jpg",
+      "/images/A36-4.jpg",
+    ],
+    description:
+      "Material: Ceramic body, durable and heat-resistant;Design: Classic coffee mug with ergonomic handle;Capacity: Standard size for coffee or tea;Applicable Use: Suitable for home, office, or café use;Customization: Support custom logo printing & OEM processing;**Grade: First class product,Solid color finish: Starry Blue, Ink Grass Green, A51, Rock Green, Ink Dark Green, Ink Red, Cloud Mist",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"301-400ml",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+   {
+    slug: "Retro Ceramic Coffee Mug 250ml",
+    category: "kitchen-appliances",
+    name: "Retro Ceramic Coffee Mug 250ml",
+    images:[ 
+      "/images/A38.jpg",
+      "/images/A38-1.jpg",
+    ],
+    description:
+      "Material: Ceramic body, durable and heat-resistant;Design: Retro style coffee mug with classic aesthetic;Capacity: 250ml for coffee or tea;Applicable Use: Suitable for home, office, or café use;Customization: Support custom logo printing & OEM processing;**Grade: First class product,Solid color finish: Starry Blue, Ink Grass Green, A51, Rock Green, Ink Dark Green, Ink Red, Cloud Mist",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"250ml",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+  {
+    slug: "Retro Ceramic Coffee Mug 250ml",
+    category: "kitchen-appliances",
+    name: "Retro Ceramic Coffee Mug 250ml",
+    images:[ 
+      "/images/A38-1.jpg",
+      "/images/A38.jpg",
+    ],
+    description:
+      "Material: Ceramic body, durable and heat-resistant;Design: Retro style coffee mug with classic aesthetic;Capacity: 250ml for coffee or tea;Applicable Use: Suitable for home, office, or café use;Customization: Support custom logo printing & OEM processing;**Grade: First class product,Solid color finish: Starry Blue, Ink Grass Green, A51, Rock Green, Ink Dark Green, Ink Red, Cloud Mist",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"250ml",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+  {
+    slug: "American-Style-Ceramic-Coffee-Mug-350ml",
+    category: "kitchen-appliances",
+    name: "American Style Ceramic Coffee Mug 350ml",
+    images:[ 
+      "/images/A39.jpg",
+      "/images/A39-1.jpg",
+    ],
+    description:
+      "Material: Ceramic body, durable and heat-resistant;Design: American style coffee mug with classic aesthetic;Capacity: 350ml for coffee or tea;Applicable Use: Suitable for home, office, or café use;Customization: Support custom logo printing & OEM processing;**Grade: First class product,Solid color finish: Starry Blue, Ink Grass Green, A51, Rock Green, Ink Dark Green, Ink Red, Cloud Mist",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"350ml",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+   {
+    slug: "Handmade-Ceramic-Display-Set",
+    category: "kitchen-appliances",
+    name: "Handmade Ceramic Display Set",
+    images:[ 
+      "/images/A40.jpg",
+      "/images/A40-1.jpg",
+      "/images/A40-2.jpg",
+    ],
+    description:
+      "Material: Ceramic body, durable and heat-resistant;Design: Handmade display set with artistic aesthetic;Capacity: 350ml for coffee or tea;Applicable Use: Suitable for home, office, or café use;Customization: Support custom logo printing & OEM processing;**Grade: First class product,Solid color finish: Starry Blue, Ink Grass Green, A51, Rock Green, Ink Dark Green, Ink Red, Cloud Mist",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
   }
 
 

@@ -839,6 +839,22 @@ export const products : Product[]= [
     capacity:"2L, comes with blender cup",
     power: "N/A",
     certification: "CE / RoHS",
+  },
+  {
+    slug: "Foodgrade-Quiet-Blender-with-Sound-Cover,-1.6L-2600W-Ice-Crusher-&-Smoothie-Maker",
+    category: "kitchen-appliances",
+    name: "Foodgrade Quiet Blender with Sound Cover, 1.6L 2600W Ice Crusher & Smoothie Maker",
+    images:[ 
+      "/images/A45.jpg",
+    ],
+    description:
+      "Material: Food-grade plastic, durable and heat-resistant;Design: Quiet blender with sound cover for noise reduction;Capacity: 1.6L for blending, mixing, and more;Power: 2600W for efficient operation;Voltage: 220V for global compatibility;Applicable Use: Suitable for milk tea shops, cafes, or commercial kitchens;Customization: Support custom logo printing & OEM processing;**Grade: First class product",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "220V",
+    capacity:"1.6L",
+    power: "2600W",
+    certification: "CE / RoHS",
   }
 
 

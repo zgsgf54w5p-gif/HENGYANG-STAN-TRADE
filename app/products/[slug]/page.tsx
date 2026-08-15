@@ -35,7 +35,7 @@ export default async function ProductPage({
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#2563EB]">Product Detail</p>
-              <h1 className="mt-2 text-3xl font-black text-slate-900 sm:text-4xl">{product.name}</h1>
+              <h1 className="mt-2 text-3xl font-black text-[#FFD700] sm:text-4xl">{product.name}</h1>
             </div>
             {product.badge && (
               <span className="inline-flex w-fit items-center rounded-full bg-[#F97316] px-4 py-2 text-sm font-semibold text-slate-900">
@@ -60,12 +60,12 @@ export default async function ProductPage({
           </section>
 
           <aside className="h-fit rounded-[32px] border border-slate-200 bg-white p-6 shadow-[0_20px_70px_rgba(7,31,61,0.1)] sm:p-8 lg:sticky lg:top-24">
-            <div className="rounded-[24px] bg-[linear-gradient(135deg,_#2563EB_0%,_#3B82F6_100%)] p-5 text-white">
-              <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-slate-100">
-                <Sparkles size={16} />
+            <div className="rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm">
+              <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
+                <Sparkles size={16} className="text-[#FFD700]" />
                 Wholesale-ready offer
               </div>
-              <p className="mt-3 text-lg leading-8 text-slate-100">{product.description}</p>
+              <p className="mt-3 text-lg leading-8 text-slate-700">{product.description}</p>
             </div>
 
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -99,7 +99,7 @@ export default async function ProductPage({
             </div>
 
             <div className="mt-6 space-y-3">
-              <a href="/quote" className="flex items-center justify-center gap-2 rounded-2xl bg-[#2563EB] px-8 py-5 text-xl font-bold text-white transition hover:bg-[#1D4ED8]">
+              <a href="/quote" className="flex items-center justify-center gap-2 rounded-2xl bg-[#FFD700] px-8 py-5 text-xl font-bold text-[#0F172A] transition hover:bg-[#F59E0B] shadow-[0_8px_30px_rgba(255,215,0,0.35)]">
                 Request a Quote
                 <ArrowRight size={18} />
               </a>
@@ -107,7 +107,7 @@ export default async function ProductPage({
                 href={`https://wa.me/8613510151112?text=${encodeURIComponent(`Hello Hengyang Stan Trade, I am interested in the ${product.name}.`)}`}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-center gap-2 rounded-2xl bg-[#2563EB] px-8 py-5 text-xl font-bold text-white transition hover:bg-[#1D4ED8]"
+                className="flex items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-8 py-5 text-xl font-bold text-white transition hover:bg-[#1ebe5f] shadow-[0_8px_30px_rgba(37,211,102,0.35)]"
               >
                 <MessageCircle size={18} />
                 Chat on WhatsApp

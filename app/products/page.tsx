@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, ChevronUp, Package, Search, ShieldCheck, Sparkles, Zap } from "lucide-react";
+import { ArrowRight, ChevronDown, ChevronUp, MessageCircle, Package, Search, ShieldCheck, Sparkles, Zap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
@@ -96,16 +96,16 @@ function ProductsContent() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.35, delay: index * 0.04 }}
-                  className="w-full overflow-hidden rounded-[28px] border border-slate-700/60 bg-[#0F172A] shadow-[0_18px_60px_rgba(4,11,30,0.45)] md:w-[calc(50%-1rem)] xl:w-[calc(33.333%-1.334rem)]"
+                  className="w-full overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_18px_50px_rgba(7,31,61,0.08)] md:w-[calc(50%-1rem)] xl:w-[calc(33.333%-1.334rem)]"
                 >
                   <button
                     type="button"
                     onClick={() => setExpandedSlug(isExpanded ? null : product.slug)}
                     className="w-full text-left"
                   >
-                    <div className="relative flex aspect-square items-center justify-center bg-[linear-gradient(135deg,_#1b2848_0%,_#101a33_100%)] p-5">
+                    <div className="relative flex aspect-square items-center justify-center bg-[linear-gradient(135deg,_#f7fbff_0%,_#eef5ff_100%)] p-5">
                       {product.badge && (
-                        <span className="absolute left-4 top-4 rounded-full bg-gradient-to-r from-[#FFD700] to-[#F59E0B] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-[#0F172A] shadow-lg">
+                        <span className="absolute left-4 top-4 rounded-full bg-[#F97316] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-900">
                           {product.badge}
                         </span>
                       )}
@@ -121,7 +121,7 @@ function ProductsContent() {
                     <div className="p-5">
                       <div className="flex items-start justify-between gap-3">
                         <div>
-                          <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#FFD700]/90">
+                          <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#2563EB]">
                             {product.category}
                           </p>
                           <h2 className="mt-2 text-xl font-bold text-[#FFD700] line-clamp-2">
@@ -129,17 +129,17 @@ function ProductsContent() {
                           </h2>
                         </div>
                         {isLongDescription ? (
-                          <div className="mt-1 rounded-full bg-white/10 p-2 text-white/70">
+                          <div className="mt-1 rounded-full bg-slate-100 p-2 text-slate-500">
                             {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
                           </div>
                         ) : null}
                       </div>
 
-                      <p className="mt-3 text-sm leading-7 text-white/90 line-clamp-3">
+                      <p className="mt-3 text-sm leading-7 text-slate-600 line-clamp-3">
                         {isExpanded ? description : previewText}
                       </p>
 
-                      <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-white/60">
+                      <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-[#2563EB]">
                         <Sparkles size={15} />
                         <span>{isExpanded ? "Tap to collapse" : "Tap to expand"}</span>
                       </div>
@@ -152,37 +152,37 @@ function ProductsContent() {
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        className="overflow-hidden border-t border-white/10"
+                        className="overflow-hidden border-t border-slate-100"
                       >
                         <div className="space-y-4 p-5">
                           <div className="grid gap-3 sm:grid-cols-2">
                             {product.moq && (
-                              <div className="rounded-2xl bg-white/10 p-3">
-                                <div className="flex items-center gap-2 text-white/80">
+                              <div className="rounded-2xl bg-slate-50 p-3">
+                                <div className="flex items-center gap-2 text-[#2563EB]">
                                   <Package size={15} />
                                   <span className="text-xs font-bold uppercase">MOQ</span>
                                 </div>
-                                <p className="mt-1 text-sm font-bold text-white">{product.moq}</p>
+                                <p className="mt-1 text-sm font-bold text-slate-900">{product.moq}</p>
                               </div>
                             )}
 
                             {product.voltage && (
-                              <div className="rounded-2xl bg-white/10 p-3">
-                                <div className="flex items-center gap-2 text-white/80">
+                              <div className="rounded-2xl bg-slate-50 p-3">
+                                <div className="flex items-center gap-2 text-[#2563EB]">
                                   <Zap size={15} />
                                   <span className="text-xs font-bold uppercase">Voltage</span>
                                 </div>
-                                <p className="mt-1 text-sm font-bold text-white">{product.voltage}</p>
+                                <p className="mt-1 text-sm font-bold text-slate-900">{product.voltage}</p>
                               </div>
                             )}
 
                             {product.capacity && (
-                              <div className="rounded-2xl bg-white/10 p-3 sm:col-span-2">
-                                <div className="flex items-center gap-2 text-white/80">
+                              <div className="rounded-2xl bg-slate-50 p-3 sm:col-span-2">
+                                <div className="flex items-center gap-2 text-[#2563EB]">
                                   <ShieldCheck size={15} />
                                   <span className="text-xs font-bold uppercase">Capacity</span>
                                 </div>
-                                <p className="mt-1 text-sm font-bold text-white">{product.capacity}</p>
+                                <p className="mt-1 text-sm font-bold text-slate-900">{product.capacity}</p>
                               </div>
                             )}
                           </div>
@@ -198,11 +198,22 @@ function ProductsContent() {
                             </Link>
                             <Link
                               href="/quote"
-                              className="inline-flex items-center rounded-xl border border-white/30 px-7 py-4 text-base font-semibold text-white transition hover:border-[#FFD700] hover:text-[#FFD700]"
+                              className="inline-flex items-center gap-2 rounded-xl bg-[#FFD700] px-7 py-4 text-base font-semibold text-[#0F172A] transition hover:bg-[#F59E0B] shadow-[0_4px_15px_rgba(255,215,0,0.35)]"
                               onClick={(event) => event.stopPropagation()}
                             >
                               Request Quote
+                              <ArrowRight size={15} />
                             </Link>
+                            <a
+                              href={`https://wa.me/8613510151112?text=${encodeURIComponent(`Hello Hengyang Stan Trade, I am interested in the ${product.name}.`)}`}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-7 py-4 text-base font-semibold text-white transition hover:bg-[#1ebe5f] shadow-[0_4px_15px_rgba(37,211,102,0.35)]"
+                              onClick={(event) => event.stopPropagation()}
+                            >
+                              <MessageCircle size={15} />
+                              Chat on WhatsApp
+                            </a>
                           </div>
                         </div>
                       </motion.div>

@@ -905,7 +905,56 @@ export const products : Product[]= [
     capacity:"N/A",
     power: "N/A",
     certification: "CE / RoHS",
+  },
+  {
+    slug: "Disposable PLA Dessert Cups",
+    category: "kitchen-appliances",
+    name: "Disposable PLA Dessert Cups",
+    images:[ 
+      "/images/A49.jpg",
+    ],
+    description:
+      " Material: Degradable PLA material;> Capacity: Under 100ml (70ml);> Feature: Heatresistant, transparent, fully degradable;> Custom: Support custom logo printing;> Application: Perfect for milktea shop, dessert table, mousse cake, wood sawdust cake, pudding and other desserts;> Light weight, gross weight under 0.3kg, mini highfoot series, disposable for party & catering use",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"Under 100ml",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+  {
+    slug: "Kitchen Sink Caddy Organizer",
+    category: "kitchen-appliances",
+    name: "Kitchen Sink Caddy Organizer",
+    images:[ 
+      "/images/A50.jpg",
+    ],
+    description:
+      " Material: Stainless steel;> Feature: Rust-resistant, durable, multi-purpose;> Custom: Support custom logo printing;> Application: Perfect for kitchen sink organization, holding sponges, brushes, and soap;> Light weight, gross weight under 0.5kg, suitable for home & commercial use",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+  {
+    slug: "Thickened WallMounted Kitchen Storage Rack",
+    category: "kitchen-appliances",
+    name: "Thickened WallMounted Kitchen Storage Rack",
+    images:[ 
+      "/images/A52.jpg",
+    ],
+    description:
+      "Material: Carbon Steel Style: Modern Minimalist Installation Type: Countertop Placement Shape: Rectangular Color: Gungray Function: Multipurpose kitchen storage & draining Application Scene: Kitchen countertop, near sink Product Features:",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
   }
+
 
 
 

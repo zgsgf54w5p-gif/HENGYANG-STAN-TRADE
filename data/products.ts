@@ -986,6 +986,22 @@ export const products : Product[]= [
     capacity:"N/A",
     power: "N/A",
     certification: "CE / RoHS",
+  },
+   {
+    slug: "Kitchen Sink Caddy Organizer",
+    category: "kitchen-appliances",
+    name: "Kitchen Sink Caddy Organizer",
+    images:[ 
+      "/images/A50(1).jpg",
+    ],
+    description:
+     "Material: Carbon Steel Style: Modern Minimalist Installation Type: Countertop Placement Shape: Rectangular Color: Gungray Function: Multipurpose kitchen storage & draining Application Scene: Kitchen countertop",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
   }
 
 

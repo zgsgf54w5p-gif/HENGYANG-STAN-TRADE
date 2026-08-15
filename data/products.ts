@@ -953,6 +953,23 @@ export const products : Product[]= [
     capacity:"N/A",
     power: "N/A",
     certification: "CE / RoHS",
+  },
+   {
+    slug: "Stainless Steel Knife & Cutting Board Holder",
+    category: "kitchen-appliances",
+    name: "Stainless Steel Knife & Cutting Board Holder",
+    images:[ 
+      "/images/A53-1.jpg",
+       "/images/A53-2.jpg",
+    ],
+    description:
+      "Material: Stainless Steel + Plastic Product Function: Stores knife sets, chopsticks, spoons & forks, cutting boards, pot lids.",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
   }
 
 

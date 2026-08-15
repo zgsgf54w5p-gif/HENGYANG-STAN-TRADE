@@ -855,7 +855,60 @@ export const products : Product[]= [
     capacity:"1.6L",
     power: "2600W",
     certification: "CE / RoHS",
+  },
+   {
+    slug: "7Piece Cast Iron Enamel Cookware-Set",
+    category: "kitchen-appliances",
+    name: "7 Piece Cast Iron Enamel Cookware Set",
+    images:[ 
+      "/images/A46.jpg",
+      "/images/A46-2.jpg",
+    ],
+    description:
+      "Material: Cast iron with enamel coating, durable and heat-retaining;Design: 7-piece cookware set including various pots and pans;Capacity: Various sizes for different cooking needs;Power: N/A;Voltage: N/A;Applicable Use: Suitable for home, office, or commercial kitchens;Customization: Support custom logo printing & OEM processing;**Grade: First class product",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+   {
+    slug: "Classic Enamel Cast Iron Pot 4Piece Set",
+    category: "kitchen-appliances",
+    name: "Classic Enamel Cast Iron Pot 4 Piece Set",
+    images:[ 
+      "/images/A47.jpg",
+      "/images/A47-2.jpg",
+    ],
+    description:
+      "Material: Cast iron with enamel coating, durable and heat-retaining;Design: 4-piece cookware set including various pots;Capacity: Various sizes for different cooking needs;Power: N/A;Voltage: N/A;Applicable Use: Suitable for home, office, or commercial kitchens;Customization: Support custom logo printing & OEM processing;**Grade: First class product",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+   {
+    slug: "7Pcs Household Cast Iron Enamel NonStick Cookware Set",
+    category: "kitchen-appliances",
+    name: "7 Piece Cast Iron Enamel Cookware Set",
+    images:[ 
+      "/images/A48.jpg",
+    ],
+    description:
+      "Material: Cast iron with enamel coating, durable and heat-retaining;Design: 7-piece cookware set including various pots and pans;Capacity: Various sizes for different cooking needs;Power: N/A;Voltage: N/A;Applicable Use: Suitable for home, office, or commercial kitchens;Customization: Support custom logo printing & OEM processing;**Grade: First class product",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
   }
+
+
+
 
 
 

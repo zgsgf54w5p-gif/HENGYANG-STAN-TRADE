@@ -970,6 +970,22 @@ export const products : Product[]= [
     capacity:"N/A",
     power: "N/A",
     certification: "CE / RoHS",
+  },
+  {
+    slug: "Rolling Kitchen Storage Cart",
+    category: "kitchen-appliances",
+    name: "Rolling Kitchen Storage Cart",
+    images:[ 
+      "/images/A54.jpg",
+    ],
+    description:
+      "3 mesh baskets + 4 flat shelves: 80×32×108cm；90×32×108cm；100×32×108cm;4 mesh baskets + 4 flat shelves: 80×32×135cm；90×32×135cm；100×32×135cm;4layer flat shelf: 120×32×135cm",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
   }
 
 

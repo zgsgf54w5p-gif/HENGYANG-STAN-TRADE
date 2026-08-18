@@ -1034,7 +1034,24 @@ export const products : Product[]= [
     capacity:"5L",
     power: "N/A",
     certification: "CE / RoHS",
+  },
+  {
+    slug: "Commercial Stainless Steel Meat Mincer",
+    category: "kitchen-appliances",
+    name: "Commercial Stainless Steel Meat Mincer",
+    images:[ 
+      "/images/A60.jpg",
+    ],
+    description:
+     "3segment Auger Screw: Extended spiral shaft with lowspeed spiral compression technology, delivers fast and smooth meat mincing performance.;Removable Grinding Head: Easy to take apart for quick cleaning, no dirt residue, saves time and labor.;Sharp Stainless Steel Cross Blade: Made of stainlesssteel material, sharp cutting edges produce fine and even minced meat.;Highefficiency Full Copper Motor: Powerful, stable and durable. Long service life, antijamming for continuous operation.;Stainless Steel Body: Foodgrade stainlesssteel construction, safe and pollutionfree. Smooth surface without sharp edges, simple to clean and maintain.",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
   }
+
 
 
 

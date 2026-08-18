@@ -1050,6 +1050,38 @@ export const products : Product[]= [
     capacity:"N/A",
     power: "N/A",
     certification: "CE / RoHS",
+  },
+   {
+    slug: "Rechargeable Multifunction Electric Food Chopper",
+    category: "kitchen-appliances",
+    name: "Rechargeable Multifunction Electric Food Chopper",
+    images:[ 
+      "/images/A61.jpg",
+    ],
+    description:
+     "Material: ABS;Rated Voltage: 3.7V;Rated Power: 30W;Rated Frequency: 50Hz;Net Weight: 500g;Cup options: PS plastic cup / Glass cup with 6blade cutter;Style: Modern minimalist;Origin: Zhongshan;Customization & Logo printing: Supported",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "3.7V",
+    capacity:"N/A",
+    power: "30W",
+    certification: "CE / RoHS",
+  },
+    {
+    slug: "5L Stainless Steel Electric Meat Grinder",
+    category: "kitchen-appliances",
+    name: "5L Stainless Steel Electric Meat Grinder",
+    images:[ 
+      "/images/A62.jpg",
+    ],
+    description:
+     "Capacity: 5L;Rated Power: 500W;Rated Voltage: 220V;Rated Frequency: 50Hz;Rotation Speed: 18000 RPM;Speed Gears: 5speed adjustable;Body & Inner Bowl Material: Stainless steel;Control Mode: Button control;Product Dimension: 18*25*31 CM;Power Supply: Plugin electric;Suitable for: 25 people;Optional configurations: with 1 set / 2 sets / 3 sets of 6blade cutters",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "220V",
+    capacity:"5L",
+    power: "500W",
+    certification: "CE / RoHS",
   }
 
 

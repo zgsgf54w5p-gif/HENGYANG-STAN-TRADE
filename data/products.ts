@@ -923,14 +923,14 @@ export const products : Product[]= [
     certification: "CE / RoHS",
   },
   {
-    slug: "Kitchen Sink Caddy Organizer",
+    slug: "NoDrill Stainless Steel Chopstick Holder WallMount Kitchen Utensil Storage Rack",
     category: "kitchen-appliances",
-    name: "Kitchen Sink Caddy Organizer",
+    name: "NoDrill Stainless Steel Chopstick Holder WallMount Kitchen Utensil Storage Rack",
     images:[ 
       "/images/A50.jpg",
     ],
     description:
-      " Material: Stainless steel;> Feature: Rust-resistant, durable, multi-purpose;> Custom: Support custom logo printing;> Application: Perfect for kitchen sink organization, holding sponges, brushes, and soap;> Light weight, gross weight under 0.5kg, suitable for home & commercial use",
+      "Material: Carbon Steel Style: Modern Minimalist Installation Type: Countertop Placement Shape: Rectangular Color: Gungray Function: Multipurpose kitchen storage & draining Application Scene: Kitchen countertop",
     badge: "New Arrival",
     moq:"200 Units",
     voltage: "N/A",
@@ -988,11 +988,11 @@ export const products : Product[]= [
     certification: "CE / RoHS",
   },
    {
-    slug: "Kitchen Sink Caddy Organizer",
+    slug: "NoDrill Stainless Steel Chopstick Holder WallMount Kitchen Utensil Storage Rack",
     category: "kitchen-appliances",
-    name: "Kitchen Sink Caddy Organizer",
+    name: "NoDrill Stainless Steel Chopstick Holder WallMount Kitchen Utensil Storage Rack",
     images:[ 
-      "/images/A50(1).jpg",
+      "/images/A55.jpg",
     ],
     description:
      "Material: Carbon Steel Style: Modern Minimalist Installation Type: Countertop Placement Shape: Rectangular Color: Gungray Function: Multipurpose kitchen storage & draining Application Scene: Kitchen countertop",

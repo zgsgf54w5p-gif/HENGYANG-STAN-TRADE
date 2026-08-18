@@ -1082,7 +1082,8 @@ export const products : Product[]= [
     capacity:"5L",
     power: "500W",
     certification: "CE / RoHS",
-  }, {
+  }, 
+  {
     slug: "3in1 Multifunction Blender",
     category: "kitchen-appliances",
     name: "3 in 1 Multi function Blender",
@@ -1095,6 +1096,38 @@ export const products : Product[]= [
     moq:"200 Units",
     voltage: "111V-240V",
     capacity:"1.8L",
+    power: "800W",
+    certification: "CE / RoHS",
+  },
+  {
+    slug: "Household Electric Meat Mincer 800W",
+    category: "kitchen-appliances",
+    name: "Household Electric Meat Mincer 800W",
+    images:[ 
+      "/images/A64.jpg",
+    ],
+    description:
+    "Power: 800W;Rated Voltage: 111V240V wide voltage;Speed Gears: 3speed, rotary knob control;Motor Speed: ≤10000 RPM;Body & Cup Material: Stainless steel, brushed surface finish;Blade quantity: 5 pieces, multiple mixing blades;Product Size: 255125290 mm;Net Weight: 2.5kg;Operation Mode: Semiautomatic, plugin power supply;Cleaning: Manual cleaning (nonautomatic cleaning);Energy Efficiency: Level 2;Noise: 4670 db;Plug type: US / AU / UK / EU plug optional;Suitable for: 67 people;Heating: No heating function;Motor option: Full copper motor or copperclad aluminum motor;Accessories: 3/5/7hole cutting plates, cookie attachment, plunger, sausage nozzles, stainless steel cutting grids",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "111V-240V",
+    capacity:"N/A",
+    power: "800W",
+    certification: "CE / RoHS",
+  },
+  {
+    slug: "3L Automatic 2in1 Food Processor",
+    category: "kitchen-appliances",
+    name: "3L Automatic 2in1 Food Processor",
+    images:[ 
+      "/images/A65.jpg",
+    ],
+    description:
+    "Capacity: 3L;Function: Meat chopping, dough kneading;Control mode: Touchscreen control;Operation: Fully automatic;Speed gears: 3speed adjustable;Motor speed: ≤10000 RPM;Rated voltage: 111V240V wide voltage;Body & Cup material: Stainless steel;Blades: Double mixing blades, total 3 blades;Net weight: 2500g;Energy efficiency: Level 2;Style: Minimalist style;Optional configuration: 1 set of blades / 2 sets of blades;Suitable for: 23 people household use",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "111V-240V",
+    capacity:"N/A",
     power: "800W",
     certification: "CE / RoHS",
   }

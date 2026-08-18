@@ -1002,6 +1002,38 @@ export const products : Product[]= [
     capacity:"N/A",
     power: "N/A",
     certification: "CE / RoHS",
+  },
+  {
+    slug: "5L Stainless Steel Meat Grinder",
+    category: "kitchen-appliances",
+    name: "5L Stainless Steel Meat Grinder",
+    images:[ 
+      "/images/A58.jpg",
+    ],
+    description:
+     "Body & bowl material: Foodgrade stainless steel, wiredrawing shell craft, durable and easytoclean.;Control: Touchtype operation with 2 adjustable speed gears, motor speed below 10000 RPM.;Capacity: 5L largecapacity stainless steel bowl, suitable for 89 people household use.;Blades: Multiple optional blades (single / double / three / four blades), 4blade set included, no mixing blade.;Voltage: 37V110V working voltage, low noise ≤36dB.;Cleaning: Nonautomatic cleaning, inner wall scale mark for easy ingredient measurement.;Dimension: 23×23×28 cm, gross weight 1600g.",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "37V110V working voltage, low noise ≤36dB.",
+    capacity:"5L",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+   {
+    slug: "5L Multifunction Food Processor",
+    category: "kitchen-appliances",
+    name: "5L Multifunction Food Processor",
+    images:[ 
+      "/images/A59.jpg",
+    ],
+    description:
+     "Material: Main body made of Tritan material, thick glass bowl, brushed shell craftsmanship, safe and durable.;Multifunctions: Allinone machine for juicing, vegetable chopping, meat mincing, dough kneading and highspeed mixing.;Operation: Touchcontrol fully automatic operation, 5 adjustable speed gears, motor speed under 10000 RPM.;Capacity: 5L large capacity, suitable for 45 people family use.;Accessories: Equipped with meatmincing blades, dough kneading stick, vegetablechopping disc and shredding disc, multiple mixing blades included. Total 4 blades.;Voltage: Wide voltage 111V240V, plugin powered.;Noise Level: 4670dB.;Size: 222732 cm. Nonautomatic cleaning.;Warranty: 12month warranty.",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "111V240V",
+    capacity:"5L",
+    power: "N/A",
+    certification: "CE / RoHS",
   }
 
 

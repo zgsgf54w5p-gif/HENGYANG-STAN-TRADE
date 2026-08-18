@@ -1082,6 +1082,21 @@ export const products : Product[]= [
     capacity:"5L",
     power: "500W",
     certification: "CE / RoHS",
+  }, {
+    slug: "3in1 Multifunction Blender",
+    category: "kitchen-appliances",
+    name: "3 in 1 Multi function Blender",
+    images:[ 
+      "/images/A63.jpg",
+    ],
+    description:
+     "Model: HGB07PC;Capacity: 1.8L;Power: 800W;Rated Voltage: 111V240V;Speed Gears: 3speed adjustable, rotary knob control;Motor Speed: 2000029999 RPM;Cup Material: Plastic;Blade: More than 6 pcs mixing blades;Product Size: 200mm×200mm×400mm;Operation Mode: Semiautomatic;Heating: No heating function;Warranty: 12 months;Brand: Support OEM;Suitable for 45 people;Cleaning: Manual cleaning (nonautomatic cleaning);Style: Minimalist & industrial style;Color: White, offwhite, creamwhite",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "111V-240V",
+    capacity:"1.8L",
+    power: "800W",
+    certification: "CE / RoHS",
   }
 
 

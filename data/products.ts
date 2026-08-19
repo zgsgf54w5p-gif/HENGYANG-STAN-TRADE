@@ -1146,7 +1146,121 @@ export const products : Product[]= [
     capacity:"1.5L",
     power: "1000W",
     certification: "CE / RoHS",
+  },
+  {
+    slug: "FoodGrade Silicone Lunch Box",
+    category: "kitchen-appliances",
+    name: "FoodGrade Silicone Lunch Box",
+    images:[ 
+      "/images/A68.jpg",
+    ],
+    description:
+    "This foodgrade silicone lunch box is singlecompartment rectangular food storage container, modern minimalist solidcolor design. ✅ Multiscene Use: Perfect for home, travel, outdoor and camping activities. ✅ Multicapacity Options: 300ml & below, 301500ml, 501800ml, 8001000ml available. ✅ Safe Heating & Cooling: Microwave, freezer and hightemperature steaming available, heatpreserving function. Nondisposable, reusable. ✅ Leakproof & Sealed: Good sealing performance for freshkeeping, convenient to carry as baby food container or adult bento lunch box. ✅ Customizable: Support logo printing and custom processing. Suitable for gifts for wedding, birthday, holiday, business present and promotion giveaway.",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+   {
+    slug: "304 Stainless Steel Divided Bento Box",
+    category: "kitchen-appliances",
+    name: "304 Stainless Steel Divided Bento Box",
+    images:[ 
+      "/images/A69.jpg",
+      "/images/A69 A.jpg",
+    ],
+    description:
+    "Material: 304 Stainless Steel ;Function: Freshkeeping ;Layers: Doublelayer ;Product Type: Lunch / Bento Box ;Item No.: 2558, 2559, 2560, 2560A ;Microwave Oven: Available for microwave heating ;Target User: Adults ;Carton Qty: 48 pcs per carton ;Customization: Support custom processing & logo printing ;Price Range: 2030 RMB ;Patent: None ;Quality Grade: Premium Grade ;Style: Minimalist Style ;Capacity: 501800ml, 8001000ml ;Heat Preservation: Noninsulated ;Brand: No brand ;Origin: Nonimported ;Shape: Rectangular; Pattern: Solid color ;Trade Mode: Domestic & Export trade ",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+  {
+    slug: "304 Stainless Steel Square Bento Box",
+    category: "kitchen-appliances",
+    name: "304 Stainless Steel Square Bento Box",
+    images:[ 
+      "/images/A70.jpg",
+    ],
+    description:
+    "Material: 304 Stainless Steel ;Function: Food Storage ;Insulation: Insulated ;Box Layers: Singlelayer ;Product Type: Lunch / Bento Box ;Item No.: 304 Square Lunch Box ;Shape: Square ;Microwave: Not Microwavesafe ;Style: Modern Minimalist ;Pattern: Solid Color ;Target User: Adults ;Trade Property: Domestic trade ;Carton Quantity: 64 pcs per carton ;Gift Occasions: Wedding, birthday, holiday, housewarming, exhibition, promotion, staff welfare, business gift etc. ;Logo Printing: Custom logo available ;Custom Processing: Support OEM customization ;Launch Year: 2025 Price Range: 1020 RMB ;Disposable: Nondisposable ;Specifications: 800ml small singlegrid, 800ml small doublegrid, 1200ml medium singlegrid and other sizes ",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+   {
+    slug: "304 Stainless Steel DoubleLayer Lunch Box",
+    category: "kitchen-appliances",
+    name: "304 Stainless Steel DoubleLayer Lunch Box",
+    images:[ 
+      "/images/A71.jpg",
+    ],
+    description:
+    "Material: 304 Stainless Steel ;Function: Thickened, Portable, Heatinsulated, Sealed, Hightemperature Resistant, Divided Compartments ;Box Layers: Singlelayer, Doublelayer, Triplelayer ;Product Category: Lunch / Bento Box ;Imported: No ;Shape: Rectangular ;Microwave: Microwavesafe ;Style: Modern Minimalist ;Pattern: Solid Color ;Target User: Adults ;Carton Qty: 63 pcs per carton;Disposable: Nondisposable ;Patent: None ;Capacity: Over 5L;Specifications: Singlelayer khaki (with chopsticks & spoon), upgraded singlelayer khaki (with chopsticks & spoon), sealed leakproof design and other variants ;Style: 304 Doublelayer Lunch Box Product Type: Lunch Box Style Type: Minimalist Compartment Design: 2compartment",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+   {
+    slug: "Corn Starch Disposable Degradable Food Container",
+    category: "kitchen-appliances",
+    name: "Corn Starch Disposable Degradable Food Container",
+    images:[ 
+      "/images/A72.jpg",
+    ],
+    description:
+    "Material: Corn Starch ;Degradable: Yes ;Capacity: 750ml ;Technology ;Style: Minimalist ;Shape: Round ;Item No.: Round Degradable Food Container ;Size: Square box 350ML (300sets/carton), ;Square box 500ML (300sets/carton), ;Square box 650ML etc. ;Thickness: 0.75 ;Custom Processing: Available ;Carton Quantity: 300 sets / 200 sets per carton ;Origin: Wenzhou ;Color: Apricot Specifications: 350ml,450ml,550ml,650ml,750ml,800ml,900ml,1000ml,1250ml,1500ml ",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+  {
+    slug: "Concave Heat‑Resistant Glass Food Storage Bowl",
+    category: "kitchen-appliances",
+    name: "Concave Heat‑Resistant Glass Food Storage Bowl",
+    images:[ 
+      "/images/A73.jpg",
+    ],
+    description:
+    "Product Description;- Material: High borosilicate heat‑resistant glass;- Capacity: 800‑1000ml;- Structure: Double‑layer, divided compartment design;- Feature: Flip‑top lid, sealed for fresh‑keeping, leak‑proof and spill‑proof. Suitable for food storage and classification. Can be stored in refrigerator.;- Microwave available, NOT insulated.;- Non‑disposable product.;- Colors available: Rose Powder, Onion Green, Prussian Blue;- Cannot print custom logo, no custom processing.;- Carton quantity: 48 pcs per carton;- Style: Minimalist style;- Quality Grade: Qualified product;- Suitable for cross‑border export.;- Applicable scenarios: Food storage, meal prep, food containment.",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
+  },
+  {
+    slug: "Round High Borosilicate Glass Lunch Box with Lid",
+    category: "kitchen-appliances",
+    name: "Round High Borosilicate Glass Lunch Box with Lid",
+    images:[ 
+      "/images/A74.jpg",
+    ],
+    description:
+    "Material: High borosilicate glass;Shape: Round, no dividedcompartment design;Capacity options: 301500ML, 501800ML, 8001000ML, 12L;Structure: Singlelayer;Function: Food freshkeeping; microwave available; NOT heatinsulated;Application scene: Office mealprep, rice serving, fruit storage, suitable for adults;Pattern: Solid color;Reusable, nondisposable product;Custom service: Logo printing & custom processing are supported;Carton packing quantity: 18 pcs per carton;Quality grade: Premium grade product;Style: New Chinese style;Crossborder export supply available;Main sales region: Europe",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "N/A",
+    capacity:"N/A",
+    power: "N/A",
+    certification: "CE / RoHS",
   }
+  
 
 
 

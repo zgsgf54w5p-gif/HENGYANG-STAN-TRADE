@@ -1130,6 +1130,22 @@ export const products : Product[]= [
     capacity:"N/A",
     power: "800W",
     certification: "CE / RoHS",
+  },
+   {
+    slug: "Retro Style 1000W Baby Food Maker, 1.5L Electric Blender with Plastic ",
+    category: "kitchen-appliances",
+    name: "Retro Style 1000W Baby Food Maker, 1.5L Electric Blender with Plastic",
+    images:[ 
+      "/images/A67.jpg",
+    ],
+    description:
+    "Model: Y66 Blender (Plastic Cup / Glass Cup, MOQ: 6 units);Capacity: 1.5L;Power: 1000W;Rated Voltage: 111V240V wide voltage;Speed Gears: 5speed adjustable, rotary knob control;Motor Speed: 1000019999 RPM;Body Material: Stainless steel;Cup Material: Plastic or Glass for option;Blades: Double mixing blades, more than 6 blades total;Product Dimension: 202040 cm;Operation Mode: Semiautomatic, plugin powered;Heating: No heating function;Noise Level: 3645 db;Plug Options: US / EU / UK plug;Style: Retro style;Scale marking on cup body;Cleaning: Manual cleaning (nonautomatic cleaning);Warranty: 12 months;Suitable for 23person household;MOQ: 6 pieces",
+    badge: "New Arrival",
+    moq:"200 Units",
+    voltage: "111V-240V",
+    capacity:"1.5L",
+    power: "1000W",
+    certification: "CE / RoHS",
   }
 
 
